@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CompatibilityApp</string>
+    <string name="pick_option">Pick an Option</string>
 </resources>
