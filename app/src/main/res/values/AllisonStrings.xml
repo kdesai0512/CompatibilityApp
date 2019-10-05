@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="choose">Choose A Person</string>
+    <string name="theirFeatures">Enter Their Features?</string>
+    <string name="height">Minimum Height:</string>
+    <string name="feet">Feet</string>
+    <string name="inch">Inches</string>
+    <string name="age">Age:</string>
+    <string name="minimum">Min</string>
+    <string name="maximum">Max</string>
+    <string name="gender">Gender:</string>
+    <string name="rate">Rate the App</string>
+    <string name="mostComp">Most Compatibile:</string>
+    <string name="leastComp">Least Compatibile:</string>
+    <string name="share">Share</string>
+    <string name="restart">Restart</string>
+</resources>

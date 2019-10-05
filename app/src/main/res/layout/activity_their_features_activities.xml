@@ -4,6 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin"
     tools:context=".TheirFeaturesActivities">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:text="@string/theirFeatures"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:text="@string/height"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></TextView>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/feet"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/inch"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:text="@string/age"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"></TextView>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/minimum"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/editText"></EditText>
+
+    <EditText
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:hint="@string/maximum"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"></EditText>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        android:text="@string/gender"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Spinner
+        android:layout_width="@dimen/width"
+        android:layout_height="@dimen/height"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/editText3"></Spinner>
 </androidx.constraintlayout.widget.ConstraintLayout>
