@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <string name="gamer">gamer</string>
     <string name="theirQualitiesQuestion">What Do You Want Your Partner To Be?</string>
+    <string name="yourQualitiesQuestion">What Defines You?</string>
+    <string name="gamer">gamer</string>
+    <string name="traveler">traveler</string>
+    <string name="artist">artist</string>
+    <string name="musician">musician</string>
+    <string name="cook">home cook</string>
+    <string name="writer">writer</string>
+    <string name="influencer">social influencer</string>
+    <string name="athlete">athlete</string>
 </resources>
