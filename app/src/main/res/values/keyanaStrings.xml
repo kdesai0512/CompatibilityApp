@@ -11,4 +11,10 @@
     <string name="writer">writer</string>
     <string name="influencer">social influencer</string>
     <string name="athlete">athlete</string>
+    <string name="rich">rich</string>
+    <string name="social">social</string>
+    <string name="intelligence">intelligence</string>
+    <string name="fun">fun</string>
+    <string name="looks">looks</string>
+    <string name="sliderHeading">How Would You Describe Yourself?</string>
 </resources>
