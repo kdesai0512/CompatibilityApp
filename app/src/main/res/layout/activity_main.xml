@@ -9,9 +9,9 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/logo"
-        android:layout_width="349dp"
-        android:layout_height="292dp"
-        android:layout_marginStart="56dp"
+        android:layout_width="337dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="@dimen/image_start"
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,13 +22,53 @@
         android:id="@+id/PickOption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/pick_option_start"
+        android:layout_marginTop="@dimen/pick_option_top"
         android:text="@string/pick_option"
         android:textAllCaps="true"
         android:textSize="29dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/celeb_button_start"
+        android:layout_marginTop="@dimen/celeb_button_top"
+        android:text="@string/celeb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PickOption" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/show_person_button_start"
+        android:layout_marginTop="@dimen/show_person_button_top"
+        android:text="@string/show_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="109dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="@dimen/switch_start"
+        android:layout_marginTop="@dimen/switch_top"
+        android:text="I agree "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/terms_start"
+        android:layout_marginTop="@dimen/terms_top"
+        android:text="@string/terms"
+        app:layout_constraintStart_toEndOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

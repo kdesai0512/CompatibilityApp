@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name ="image_top">0</dimen>
+    <dimen name ="image_start">44</dimen>
+
+    <dimen name="pick_option_top">16</dimen>
+    <dimen name="pick_option_start">92</dimen>
+
+    <dimen name="celeb_button_top">28</dimen>
+    <dimen name="celeb_button_start">116</dimen>
+
+    <dimen name="show_person_button_top">24</dimen>
+    <dimen name="show_person_button_start">116</dimen>
+
+    <dimen name="switch_top">68</dimen>
+    <dimen name="switch_start">90</dimen>
+
+    <dimen name="terms_top">73</dimen>
+    <dimen name="terms_start">10</dimen>
+
+    <dimen name="get_to_know_you_top">28</dimen>
+    <dimen name="get_to_know_you_start">92</dimen>
+
+    <dimen name="name_top">112</dimen>
+    <dimen name="name_start">32</dimen>
+
+    <dimen name="first_top">24</dimen>
+    <dimen name="first_start">72</dimen>
+
+    <dimen name="last_top">96</dimen>
+    <dimen name="last_start">140</dimen>
+
+    <dimen name="first_edit_top">94</dimen>
+    <dimen name="first_edit_start">8</dimen>
+
+    <dimen name="last_edit_top">94</dimen>
+    <dimen name="last_edit_start">8</dimen>
+
+</resources>
