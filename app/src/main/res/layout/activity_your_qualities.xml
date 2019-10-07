@@ -8,52 +8,68 @@
     tools:context=".YourQualitiesActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/yourQualitiesQuestion"
+        android:gravity="center"
+        android:textColor="@color/black"
         android:textSize="@dimen/headingTextSize"/>
 
     <CheckBox
+        android:id="@+id/yourGamer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/gamer"
-        android:textSize="@dimen/textSize" />
+        android:textSize="@dimen/myTextSize" />
 
     <CheckBox
+        android:id="@+id/yourTraveler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/traveler"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize"/>
 
     <CheckBox
+        android:id="@+id/yourMusician"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/musician"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize" />
 
     <CheckBox
+        android:id="@+id/yourCook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/cook"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize" />
 
     <CheckBox
+        android:id="@+id/yourWriter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/writer"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize" />
 
     <CheckBox
+        android:id="@+id/yourInfluencer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/influencer"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize" />
 
     <CheckBox
+        android:id="@+id/yourAthlete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/athlete"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/myTextSize" />
 
 
 
