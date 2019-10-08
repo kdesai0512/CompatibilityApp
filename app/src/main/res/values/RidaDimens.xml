@@ -36,4 +36,6 @@
     <dimen name="last_edit_top">94</dimen>
     <dimen name="last_edit_start">8</dimen>
 
+    <dimen name="horo_top">270</dimen>
+
 </resources>

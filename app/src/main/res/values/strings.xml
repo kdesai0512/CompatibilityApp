@@ -10,4 +10,22 @@
     <string name="last">last</string>
     <string name="bday">Birthday</string>
     <string name="horoscope">Horoscope</string>
+
+    <string-array name="horoscope_arrays">
+        <item>Aries</item>
+        <item>Taurus</item>
+        <item>Gemini</item>
+        <item>Cancer</item>
+        <item>Leo</item>
+        <item>Virgo</item>
+        <item>Libra</item>
+        <item>Scorpio</item>
+        <item>Sagittarius</item>
+        <item>Capricorn</item>
+        <item>Aquarius</item>
+        <item>Pisces</item>
+    </string-array>
+
+    <string name="horo_link"><a href="https://www.horoscope.com/us/index.aspx">click here to find out which one is yours!</a></string>
+
 </resources>
