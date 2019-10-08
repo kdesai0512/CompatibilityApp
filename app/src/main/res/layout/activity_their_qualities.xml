@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
         android:text="@string/next"
+        android:onClick="finalActivity"
         android:layout_gravity="center">
     </Button>
 

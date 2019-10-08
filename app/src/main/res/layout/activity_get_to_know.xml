@@ -130,6 +130,7 @@
         android:layout_marginTop="68dp"
         android:text="@string/next"
         android:textSize="@dimen/textSize"
+        android:onClick="yourQualities"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"></Button>
 

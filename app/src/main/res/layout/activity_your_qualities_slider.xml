@@ -108,6 +108,7 @@
         android:textSize="@dimen/textSize"
         android:layout_margin="@dimen/margin"
         android:text="@string/next"
+        android:onClick="theirFeatures"
         android:layout_gravity="center">
     </Button>
 
