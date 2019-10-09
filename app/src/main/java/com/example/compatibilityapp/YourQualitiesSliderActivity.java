@@ -8,6 +8,14 @@ import android.view.View;
 
 public class YourQualitiesSliderActivity extends AppCompatActivity {
 
+    public static final boolean THEIR_GAMER = false;
+    public static final boolean THEIR_ATHLETE = false;
+    public static final boolean THEIR_MUSICIAN = false;
+    public static final boolean THEIR_INFLUENCER = false;
+    public static final boolean THEIR_COOK = false;
+    public static final boolean THEIR_WRITER = false;
+    public static final boolean THEIR_TRAVELER = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
