@@ -96,6 +96,11 @@ public class YourQualitiesActivity extends AppCompatActivity {
         intent.putExtra(YourQualitiesSliderActivity.THEIR_WRITER, writer1);
         intent.putExtra(YourQualitiesSliderActivity.THEIR_INFLUENCER, influencer1);
         intent.putExtra(YourQualitiesSliderActivity.THEIR_ATHLETE, athlete1);
+        intent.putExtra(YourQualitiesSliderActivity.MY_FIRST_NAME, MY_FIRST_NAME);
+        intent.putExtra(YourQualitiesSliderActivity.MY_LAST_NAME, MY_LAST_NAME);
+        intent.putExtra(YourQualitiesSliderActivity.MY_BIRTHDAY, MY_BIRTHDAY);
+        intent.putExtra(YourQualitiesSliderActivity.MY_HOROSCOPE, MY_HOROSCOPE);
+
         startActivity(intent);
     }
 }
