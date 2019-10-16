@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/calendarCircle</item>
+        <item name="colorPrimary">@color/calendarNum</item>
+        <item name="android:textColorPrimary">@color/calendarNum</item>
+    </style>
+
 </resources>

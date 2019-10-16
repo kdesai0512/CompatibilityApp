@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="myTextSize">30sp</dimen>
+    <dimen name="myTextSize">20sp</dimen>
     <dimen name="headingTextSize">30sp</dimen>
     <dimen name="myMarginTop">20dp</dimen>
         

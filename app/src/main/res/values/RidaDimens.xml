@@ -25,7 +25,7 @@
     <dimen name="name_start">32dp</dimen>
 
     <dimen name="first_top">24dp</dimen>
-    <dimen name="first_start">72dp</dimen>
+    <dimen name="first_start">50dp</dimen>
 
     <dimen name="last_top">96dp</dimen>
     <dimen name="last_start">140dp</dimen>
@@ -36,6 +36,6 @@
     <dimen name="last_edit_top">94dp</dimen>
     <dimen name="last_edit_start">8dp</dimen>
 
-    <dimen name="horo_top">270dp</dimen>
+    <dimen name="horo_top">330dp</dimen>
 
 </resources>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/get_to_know_you">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
         android:layout_marginStart="@dimen/get_to_know_you_start"
         android:layout_marginTop="@dimen/get_to_know_you_top"
         android:text="@string/get_to_know_you"
+        android:fontFamily="@font/doppio_one"
         android:textSize="29dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/name_start"
         android:layout_marginTop="@dimen/name_top"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/name"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,25 +57,25 @@
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="120dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="@dimen/first_edit_start"
-        android:layout_marginTop="@dimen/first_edit_top"
-        android:textSize="@dimen/infoTextSize"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"></EditText>
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="125dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="@dimen/first_edit_start"
+            android:layout_marginTop="@dimen/first_edit_top"
+            android:textSize="@dimen/infoTextSize"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"></EditText>
 
-    <EditText
-        android:id="@+id/lastName"
-        android:layout_width="120dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="@dimen/last_edit_start"
-        android:layout_marginTop="@dimen/last_edit_top"
-        android:textSize="@dimen/infoTextSize"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"></EditText>
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="139dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="@dimen/last_edit_start"
+            android:layout_marginTop="@dimen/last_edit_top"
+            android:textSize="@dimen/infoTextSize"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"></EditText>
 
     <TextView
         android:id="@+id/textView13"
@@ -80,6 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/name_start"
         android:layout_marginTop="@dimen/name_top"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/bday"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,56 +95,58 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/name_start"
         android:layout_marginTop="@dimen/horo_top"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/horoscope"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <CalendarView
-        android:id="@+id/calendarView"
 
-        android:layout_width="307dp"
-        android:layout_height="308dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12">
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:theme="@style/CalenderViewCustom"
+            android:layout_width="307dp"
+            android:layout_height="308dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="84dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
 
-    </CalendarView>
+        </CalendarView>
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="237dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="9dp"
-        android:entries="@array/horoscope_arrays"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="237dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="39dp"
+            android:entries="@array/horoscope_arrays"
+            app:layout_constraintStart_toEndOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/horo_link"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/nova_mono"
+            android:text="@string/horo_link"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="72dp"
+            android:onClick="yourQualities"
+            android:text="@string/next"
+            android:textSize="@dimen/textSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"></Button>
 
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/next"
-        android:textSize="@dimen/textSize"
-        android:onClick="yourQualities"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"></Button>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

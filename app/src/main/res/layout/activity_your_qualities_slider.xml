@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/your_qualities_slider"
     tools:context=".YourQualitiesSliderActivity">
 
     <TextView
@@ -12,15 +13,15 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/headingTextSize"
         android:text="@string/sliderHeading"
-        android:gravity="center"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/doppio_one"
+        android:gravity="center" />
 
     <TextView
         android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rich"
-        android:textColor="@color/black"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize"
         android:layout_gravity="center" />
 
@@ -37,8 +38,8 @@
         android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/social"
-        android:textColor="@color/black"
         android:textSize="@dimen/myTextSize"
         android:layout_gravity="center" />
 
@@ -54,8 +55,8 @@
         android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/intelligence"
-        android:textColor="@color/black"
         android:textSize="@dimen/myTextSize"
         android:layout_gravity="center" />
 
@@ -72,8 +73,8 @@
         android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/fun"
-        android:textColor="@color/black"
         android:textSize="@dimen/myTextSize"
         android:layout_gravity="center" />
 
@@ -89,8 +90,8 @@
         android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
         android:text="@string/looks"
-        android:textColor="@color/black"
         android:textSize="@dimen/myTextSize"
         android:layout_gravity="center" />
 
@@ -108,6 +109,8 @@
         android:textSize="@dimen/textSize"
         android:layout_margin="@dimen/margin"
         android:text="@string/next"
+        android:fontFamily="@font/doppio_one"
+        android:textAllCaps="false"
         android:onClick="theirFeatures"
         android:layout_gravity="center">
     </Button>
