@@ -9,13 +9,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class TheirFeaturesActivities extends AppCompatActivity {
-    public static final String THEIR_GAMER = "false";
-    public static final String THEIR_ATHLETE = "false";
-    public static final String THEIR_MUSICIAN = "false";
-    public static final String THEIR_INFLUENCER = "false";
-    public static final String THEIR_COOK = "false";
-    public static final String THEIR_WRITER = "false";
-    public static final String THEIR_TRAVELER = "false";
+    public static final String YOUR_GAMER = "false";
+    public static final String YOUR_ATHLETE = "false";
+    public static final String YOUR_MUSICIAN = "false";
+    public static final String YOUR_INFLUENCER = "false";
+    public static final String YOUR_COOK = "false";
+    public static final String YOUR_WRITER = "false";
+    public static final String YOUR_TRAVELER = "false";
     public static final String MY_FIRST_NAME = "firstName";
     public static final String MY_LAST_NAME = "lastName";
     public static final String MY_BIRTHDAY = "birthday";
@@ -60,13 +60,13 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         intent.putExtra(TheirQualitiesActivity.FUN_VALUE, FUN_VALUE);
         intent.putExtra(TheirQualitiesActivity.LOOKS_VALUE, LOOKS_VALUE);
 
-        intent.putExtra(TheirQualitiesActivity.THEIR_GAMER, THEIR_GAMER);
-        intent.putExtra(TheirQualitiesActivity.THEIR_TRAVELER, THEIR_TRAVELER);
-        intent.putExtra(TheirQualitiesActivity.THEIR_MUSICIAN, THEIR_MUSICIAN);
-        intent.putExtra(TheirQualitiesActivity.THEIR_COOK, THEIR_COOK);
-        intent.putExtra(TheirQualitiesActivity.THEIR_WRITER, THEIR_WRITER);
-        intent.putExtra(TheirQualitiesActivity.THEIR_INFLUENCER, THEIR_INFLUENCER);
-        intent.putExtra(TheirQualitiesActivity.THEIR_ATHLETE, THEIR_ATHLETE);
+        intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, YOUR_GAMER);
+        intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, YOUR_TRAVELER);
+        intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, YOUR_MUSICIAN);
+        intent.putExtra(TheirQualitiesActivity.YOUR_COOK, YOUR_COOK);
+        intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, YOUR_WRITER);
+        intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
+        intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, YOUR_ATHLETE);
         intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, MY_FIRST_NAME);
         intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, MY_BIRTHDAY);
