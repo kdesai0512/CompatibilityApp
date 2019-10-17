@@ -5,12 +5,14 @@
     <color name="colorAccent">#B6C28C</color>
     <color name="black">#000000</color>
     <color name="endColor">#fff</color>
-    <color name="startColor">#f67</color>
+    <color name="startColor">#B6C28C</color>
     <color name="get_to_know_you">#FFAC81</color>
     <color name="calendarCircle">#D56C98</color>
     <color name="calendarNum">#C9567E</color>
     <color name="calendarAcc">#C9567E</color>
     <color name="your_qualities">#FF928B</color>
     <color name="your_qualities_slider">#FEC3A6</color>
+
+
 
 </resources>
