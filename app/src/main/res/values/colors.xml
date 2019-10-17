@@ -2,15 +2,19 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#B6C28C</color>
+    <color name="colorAccent">#252521</color>
     <color name="black">#000000</color>
     <color name="endColor">#fff</color>
-    <color name="startColor">#f67</color>
-    <color name="get_to_know_you">#FFAC81</color>
+    <color name="startColor">#B6C28C</color>
+    <color name="get_to_know_you">#F3E1E1</color>
     <color name="calendarCircle">#D56C98</color>
-    <color name="calendarNum">#C9567E</color>
+    <color name="calendarNum">#EE749C</color>
     <color name="calendarAcc">#C9567E</color>
-    <color name="your_qualities">#FF928B</color>
-    <color name="your_qualities_slider">#FEC3A6</color>
+    <color name="your_qualities">#E7EADF</color>
+    <color name="your_qualities_slider">#D3E9EA</color>
+    <color name="their_features">#D4DADC</color>
+    <color name="their_qualities">#F1E6EF</color>
+
+
 
 </resources>

@@ -27,7 +27,6 @@
     </string-array>
 
     <string name="horo_link">
-        <a href="https://www.horoscope.com/us/index.aspx">
-        </a>click here to find out which one is yours!</string>
+        <a href="https://www.horoscope.com/us/index.aspx">click here to find out which one is yours!</a></string>
 
 </resources>
