@@ -2,8 +2,8 @@
 <resources>
     <dimen name="textSize">30dp</dimen>
     <dimen name="infoTextSize">19dp</dimen>
-    <dimen name="margin">12dp</dimen>
-    <dimen name="marginTop">75dp</dimen>
+    <dimen name="margin">20dp</dimen>
+    <dimen name="marginTop">100dp</dimen>
     <dimen name="marginStart">50dp</dimen>
     <dimen name="width">105dp</dimen>
     <dimen name="height">55dp</dimen>
