@@ -109,8 +109,8 @@
         android:textSize="@dimen/textSize"
         android:layout_margin="@dimen/margin"
         android:text="@string/next"
-        android:fontFamily="@font/doppio_one"
-        android:textAllCaps="false"
+        android:fontFamily="@font/nova_mono"
+        android:textAllCaps="true"
         android:onClick="theirFeatures"
         android:layout_gravity="center">
     </Button>

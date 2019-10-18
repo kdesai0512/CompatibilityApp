@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/theirQualitiesQuestion"
-        android:textColor="@color/black"
+        android:fontFamily="@font/doppio_one"
         android:textSize="@dimen/headingTextSize"/>
 
     <CheckBox
@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/traveler"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize"/>
 
     <CheckBox
@@ -38,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/musician"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 
     <CheckBox
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/cook"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 
     <CheckBox
@@ -54,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/writer"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 
     <CheckBox
@@ -62,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/influencer"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 
     <CheckBox
@@ -70,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/athlete"
+        android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 
     <Button
@@ -77,6 +83,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
         android:text="@string/next"
+        android:fontFamily="@font/nova_mono"
         android:onClick="finalActivity"
         android:layout_gravity="center">
     </Button>
