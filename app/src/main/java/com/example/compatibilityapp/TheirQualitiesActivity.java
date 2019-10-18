@@ -40,7 +40,6 @@ public class TheirQualitiesActivity extends AppCompatActivity {
     }
     public void finalActivity(View v)
     {
-
         CheckBox gamer = (CheckBox) findViewById(R.id.theirGamer);
         CheckBox athlete = (CheckBox) findViewById(R.id.theirAthlete);
         CheckBox cook = (CheckBox) findViewById(R.id.theirCook);
