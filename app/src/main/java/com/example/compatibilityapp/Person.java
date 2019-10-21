@@ -3,12 +3,12 @@ package com.example.compatibilityapp;
 public class Person
 {
     private String firstName, lastName, horoscope;
-    private int age, feet, inches, rich, social, intelligence, fun, looks;
+    private int age, feet, inches, rich, social, intelligence, fun, looks, points;
     private boolean gender, gamer, traveler, artist, musician,homeCook, writer, socialInfluencer, athlete;
 
     public Person(String firstName, String lastName, int age, int feet, int inches, boolean gender, String horoscope, int rich, int social, int intelligence,
                     int fun, int looks, boolean gamer, boolean traveler, boolean artist, boolean musician, boolean homeCook, boolean writer, boolean socialInfluencer,
-                    boolean athlete)
+                    boolean athlete, int points)
     {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -30,6 +30,7 @@ public class Person
         this.writer = writer;
         this.socialInfluencer = socialInfluencer;
         this.athlete = athlete;
+        this.points = points;
     }
 
     public String getFirstName() {
@@ -190,5 +191,13 @@ public class Person
 
     public void setHoroscope(String horoscope) {
         this.horoscope = horoscope;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
     }
 }

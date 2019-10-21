@@ -83,36 +83,171 @@ public class FinalActivity extends AppCompatActivity {
     }
     public static final Person[] people = {
 
-            new Person("Johnny", "Johnny", 21, 5, 6, true, "Pisces", 60, 80, 35, 95, 60, true, false, false, false, true, false, false, false),
-            new Person("Reeeeeeehanna", "Le", 32, 5, 2, false, "Sagittarius", 12, 30, 55, 52, 47, false, false, false, false, false, true, true, false),
-            new Person("Kiki", "Ded", 69, 5, 5, false, "Taurus", 5, 60, 60, 75, 45, true, true, false, false, false, false, false, false),
-            new Person("Smith", "Alejandro", 28, 5, 3, true, "Leo", 30, 55, 10, 30, 77, false, false, false, false, false, false, true, true),
-            new Person("Kerit", "Patel", 86, 5, 2, false, "Gemini", 87, 2, 92, 5, 23, false, true, false, true, false, true, false, false),
-            new Person("Adevry", "Detoolk", 18, 4, 11, false, "Gemini", 2, 42, 67, 96, 74, false, false, true, false, false, false, true, false),
-            new Person("Flowrida", "Mann", 42, 6, 1, true, "Scorpio", 27, 37, 27, 28, 29, false, false, true, false, false, false, false, false),
-            new Person("Ally", "Yen", 24, 7, 5, false, "Capricorn", 99, 1, 65, 87, 2, false, true, false, false, false, false, false, true),
-            new Person("Pedro", "Caser", 53, 5, 6, true, "Cancer", 55, 78, 13, 36, 99, true, false, false, false, false, false, true, false),
-            new Person("Dan", "Doofinshmertz", 36, 6, 0, true, "Aries", 40, 88, 40, 45, 39, false, true, false, true, false, false, false, false),
-            new Person("E", "Colie", 47, 4, 2, false, "Virgo", 50, 50, 50, 50, 50, false, false, false, false, true, false, false, false),
-            new Person("Haylee", "Norman", 19, 5, 8, false, "Pisces", 40, 68, 50, 20, 10, true, true, false, false, false, false, false, false),
-            new Person("Matt", "Nintendo", 55, 6, 9, true, "Aquarius", 76, 90, 33, 83, 57, false, false, false, true, true, false, false, false),
-            new Person("Pew", "Reserch", 34, 5, 10, true, "Libra", 22, 28, 74, 66, 14, false, false, false, false, false, true, false, false),
-            new Person("Nick", "Hicks", 26, 5, 11, true, "Capricorn", 31, 73, 43, 85, 24, false, false, false, false, false, true, false, false),
-            new Person("Rhys", "Byrne", 45, 6, 4, true, "Libra", 28, 63, 70, 73, 36, false, false, true, false, false, false, false, false),
-            new Person("KVIIIlyn", "Steele", 29, 5, 3, false, "Leo", 59, 30, 53, 43, 54, false, false, false, false, false, false, false, false),
-            new Person("Estefania", "Vargas", 84, 6, 0, false, "Pisces", 84, 40, 20, 67, 98, false, true, false, false, false, true, false, false),
-            new Person("Philip", "Dilip", 18, 5, 8, true, "Sagittarius", 10, 30, 13, 95, 34, false, false, false, false, false, false, false, false),
-            new Person("Boris", "Eckbert", 61, 6, 2, true, "Taurus", 46, 39, 94, 46, 67, true, false, false, false, false, false, false, false),
-            new Person("Lena", "Vitale", 28, 4, 11, false, "Scorpio", 25, 46, 57, 72, 62, false, false, false, true, false, false, false, true),
-            new Person("Tena", "Praveen", 19, 5, 1, false, "Cancer", 63, 71, 1, 84, 58, false, false, false, false, false, false, false, true),
-            new Person("Ana", "Hernandez", 18, 5, 9, false, "Cancer", 50, 67, 80, 97, 96, true, true, false, false, false, false, false, false),
-            new Person("Mick", "Bro", 74, 5, 11, true, "Scorpio", 40, 53, 78, 86, 98, false, false, false, true, false, false, true, true),
-            new Person("Pablo", "Trent", 27, 5, 6, true, "Taurus", 57, 65, 52, 82, 78, true, true, false, false, false, false, false, false),
-            new Person("Alex", "Third", 25, 5, 9, true, "Libra", 32, 87, 44, 79, 75, false, false, true, false, false, true, false, false),
-            new Person("Marty", "Gongey", 36, 5, 10, true, "Virgo", 83, 58, 23, 90, 85, true, true, false, false, false, false, false, false),
-            new Person("Linda", "George", 57, 5, 7, false, "Pisces", 76, 25, 89, 94, 86, true, false, false, false, false, false, true, true),
-            new Person("Angela", "Corin", 64, 4, 7, false, "Scorpio", 7, 13, 13, 8, 24, false, true, false, true, false, false, false, true)
+            new Person("Johnny", "Johnny", 21, 5, 6, true, "Pisces", 60, 80, 35, 95, 60, true, false, false, false, true, false, false, false,0),
+            new Person("Reeeeeeehanna", "Le", 32, 5, 2, false, "Sagittarius", 12, 30, 55, 52, 47, false, false, false, false, false, true, true, false,0),
+            new Person("Kiki", "Ded", 69, 5, 5, false, "Taurus", 5, 60, 60, 75, 45, true, true, false, false, false, false, false, false,0),
+            new Person("Smith", "Alejandro", 28, 5, 3, true, "Leo", 30, 55, 10, 30, 77, false, false, false, false, false, false, true, true,0),
+            new Person("Kerit", "Patel", 86, 5, 2, false, "Gemini", 87, 2, 92, 5, 23, false, true, false, true, false, true, false, false,0),
+            new Person("Adevry", "Detoolk", 18, 4, 11, false, "Gemini", 2, 42, 67, 96, 74, false, false, true, false, false, false, true, false,0),
+            new Person("Flowrida", "Mann", 42, 6, 1, true, "Scorpio", 27, 37, 27, 28, 29, false, false, true, false, false, false, false, false,0),
+            new Person("Ally", "Yen", 24, 7, 5, false, "Capricorn", 99, 1, 65, 87, 2, false, true, false, false, false, false, false, true,0),
+            new Person("Pedro", "Caser", 53, 5, 6, true, "Cancer", 55, 78, 13, 36, 99, true, false, false, false, false, false, true, false,0),
+            new Person("Dan", "Doofinshmertz", 36, 6, 0, true, "Aries", 40, 88, 40, 45, 39, false, true, false, true, false, false, false, false,0),
+            new Person("E", "Colie", 47, 4, 2, false, "Virgo", 50, 50, 50, 50, 50, false, false, false, false, true, false, false, false,0),
+            new Person("Haylee", "Norman", 19, 5, 8, false, "Pisces", 40, 68, 50, 20, 10, true, true, false, false, false, false, false, false,0),
+            new Person("Matt", "Nintendo", 55, 6, 9, true, "Aquarius", 76, 90, 33, 83, 57, false, false, false, true, true, false, false, false,0),
+            new Person("Pew", "Reserch", 34, 5, 10, true, "Libra", 22, 28, 74, 66, 14, false, false, false, false, false, true, false, false,0),
+            new Person("Nick", "Hicks", 26, 5, 11, true, "Capricorn", 31, 73, 43, 85, 24, false, false, false, false, false, true, false, false,0),
+            new Person("Rhys", "Byrne", 45, 6, 4, true, "Libra", 28, 63, 70, 73, 36, false, false, true, false, false, false, false, false,0),
+            new Person("KVIIIlyn", "Steele", 29, 5, 3, false, "Leo", 59, 30, 53, 43, 54, false, false, false, false, false, false, false, false,0),
+            new Person("Philip", "Dilip", 18, 5, 8, true, "Sagittarius", 10, 30, 13, 95, 34, false, false, false, false, false, false, false, false,0),
+            new Person("Boris", "Eckbert", 61, 6, 2, true, "Taurus", 46, 39, 94, 46, 67, true, false, false, false, false, false, false, false,0),
+            new Person("Lena", "Vitale", 28, 4, 11, false, "Scorpio", 25, 46, 57, 72, 62, false, false, false, true, false, false, false, true,0),
+            new Person("Tena", "Praveen", 19, 5, 1, false, "Cancer", 63, 71, 1, 84, 58, false, false, false, false, false, false, false, true,0),
+            new Person("Ana", "Hernandez", 18, 5, 9, false, "Cancer", 50, 67, 80, 97, 96, true, true, false, false, false, false, false, false,0),
+            new Person("Mick", "Bro", 74, 5, 11, true, "Scorpio", 40, 53, 78, 86, 98, false, false, false, true, false, false, true, true,0),
+            new Person("Pablo", "Trent", 27, 5, 6, true, "Taurus", 57, 65, 52, 82, 78, true, true, false, false, false, false, false, false,0),
+            new Person("Alex", "Third", 25, 5, 9, true, "Libra", 32, 87, 44, 79, 75, false, false, true, false, false, true, false, false,0),
+            new Person("Marty", "Gongey", 36, 5, 10, true, "Virgo", 83, 58, 23, 90, 85, true, true, false, false, false, false, false, false,0),
+            new Person("Linda", "George", 57, 5, 7, false, "Pisces", 76, 25, 89, 94, 86, true, false, false, false, false, false, true, true,0),
+            new Person("Angela", "Corin", 64, 4, 7, false, "Scorpio", 7, 13, 13, 8, 24, false, true, false, true, false, false, false, true,0)
 
     };
+
+    public void calculations()
+    {
+        String age = MY_BIRTHDAY.substring(6);
+        int age2 = Integer.parseInt(age);
+        String rich = RICH_VALUE;
+        int rich2 = Integer.parseInt(rich);
+        String social = SOCIAL_VALUE;
+        int social2 = Integer.parseInt(social);
+        String intel = INTEL_VALUE;
+        int intel2 = Integer.parseInt(intel);
+        String fun = FUN_VALUE;
+        int fun2 = Integer.parseInt(fun);
+        String looks = LOOKS_VALUE;
+        int looks2 = Integer.parseInt(looks);
+        String feet = THEIR_FEET;
+        int feet2 =  Integer.parseInt(feet);
+        String inches = THEIR_FEET;
+        int inches2 =  Integer.parseInt(inches);
+
+        boolean your_gamer2 = false;
+        boolean your_traveler2 = false;
+        boolean your_artist2 = false;
+        boolean your_musician2 = false;
+        boolean your_cook2 = false;
+        boolean your_influencer = false;
+        boolean your_writer2 = false;
+        boolean your_athlete2 = false;
+
+        if(YOUR_GAMER=="true")
+            your_gamer2 = true;
+        else
+            your_gamer2 = false;
+
+        if(YOUR_TRAVELER =="true")
+            your_traveler2 = true;
+        else
+            your_traveler2 = false;
+
+        if(YOUR_ARTIST=="true")
+            your_artist2 = true;
+        else
+            your_artist2 = false;
+
+        if(YOUR_MUSICIAN=="true")
+            your_musician2 = true;
+        else
+            your_musician2 = false;
+
+        if(YOUR_COOK=="true")
+            your_cook2 = true;
+        else
+            your_cook2 = false;
+
+        if(YOUR_INFLUENCER=="true")
+            your_influencer = true;
+        else
+            your_influencer = false;
+
+        if(YOUR_WRITER=="true")
+            your_writer2 = true;
+        else
+            your_writer2 = false;
+
+        if(YOUR_ATHLETE=="true")
+            your_athlete2 = true;
+        else
+            your_athlete2 = false;
+
+
+        new Person(MY_FIRST_NAME, MY_LAST_NAME,age2,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
+                your_cook2,your_writer2,your_influencer,your_athlete2, 0);
+
+       for (int i = 0; i < people.length; i++)
+       {
+           if(Math.abs(people[i].getAge() - age2) <=15)
+           {
+               if (people[i].getFeet() >= feet2 && people[i].getInches() >= inches2)
+               {
+                   if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isGamer() == your_gamer2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isTraveler() == your_traveler2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isArtist() == your_artist2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isMusician() == your_musician2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isHomeCook() == your_cook2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isWriter() == your_writer2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isSocialInfluencer() == your_influencer)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+                   if(people[i].isAthlete() == your_athlete2)
+                   {
+                       people[i].setPoints(people[i].getPoints() + 1);
+                   }
+
+                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
+                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
+                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
+                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
+                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
+
+
+
+               }
+
+           }
+       }
+
+
+
+
+
+
+
+    }
 
 }
