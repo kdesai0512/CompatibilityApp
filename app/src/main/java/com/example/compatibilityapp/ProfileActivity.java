@@ -12,6 +12,7 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String THEIR_INFLUENCER = "false";
     public static final String THEIR_COOK = "false";
     public static final String THEIR_WRITER = "false";
+    public static final String THEIR_ARTIST = "false";
     public static final String THEIR_TRAVELER = "false";
     public static final String MY_FIRST_NAME = "firstName";
     public static final String MY_LAST_NAME = "lastName";
@@ -32,6 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
     public static final String YOUR_MUSICIAN = "false";
     public static final String YOUR_INFLUENCER = "false";
     public static final String YOUR_COOK = "false";
+    public static final String YOUR_ARTIST = "false";
     public static final String YOUR_WRITER = "false";
     public static final String YOUR_TRAVELER = "false";
 

@@ -15,6 +15,7 @@ public class TheirQualitiesActivity extends AppCompatActivity {
     public static final String YOUR_COOK = "false";
     public static final String YOUR_WRITER = "false";
     public static final String YOUR_TRAVELER = "false";
+    public static final String YOUR_ARTIST = "false";
     public static final String MY_FIRST_NAME = "firstName";
     public static final String MY_LAST_NAME = "lastName";
     public static final String MY_BIRTHDAY = "birthday";
@@ -30,7 +31,7 @@ public class TheirQualitiesActivity extends AppCompatActivity {
     public static final String THEIR_MAX = "0";
     public static final String THEIR_GENDER = "male";
 
-    private boolean gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1;
+    private boolean gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
 
 
     @Override
@@ -47,6 +48,7 @@ public class TheirQualitiesActivity extends AppCompatActivity {
         CheckBox musician = (CheckBox) findViewById(R.id.theirMusician);
         CheckBox traveler = (CheckBox) findViewById(R.id.theirTraveler);
         CheckBox writer = (CheckBox) findViewById(R.id.theirWriter);
+        CheckBox artist = (CheckBox) findViewById(R.id.theirArtist);
 
         gamer.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -97,6 +99,13 @@ public class TheirQualitiesActivity extends AppCompatActivity {
                 writer1 = true;
             }
         });
+        artist.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View v)
+            {
+                artist1 = true;
+            }
+        });
 
 
 
@@ -109,6 +118,7 @@ public class TheirQualitiesActivity extends AppCompatActivity {
         intent.putExtra(FinalActivity.THEIR_WRITER, writer1);
         intent.putExtra(FinalActivity.THEIR_INFLUENCER, influencer1);
         intent.putExtra(FinalActivity.THEIR_ATHLETE, athlete1);
+        intent.putExtra(FinalActivity.THEIR_ARTIST, artist1);
 
         intent.putExtra(FinalActivity.THEIR_FEET, THEIR_FEET);
         intent.putExtra(FinalActivity.THEIR_INCHES, THEIR_INCHES);
@@ -130,6 +140,7 @@ public class TheirQualitiesActivity extends AppCompatActivity {
         intent.putExtra(FinalActivity.YOUR_WRITER, YOUR_WRITER);
         intent.putExtra(FinalActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
         intent.putExtra(FinalActivity.YOUR_ATHLETE, YOUR_ATHLETE);
+        intent.putExtra(FinalActivity.YOUR_ARTIST, YOUR_ARTIST);
         intent.putExtra(FinalActivity.MY_FIRST_NAME, MY_FIRST_NAME);
         intent.putExtra(FinalActivity.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(FinalActivity.MY_BIRTHDAY, MY_BIRTHDAY);

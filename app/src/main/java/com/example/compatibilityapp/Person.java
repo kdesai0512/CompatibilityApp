@@ -200,4 +200,9 @@ public class Person
     public void setPoints(int points) {
         this.points = points;
     }
+
+    public String toString() {
+        String r = "There is " + getPoints() + ".";
+        return r;
+    }
 }

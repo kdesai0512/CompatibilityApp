@@ -16,6 +16,7 @@ public class TheirFeaturesActivities extends AppCompatActivity {
     public static final String YOUR_COOK = "false";
     public static final String YOUR_WRITER = "false";
     public static final String YOUR_TRAVELER = "false";
+    public static final String YOUR_ARTIST = "false";
     public static final String MY_FIRST_NAME = "firstName";
     public static final String MY_LAST_NAME = "lastName";
     public static final String MY_BIRTHDAY = "birthday";
@@ -67,6 +68,7 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, YOUR_WRITER);
         intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
         intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, YOUR_ATHLETE);
+        intent.putExtra(TheirQualitiesActivity.YOUR_ARTIST, YOUR_ARTIST);
         intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, MY_FIRST_NAME);
         intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, MY_BIRTHDAY);

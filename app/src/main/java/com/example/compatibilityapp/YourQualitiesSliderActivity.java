@@ -16,6 +16,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
     public static final String YOUR_COOK = "false";
     public static final String YOUR_WRITER = "false";
     public static final String YOUR_TRAVELER = "false";
+    public static final String YOUR_ARTIST = "false";
     public static final String MY_FIRST_NAME = "firstName";
     public static final String MY_LAST_NAME = "lastName";
     public static final String MY_BIRTHDAY = "birthday";
@@ -78,6 +79,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         intent.putExtra(TheirFeaturesActivities.YOUR_WRITER, YOUR_WRITER);
         intent.putExtra(TheirFeaturesActivities.YOUR_INFLUENCER, YOUR_INFLUENCER);
         intent.putExtra(TheirFeaturesActivities.YOUR_ATHLETE, YOUR_ATHLETE);
+        intent.putExtra(TheirFeaturesActivities.YOUR_ARTIST, YOUR_ARTIST);
         intent.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, MY_FIRST_NAME);
         intent.putExtra(TheirFeaturesActivities.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, MY_BIRTHDAY);

@@ -14,6 +14,7 @@ public class FinalActivity extends AppCompatActivity {
     public static final String THEIR_ATHLETE = "false";
     public static final String THEIR_MUSICIAN = "false";
     public static final String THEIR_INFLUENCER = "false";
+    public static final String THEIR_ARTIST = "false";
     public static final String THEIR_COOK = "false";
     public static final String THEIR_WRITER = "false";
     public static final String THEIR_TRAVELER = "false";
@@ -38,11 +39,13 @@ public class FinalActivity extends AppCompatActivity {
     public static final String YOUR_COOK = "false";
     public static final String YOUR_WRITER = "false";
     public static final String YOUR_TRAVELER = "false";
+    public static final String YOUR_ARTIST = "false";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
+        calculations();
     }
     public void profile(View v)
     {
@@ -54,6 +57,7 @@ public class FinalActivity extends AppCompatActivity {
         intent.putExtra(ProfileActivity.THEIR_WRITER, THEIR_WRITER);
         intent.putExtra(ProfileActivity.THEIR_INFLUENCER, THEIR_INFLUENCER);
         intent.putExtra(ProfileActivity.THEIR_ATHLETE, THEIR_ATHLETE);
+        intent.putExtra(ProfileActivity.THEIR_ARTIST, THEIR_ARTIST);
 
         intent.putExtra(ProfileActivity.THEIR_FEET, THEIR_FEET);
         intent.putExtra(ProfileActivity.THEIR_INCHES, THEIR_INCHES);
@@ -75,12 +79,14 @@ public class FinalActivity extends AppCompatActivity {
         intent.putExtra(ProfileActivity.YOUR_WRITER, YOUR_WRITER);
         intent.putExtra(ProfileActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
         intent.putExtra(ProfileActivity.YOUR_ATHLETE, YOUR_ATHLETE);
+        intent.putExtra(ProfileActivity.YOUR_ARTIST, YOUR_ARTIST);
         intent.putExtra(ProfileActivity.MY_FIRST_NAME, MY_FIRST_NAME);
         intent.putExtra(ProfileActivity.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(ProfileActivity.MY_BIRTHDAY, MY_BIRTHDAY);
         intent.putExtra(ProfileActivity.MY_HOROSCOPE, MY_HOROSCOPE);
         startActivity(intent);
     }
+
     public static final Person[] people = {
 
             new Person("Johnny", "Johnny", 21, 5, 6, true, "Pisces", 60, 80, 35, 95, 60, true, false, false, false, true, false, false, false,0),
@@ -141,6 +147,7 @@ public class FinalActivity extends AppCompatActivity {
         boolean your_influencer = false;
         boolean your_writer2 = false;
         boolean your_athlete2 = false;
+       boolean their_gender2 = false;
 
         if(YOUR_GAMER=="true")
             your_gamer2 = true;
@@ -182,6 +189,13 @@ public class FinalActivity extends AppCompatActivity {
         else
             your_athlete2 = false;
 
+        if(THEIR_GENDER.equals("male"))
+            their_gender2 = true;
+        else
+            their_gender2 = false;
+
+
+
 
         new Person(MY_FIRST_NAME, MY_LAST_NAME,age2,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0);
@@ -192,52 +206,57 @@ public class FinalActivity extends AppCompatActivity {
            {
                if (people[i].getFeet() >= feet2 && people[i].getInches() >= inches2)
                {
-                   if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                   if(people[i].isGender() == their_gender2)
                    {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isGamer() == your_gamer2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isTraveler() == your_traveler2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isArtist() == your_artist2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isMusician() == your_musician2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isHomeCook() == your_cook2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isWriter() == your_writer2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isSocialInfluencer() == your_influencer)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
-                   }
-                   if(people[i].isAthlete() == your_athlete2)
-                   {
-                       people[i].setPoints(people[i].getPoints() + 1);
+                       if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isGamer() == your_gamer2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isTraveler() == your_traveler2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isArtist() == your_artist2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isMusician() == your_musician2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isHomeCook() == your_cook2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isWriter() == your_writer2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isSocialInfluencer() == your_influencer)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+                       if(people[i].isAthlete() == your_athlete2)
+                       {
+                           people[i].setPoints(people[i].getPoints() + 1);
+                       }
+
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
                    }
 
-                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
-                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
-                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
-                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
-                   people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
 
 
 
                }
+
 
            }
        }
@@ -245,7 +264,7 @@ public class FinalActivity extends AppCompatActivity {
 
 
 
-
+    System.out.println(people[4].toString());
 
 
     }

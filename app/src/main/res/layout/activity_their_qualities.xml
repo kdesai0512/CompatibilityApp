@@ -22,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/gamer"
-        android:textSize="@dimen/myTextSize" />
+        android:textSize="@dimen/myTextSize"
+        android:fontFamily="@font/nova_mono"/>
 
     <CheckBox
         android:id="@+id/theirTraveler"
@@ -75,6 +76,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/myMarginTop"
         android:text="@string/athlete"
+        android:fontFamily="@font/nova_mono"
+        android:textSize="@dimen/myTextSize" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/theirArtist"
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:text="@string/artist"
         android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/myTextSize" />
 

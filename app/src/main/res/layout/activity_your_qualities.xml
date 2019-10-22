@@ -79,6 +79,15 @@
         android:text="@string/athlete"
         android:textSize="@dimen/myTextSize" />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yourArtist"
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:text="@string/artist"
+        android:fontFamily="@font/nova_mono"
+        android:textSize="@dimen/myTextSize" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
