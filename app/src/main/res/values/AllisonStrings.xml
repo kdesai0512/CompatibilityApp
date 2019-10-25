@@ -10,8 +10,8 @@
     <string name="maximum">Max</string>
     <string name="gender">Gender:</string>
     <string name="rate">Rate the App</string>
-    <string name="mostComp">Most Compatibile:</string>
-    <string name="leastComp">Least Compatibile:</string>
+    <string name="mostComp">Most Compatible:</string>
+    <string name="leastComp">Least Compatible:</string>
     <string name="share">Share</string>
     <string name="restart">Restart</string>
     <string name="next">Next</string>

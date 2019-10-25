@@ -18,6 +18,7 @@
 
     </pl.droidsonroids.gif.GifImageView>
 
+   <!--
     <TextView
         android:id="@+id/PickOption"
         android:layout_width="wrap_content"
@@ -30,7 +31,10 @@
         android:textSize="29dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
+        -->
 
+
+   <!--
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -41,6 +45,7 @@
         android:text="@string/celeb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PickOption" />
+        -->
 
     <Button
         android:id="@+id/button3"
@@ -52,7 +57,7 @@
         android:onClick="getToKnow"
         android:text="@string/show_person"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Switch
         android:id="@+id/switch1"

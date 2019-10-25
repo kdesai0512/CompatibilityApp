@@ -202,7 +202,7 @@ public class Person
     }
 
     public String toString() {
-        String r = "There is " + getPoints() + ".";
+        String r = "Name: " + getFirstName() + " " + getLastName() + "\nAge: " + getAge() + "\nPoints: " + getPoints();
         return r;
     }
 }

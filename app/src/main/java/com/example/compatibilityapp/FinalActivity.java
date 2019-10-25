@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -46,6 +48,9 @@ public class FinalActivity extends AppCompatActivity {
     String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
     String rich, social, intel, fun, looks;
     String feet, inch, min, max,gender;
+    Button button, button2;
+    TextView text, text2;
+
 
 
     @Override
@@ -53,45 +58,50 @@ public class FinalActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
 
+        System.out.println("hello");
 
-        Intent intent = getIntent();
-        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
-        last_name_str = intent.getStringExtra(MY_LAST_NAME);
-        b_day = intent.getStringExtra(MY_BIRTHDAY);
-        horoscope = intent.getStringExtra(MY_HOROSCOPE);
+        first_name_str = MY_FIRST_NAME;
+        last_name_str = MY_LAST_NAME;
+        b_day = MY_BIRTHDAY;
+        horoscope = MY_HOROSCOPE;
 
-        gamer2 = intent.getStringExtra(YOUR_GAMER);
-        athlete2 = intent.getStringExtra(YOUR_ATHLETE);
-        musician2 = intent.getStringExtra(YOUR_MUSICIAN);
-        influencer2 = intent.getStringExtra(YOUR_INFLUENCER);
-        cook2 = intent.getStringExtra(YOUR_COOK);
-        writer2 = intent.getStringExtra(YOUR_WRITER);
-        traveler2 = intent.getStringExtra(YOUR_TRAVELER);
-        artist2 = intent.getStringExtra(YOUR_ARTIST);
+        gamer2 = YOUR_GAMER;
+        athlete2 = YOUR_ATHLETE;
+        musician2 = YOUR_MUSICIAN;
+        influencer2 = YOUR_INFLUENCER;
+        cook2 = YOUR_COOK;
+        writer2 = YOUR_WRITER;
+        traveler2 = YOUR_TRAVELER;
+        artist2 = YOUR_ARTIST;
 
-        rich = intent.getStringExtra(RICH_VALUE);
-        social = intent.getStringExtra(SOCIAL_VALUE);
-        intel = intent.getStringExtra(INTEL_VALUE);
-        fun = intent.getStringExtra(FUN_VALUE);
-        looks = intent.getStringExtra(LOOKS_VALUE);
-        feet = intent.getStringExtra(THEIR_FEET);
-        inch = intent.getStringExtra(THEIR_INCHES);
-        min = intent.getStringExtra(THEIR_MIN);
-        max = intent.getStringExtra(THEIR_MAX);
-        gender = intent.getStringExtra(THEIR_GENDER);
+        rich = RICH_VALUE;
+        social = SOCIAL_VALUE;
+        intel = INTEL_VALUE;
+        fun = FUN_VALUE;
+        looks = LOOKS_VALUE;
+        feet = THEIR_FEET;
+        inch = THEIR_INCHES;
+        min = THEIR_MIN;
+        max = THEIR_MAX;
+        gender = THEIR_GENDER;
 
-        gamer1 = intent.getStringExtra(THEIR_GAMER);
-        athlete1 = intent.getStringExtra(THEIR_ATHLETE);
-        musician1 = intent.getStringExtra(THEIR_MUSICIAN);
-        influencer1 = intent.getStringExtra(THEIR_INFLUENCER);
-        cook1 = intent.getStringExtra(THEIR_COOK);
-        writer1 = intent.getStringExtra(THEIR_WRITER);
-        traveler1 = intent.getStringExtra(THEIR_TRAVELER);
-        artist1 = intent.getStringExtra(THEIR_ARTIST);
+        gamer1 = THEIR_GAMER;
+        athlete1 = THEIR_ATHLETE;
+        musician1 = THEIR_MUSICIAN;
+        influencer1 = THEIR_INFLUENCER;
+        cook1 = THEIR_COOK;
+        writer1 = THEIR_WRITER;
+        traveler1 = THEIR_TRAVELER;
+        artist1 = THEIR_ARTIST;
+
+        button = (Button)findViewById(R.id.button4);
+        text=(TextView)findViewById(R.id.textView6);
+        button2 = (Button)findViewById(R.id.button5);
+        text2 = (TextView) findViewById(R.id.textView7);
 
 
 
-        calculations();
+
     }
     public void profile(View v) //ignore this for now?? idk the purpose of that last activity
     {
@@ -165,10 +175,10 @@ public class FinalActivity extends AppCompatActivity {
 
     };
 
-    public void calculations()
+    public void calculations(View v)
     {
-        String age = MY_BIRTHDAY.substring(6);
-        int age2 = Integer.parseInt(age);
+        //String age = MY_BIRTHDAY.substring(6);
+        //int age2 = Integer.parseInt(age);
         String rich = RICH_VALUE;
         int rich2 = Integer.parseInt(rich);
         String social = SOCIAL_VALUE;
@@ -242,12 +252,12 @@ public class FinalActivity extends AppCompatActivity {
 
 
 
-        new Person(MY_FIRST_NAME, MY_LAST_NAME,age2,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
+        new Person(MY_FIRST_NAME, MY_LAST_NAME,0,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0);
 
        for (int i = 0; i < people.length; i++)
        {
-           if(Math.abs(people[i].getAge() - age2) <=15)
+          // if(Math.abs(people[i].getAge() - age2) <=15)
            {
                if (people[i].getFeet() >= feet2 && people[i].getInches() >= inches2)
                {
@@ -305,12 +315,27 @@ public class FinalActivity extends AppCompatActivity {
 
            }
        }
+        int max = 0;
+        int index = 0;
+        for (int i = 0; i < people.length; i++) {
+            if (people[i].getPoints() > max) {
+                max = people[i].getPoints();
+                index = i;
+            }
+        }
+
+        int min = people[0].getPoints();
+        int index2 = 0;
+        for (int i = 1; i < people.length; i++) {
+            if (people[i].getPoints() > 0 && people[i].getPoints() < min) {
+                min = people[i].getPoints();
+                index2 = i;
+            }
+        }
 
 
-
-
-    System.out.println(people[4].toString());
-
+        text.setText(people[index].toString());
+        text2.setText(people[index2].toString());
 
     }
 
