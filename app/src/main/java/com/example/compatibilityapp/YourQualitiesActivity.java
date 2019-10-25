@@ -36,9 +36,14 @@ public class YourQualitiesActivity extends AppCompatActivity {
         traveler1 = false;
         writer1 = false;
         artist1 = false;
+
+        checkbox();
+
+
     }
-    public void yourQualitiesSlider(View v)
-    {
+
+    public void checkbox() {
+
         CheckBox gamer = (CheckBox) findViewById(R.id.yourGamer);
         CheckBox athlete = (CheckBox) findViewById(R.id.yourAthlete);
         CheckBox cook = (CheckBox) findViewById(R.id.yourCook);
@@ -47,14 +52,14 @@ public class YourQualitiesActivity extends AppCompatActivity {
         final CheckBox traveler = (CheckBox) findViewById(R.id.yourTraveler);
         CheckBox writer = (CheckBox) findViewById(R.id.yourWriter);
         CheckBox artist = (CheckBox) findViewById(R.id.yourArtist);
-
         gamer.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick (View v)
-        {
-            gamer1 = true;
-        }
-    });
+
+            @Override
+            public void onClick (View v)
+            {
+                gamer1 = true;
+            }
+        });
         athlete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View v)
@@ -104,6 +109,12 @@ public class YourQualitiesActivity extends AppCompatActivity {
                 artist1 = true;
             }
         });
+    }
+    public void yourQualitiesSlider(View v)
+    {
+
+
+
 
         Intent intent = new Intent(this, YourQualitiesSliderActivity.class);
         intent.putExtra(YourQualitiesSliderActivity.YOUR_GAMER, gamer1);

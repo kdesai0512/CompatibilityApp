@@ -77,9 +77,11 @@ public class TheirQualitiesActivity extends AppCompatActivity {
         traveler1 = false;
         writer1 = false;
         artist1 = false;
+
+        checkbox2();
     }
-    public void finalActivity(View v)
-    {
+
+    public void checkbox2() {
         CheckBox gamer = (CheckBox) findViewById(R.id.theirGamer);
         CheckBox athlete = (CheckBox) findViewById(R.id.theirAthlete);
         CheckBox cook = (CheckBox) findViewById(R.id.theirCook);
@@ -145,6 +147,10 @@ public class TheirQualitiesActivity extends AppCompatActivity {
                 artist1 = true;
             }
         });
+    }
+    public void finalActivity(View v)
+    {
+
 
 
 

@@ -60,7 +60,8 @@ public class FinalActivity extends AppCompatActivity {
 
         System.out.println("hello");
 
-        first_name_str = MY_FIRST_NAME;
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
         last_name_str = MY_LAST_NAME;
         b_day = MY_BIRTHDAY;
         horoscope = MY_HOROSCOPE;
@@ -202,7 +203,7 @@ public class FinalActivity extends AppCompatActivity {
         boolean your_influencer = false;
         boolean your_writer2 = false;
         boolean your_athlete2 = false;
-       boolean their_gender2 = false;
+        boolean their_gender2 = false;
 
         if(YOUR_GAMER=="true")
             your_gamer2 = true;
@@ -261,7 +262,7 @@ public class FinalActivity extends AppCompatActivity {
            {
                if (people[i].getFeet() >= feet2 && people[i].getInches() >= inches2)
                {
-                   if(people[i].isGender() == their_gender2)
+                   //if(people[i].isGender() == their_gender2)
                    {
                        if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
                        {
@@ -324,6 +325,154 @@ public class FinalActivity extends AppCompatActivity {
             }
         }
 
+
+        text.setText(people[index].toString());
+
+
+    }
+
+    public void calculations2(View v)
+    {
+        //String age = MY_BIRTHDAY.substring(6);
+        //int age2 = Integer.parseInt(age);
+        String rich = RICH_VALUE;
+        int rich2 = Integer.parseInt(rich);
+        String social = SOCIAL_VALUE;
+        int social2 = Integer.parseInt(social);
+        String intel = INTEL_VALUE;
+        int intel2 = Integer.parseInt(intel);
+        String fun = FUN_VALUE;
+        int fun2 = Integer.parseInt(fun);
+        String looks = LOOKS_VALUE;
+        int looks2 = Integer.parseInt(looks);
+        String feet = THEIR_FEET;
+        int feet2 =  Integer.parseInt(feet);
+        String inches = THEIR_FEET;
+        int inches2 =  Integer.parseInt(inches);
+
+        boolean your_gamer2 = false;
+        boolean your_traveler2 = false;
+        boolean your_artist2 = false;
+        boolean your_musician2 = false;
+        boolean your_cook2 = false;
+        boolean your_influencer = false;
+        boolean your_writer2 = false;
+        boolean your_athlete2 = false;
+        boolean their_gender2 = false;
+
+        if(YOUR_GAMER=="true")
+            your_gamer2 = true;
+        else
+            your_gamer2 = false;
+
+        if(YOUR_TRAVELER =="true")
+            your_traveler2 = true;
+        else
+            your_traveler2 = false;
+
+        if(YOUR_ARTIST=="true")
+            your_artist2 = true;
+        else
+            your_artist2 = false;
+
+        if(YOUR_MUSICIAN=="true")
+            your_musician2 = true;
+        else
+            your_musician2 = false;
+
+        if(YOUR_COOK=="true")
+            your_cook2 = true;
+        else
+            your_cook2 = false;
+
+        if(YOUR_INFLUENCER=="true")
+            your_influencer = true;
+        else
+            your_influencer = false;
+
+        if(YOUR_WRITER=="true")
+            your_writer2 = true;
+        else
+            your_writer2 = false;
+
+        if(YOUR_ATHLETE=="true")
+            your_athlete2 = true;
+        else
+            your_athlete2 = false;
+
+        if(THEIR_GENDER.equals("male"))
+            their_gender2 = true;
+        else
+            their_gender2 = false;
+
+
+
+
+        new Person(MY_FIRST_NAME, MY_LAST_NAME,0,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
+                your_cook2,your_writer2,your_influencer,your_athlete2, 0);
+
+        for (int i = 0; i < people.length; i++)
+        {
+            // if(Math.abs(people[i].getAge() - age2) <=15)
+            {
+                if (people[i].getFeet() >= feet2 && people[i].getInches() >= inches2)
+                {
+                    //if(people[i].isGender() == their_gender2)
+                    {
+                        if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isGamer() == your_gamer2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isTraveler() == your_traveler2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isArtist() == your_artist2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isMusician() == your_musician2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isHomeCook() == your_cook2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isWriter() == your_writer2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isSocialInfluencer() == your_influencer)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+                        if(people[i].isAthlete() == your_athlete2)
+                        {
+                            people[i].setPoints(people[i].getPoints() + 1);
+                        }
+
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
+                    }
+
+
+
+
+                }
+
+
+            }
+        }
+
+
         int min = people[0].getPoints();
         int index2 = 0;
         for (int i = 1; i < people.length; i++) {
@@ -334,8 +483,8 @@ public class FinalActivity extends AppCompatActivity {
         }
 
 
-        text.setText(people[index].toString());
         text2.setText(people[index2].toString());
+
 
     }
 
