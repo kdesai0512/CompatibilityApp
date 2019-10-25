@@ -13,12 +13,20 @@ public class YourQualitiesActivity extends AppCompatActivity {
     public static final String MY_LAST_NAME = "lastName";
     public static final String MY_BIRTHDAY = "birthday";
     public static final String MY_HOROSCOPE = "horoscope";
+
     private boolean gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
+    String first_name_str, last_name_str,b_day,horoscope;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities);
+
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
+        last_name_str = intent.getStringExtra(MY_LAST_NAME);
+        b_day = intent.getStringExtra(MY_BIRTHDAY);
+        horoscope = intent.getStringExtra(MY_HOROSCOPE);
 
         gamer1 = false;
         athlete1 = false;
@@ -106,10 +114,11 @@ public class YourQualitiesActivity extends AppCompatActivity {
         intent.putExtra(YourQualitiesSliderActivity.YOUR_INFLUENCER, influencer1);
         intent.putExtra(YourQualitiesSliderActivity.YOUR_ATHLETE, athlete1);
         intent.putExtra(YourQualitiesSliderActivity.YOUR_ARTIST, artist1);
-        intent.putExtra(YourQualitiesSliderActivity.MY_FIRST_NAME, MY_FIRST_NAME);
-        intent.putExtra(YourQualitiesSliderActivity.MY_LAST_NAME, MY_LAST_NAME);
-        intent.putExtra(YourQualitiesSliderActivity.MY_BIRTHDAY, MY_BIRTHDAY);
-        intent.putExtra(YourQualitiesSliderActivity.MY_HOROSCOPE, MY_HOROSCOPE);
+
+        intent.putExtra(YourQualitiesSliderActivity.MY_FIRST_NAME, first_name_str);
+        intent.putExtra(YourQualitiesSliderActivity.MY_LAST_NAME, last_name_str);
+        intent.putExtra(YourQualitiesSliderActivity.MY_BIRTHDAY, b_day);
+        intent.putExtra(YourQualitiesSliderActivity.MY_HOROSCOPE, horoscope);
 
         startActivity(intent);
     }

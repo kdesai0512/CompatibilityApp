@@ -42,6 +42,9 @@ public class GetToKnowActivity extends AppCompatActivity {
         String myFirstNameStr = myFirstName.getText().toString();
         String myLastNameStr = myLastName.getText().toString();
 
+        System.out.println(myBirthday);
+        System.out.println(myFirstNameStr);
+
         Intent intent = new Intent(this, YourQualitiesActivity.class);
         intent.putExtra(YourQualitiesActivity.MY_FIRST_NAME, myFirstNameStr);
         intent.putExtra(YourQualitiesActivity.MY_LAST_NAME, myLastNameStr);

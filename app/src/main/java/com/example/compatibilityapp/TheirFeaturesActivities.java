@@ -27,11 +27,35 @@ public class TheirFeaturesActivities extends AppCompatActivity {
     public static final String FUN_VALUE = "0";
     public static final String LOOKS_VALUE = "0";
 
+    String first_name_str, last_name_str,b_day,horoscope;
+    String gamer, athlete, musician, influencer, cook, writer, traveler, artist;
+    String rich, social, intel, fun, looks;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_their_features_activities);
+
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
+        last_name_str = intent.getStringExtra(MY_LAST_NAME);
+        b_day = intent.getStringExtra(MY_BIRTHDAY);
+        horoscope = intent.getStringExtra(MY_HOROSCOPE);
+        gamer = intent.getStringExtra(YOUR_GAMER);
+        athlete = intent.getStringExtra(YOUR_ATHLETE);
+        musician = intent.getStringExtra(YOUR_MUSICIAN);
+        influencer = intent.getStringExtra(YOUR_INFLUENCER);
+        cook = intent.getStringExtra(YOUR_COOK);
+        writer = intent.getStringExtra(YOUR_WRITER);
+        traveler = intent.getStringExtra(YOUR_TRAVELER);
+        artist = intent.getStringExtra(YOUR_ARTIST);
+        rich = intent.getStringExtra(RICH_VALUE);
+        social = intent.getStringExtra(SOCIAL_VALUE);
+        intel = intent.getStringExtra(INTEL_VALUE);
+        fun = intent.getStringExtra(FUN_VALUE);
+        looks = intent.getStringExtra(LOOKS_VALUE);
+
     }
     public void theirQualities(View v)
     {
@@ -55,24 +79,24 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         intent.putExtra(TheirQualitiesActivity.THEIR_GENDER, theirGender);
 
 
-        intent.putExtra(TheirQualitiesActivity.RICH_VALUE, RICH_VALUE);
-        intent.putExtra(TheirQualitiesActivity.SOCIAL_VALUE, SOCIAL_VALUE);
-        intent.putExtra(TheirQualitiesActivity.INTEL_VALUE, INTEL_VALUE);
-        intent.putExtra(TheirQualitiesActivity.FUN_VALUE, FUN_VALUE);
-        intent.putExtra(TheirQualitiesActivity.LOOKS_VALUE, LOOKS_VALUE);
+        intent.putExtra(TheirQualitiesActivity.RICH_VALUE, rich);
+        intent.putExtra(TheirQualitiesActivity.SOCIAL_VALUE, social);
+        intent.putExtra(TheirQualitiesActivity.INTEL_VALUE, intel);
+        intent.putExtra(TheirQualitiesActivity.FUN_VALUE, fun);
+        intent.putExtra(TheirQualitiesActivity.LOOKS_VALUE, looks);
 
-        intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, YOUR_GAMER);
-        intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, YOUR_TRAVELER);
-        intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, YOUR_MUSICIAN);
-        intent.putExtra(TheirQualitiesActivity.YOUR_COOK, YOUR_COOK);
-        intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, YOUR_WRITER);
-        intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
-        intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, YOUR_ATHLETE);
-        intent.putExtra(TheirQualitiesActivity.YOUR_ARTIST, YOUR_ARTIST);
-        intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, MY_FIRST_NAME);
-        intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, MY_LAST_NAME);
-        intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, MY_BIRTHDAY);
-        intent.putExtra(TheirQualitiesActivity.MY_HOROSCOPE, MY_HOROSCOPE);
+        intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, gamer);
+        intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, traveler);
+        intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, musician);
+        intent.putExtra(TheirQualitiesActivity.YOUR_COOK, cook);
+        intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, writer);
+        intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, influencer);
+        intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, athlete);
+        intent.putExtra(TheirQualitiesActivity.YOUR_ARTIST, artist);
+        intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, first_name_str);
+        intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, last_name_str);
+        intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, b_day);
+        intent.putExtra(TheirQualitiesActivity.MY_HOROSCOPE, horoscope);
         startActivity(intent);
     }
 }

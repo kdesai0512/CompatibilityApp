@@ -32,12 +32,51 @@ public class TheirQualitiesActivity extends AppCompatActivity {
     public static final String THEIR_GENDER = "male";
 
     private boolean gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
+    String first_name_str, last_name_str,b_day,horoscope;
+    String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
+    String rich, social, intel, fun, looks;
+    String feet, inch, min, max,gender;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_their_qualities);
+
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
+        last_name_str = intent.getStringExtra(MY_LAST_NAME);
+        b_day = intent.getStringExtra(MY_BIRTHDAY);
+        horoscope = intent.getStringExtra(MY_HOROSCOPE);
+
+        gamer2 = intent.getStringExtra(YOUR_GAMER);
+        athlete2 = intent.getStringExtra(YOUR_ATHLETE);
+        musician2 = intent.getStringExtra(YOUR_MUSICIAN);
+        influencer2 = intent.getStringExtra(YOUR_INFLUENCER);
+        cook2 = intent.getStringExtra(YOUR_COOK);
+        writer2 = intent.getStringExtra(YOUR_WRITER);
+        traveler2 = intent.getStringExtra(YOUR_TRAVELER);
+        artist2 = intent.getStringExtra(YOUR_ARTIST);
+
+        rich = intent.getStringExtra(RICH_VALUE);
+        social = intent.getStringExtra(SOCIAL_VALUE);
+        intel = intent.getStringExtra(INTEL_VALUE);
+        fun = intent.getStringExtra(FUN_VALUE);
+        looks = intent.getStringExtra(LOOKS_VALUE);
+        feet = intent.getStringExtra(THEIR_FEET);
+        inch = intent.getStringExtra(THEIR_INCHES);
+        min = intent.getStringExtra(THEIR_MIN);
+        max = intent.getStringExtra(THEIR_MAX);
+        gender = intent.getStringExtra(THEIR_GENDER);
+
+        gamer1 = false;
+        athlete1 = false;
+        cook1 = false;
+        influencer1 = false;
+        musician1 = false;
+        traveler1 = false;
+        writer1 = false;
+        artist1 = false;
     }
     public void finalActivity(View v)
     {
@@ -120,31 +159,31 @@ public class TheirQualitiesActivity extends AppCompatActivity {
         intent.putExtra(FinalActivity.THEIR_ATHLETE, athlete1);
         intent.putExtra(FinalActivity.THEIR_ARTIST, artist1);
 
-        intent.putExtra(FinalActivity.THEIR_FEET, THEIR_FEET);
-        intent.putExtra(FinalActivity.THEIR_INCHES, THEIR_INCHES);
-        intent.putExtra(FinalActivity.THEIR_MIN, THEIR_MIN);
-        intent.putExtra(FinalActivity.THEIR_MAX, THEIR_MAX);
-        intent.putExtra(FinalActivity.THEIR_GENDER, THEIR_GENDER);
+        intent.putExtra(FinalActivity.THEIR_FEET, feet);
+        intent.putExtra(FinalActivity.THEIR_INCHES, inch);
+        intent.putExtra(FinalActivity.THEIR_MIN, min);
+        intent.putExtra(FinalActivity.THEIR_MAX, max);
+        intent.putExtra(FinalActivity.THEIR_GENDER, gender);
 
 
-        intent.putExtra(FinalActivity.RICH_VALUE, RICH_VALUE);
-        intent.putExtra(FinalActivity.SOCIAL_VALUE, SOCIAL_VALUE);
-        intent.putExtra(FinalActivity.INTEL_VALUE, INTEL_VALUE);
-        intent.putExtra(FinalActivity.FUN_VALUE, FUN_VALUE);
-        intent.putExtra(FinalActivity.LOOKS_VALUE, LOOKS_VALUE);
+        intent.putExtra(FinalActivity.RICH_VALUE, rich);
+        intent.putExtra(FinalActivity.SOCIAL_VALUE, social);
+        intent.putExtra(FinalActivity.INTEL_VALUE, intel);
+        intent.putExtra(FinalActivity.FUN_VALUE, fun);
+        intent.putExtra(FinalActivity.LOOKS_VALUE, looks);
 
-        intent.putExtra(FinalActivity.YOUR_GAMER, YOUR_GAMER);
-        intent.putExtra(FinalActivity.YOUR_TRAVELER, YOUR_TRAVELER);
-        intent.putExtra(FinalActivity.YOUR_MUSICIAN, YOUR_MUSICIAN);
-        intent.putExtra(FinalActivity.YOUR_COOK, YOUR_COOK);
-        intent.putExtra(FinalActivity.YOUR_WRITER, YOUR_WRITER);
-        intent.putExtra(FinalActivity.YOUR_INFLUENCER, YOUR_INFLUENCER);
-        intent.putExtra(FinalActivity.YOUR_ATHLETE, YOUR_ATHLETE);
-        intent.putExtra(FinalActivity.YOUR_ARTIST, YOUR_ARTIST);
-        intent.putExtra(FinalActivity.MY_FIRST_NAME, MY_FIRST_NAME);
-        intent.putExtra(FinalActivity.MY_LAST_NAME, MY_LAST_NAME);
-        intent.putExtra(FinalActivity.MY_BIRTHDAY, MY_BIRTHDAY);
-        intent.putExtra(FinalActivity.MY_HOROSCOPE, MY_HOROSCOPE);
+        intent.putExtra(FinalActivity.YOUR_GAMER, gamer2);
+        intent.putExtra(FinalActivity.YOUR_TRAVELER, traveler2);
+        intent.putExtra(FinalActivity.YOUR_MUSICIAN, musician2);
+        intent.putExtra(FinalActivity.YOUR_COOK, cook2);
+        intent.putExtra(FinalActivity.YOUR_WRITER, writer2);
+        intent.putExtra(FinalActivity.YOUR_INFLUENCER, influencer2);
+        intent.putExtra(FinalActivity.YOUR_ATHLETE, athlete2);
+        intent.putExtra(FinalActivity.YOUR_ARTIST, artist2);
+        intent.putExtra(FinalActivity.MY_FIRST_NAME, first_name_str);
+        intent.putExtra(FinalActivity.MY_LAST_NAME, last_name_str);
+        intent.putExtra(FinalActivity.MY_BIRTHDAY, b_day);
+        intent.putExtra(FinalActivity.MY_HOROSCOPE, horoscope);
         startActivity(intent);
     }
 }

@@ -41,13 +41,59 @@ public class FinalActivity extends AppCompatActivity {
     public static final String YOUR_TRAVELER = "false";
     public static final String YOUR_ARTIST = "false";
 
+    String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
+    String first_name_str, last_name_str,b_day,horoscope;
+    String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
+    String rich, social, intel, fun, looks;
+    String feet, inch, min, max,gender;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
+
+
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
+        last_name_str = intent.getStringExtra(MY_LAST_NAME);
+        b_day = intent.getStringExtra(MY_BIRTHDAY);
+        horoscope = intent.getStringExtra(MY_HOROSCOPE);
+
+        gamer2 = intent.getStringExtra(YOUR_GAMER);
+        athlete2 = intent.getStringExtra(YOUR_ATHLETE);
+        musician2 = intent.getStringExtra(YOUR_MUSICIAN);
+        influencer2 = intent.getStringExtra(YOUR_INFLUENCER);
+        cook2 = intent.getStringExtra(YOUR_COOK);
+        writer2 = intent.getStringExtra(YOUR_WRITER);
+        traveler2 = intent.getStringExtra(YOUR_TRAVELER);
+        artist2 = intent.getStringExtra(YOUR_ARTIST);
+
+        rich = intent.getStringExtra(RICH_VALUE);
+        social = intent.getStringExtra(SOCIAL_VALUE);
+        intel = intent.getStringExtra(INTEL_VALUE);
+        fun = intent.getStringExtra(FUN_VALUE);
+        looks = intent.getStringExtra(LOOKS_VALUE);
+        feet = intent.getStringExtra(THEIR_FEET);
+        inch = intent.getStringExtra(THEIR_INCHES);
+        min = intent.getStringExtra(THEIR_MIN);
+        max = intent.getStringExtra(THEIR_MAX);
+        gender = intent.getStringExtra(THEIR_GENDER);
+
+        gamer1 = intent.getStringExtra(THEIR_GAMER);
+        athlete1 = intent.getStringExtra(THEIR_ATHLETE);
+        musician1 = intent.getStringExtra(THEIR_MUSICIAN);
+        influencer1 = intent.getStringExtra(THEIR_INFLUENCER);
+        cook1 = intent.getStringExtra(THEIR_COOK);
+        writer1 = intent.getStringExtra(THEIR_WRITER);
+        traveler1 = intent.getStringExtra(THEIR_TRAVELER);
+        artist1 = intent.getStringExtra(THEIR_ARTIST);
+
+
+
         calculations();
     }
-    public void profile(View v)
+    public void profile(View v) //ignore this for now?? idk the purpose of that last activity
     {
         Intent intent = new Intent(this, ProfileActivity.class);
         intent.putExtra(ProfileActivity.THEIR_GAMER, THEIR_GAMER);
@@ -84,7 +130,6 @@ public class FinalActivity extends AppCompatActivity {
         intent.putExtra(ProfileActivity.MY_LAST_NAME, MY_LAST_NAME);
         intent.putExtra(ProfileActivity.MY_BIRTHDAY, MY_BIRTHDAY);
         intent.putExtra(ProfileActivity.MY_HOROSCOPE, MY_HOROSCOPE);
-        startActivity(intent);
     }
 
     public static final Person[] people = {

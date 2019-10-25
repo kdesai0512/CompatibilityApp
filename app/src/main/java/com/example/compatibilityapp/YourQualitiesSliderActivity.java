@@ -22,11 +22,45 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
     public static final String MY_BIRTHDAY = "birthday";
     public static final String MY_HOROSCOPE = "horoscope";
 
+    String first_name_str, last_name_str,b_day,horoscope;
+    String gamer, athlete, musician, influencer, cook, writer, traveler, artist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities_slider);
+
+        Intent intent = getIntent();
+        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
+        last_name_str = intent.getStringExtra(MY_LAST_NAME);
+        b_day = intent.getStringExtra(MY_BIRTHDAY);
+        horoscope = intent.getStringExtra(MY_HOROSCOPE);
+
+        gamer = intent.getStringExtra(YOUR_GAMER);
+        athlete = intent.getStringExtra(YOUR_ATHLETE);
+        musician = intent.getStringExtra(YOUR_MUSICIAN);
+        influencer = intent.getStringExtra(YOUR_INFLUENCER);
+        cook = intent.getStringExtra(YOUR_COOK);
+        writer = intent.getStringExtra(YOUR_WRITER);
+        traveler = intent.getStringExtra(YOUR_TRAVELER);
+        artist = intent.getStringExtra(YOUR_ARTIST);
+
+        System.out.println(first_name_str);
+        System.out.println(last_name_str);
+        System.out.println(b_day);
+        System.out.println(horoscope);
+
+        System.out.println(gamer);
+        System.out.println(athlete);
+        System.out.println(musician);
+        System.out.println(influencer);
+        System.out.println(cook);
+        System.out.println(writer);
+        System.out.println(traveler);
+        System.out.println(artist);
+
+
 
     }
 
@@ -72,18 +106,19 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         intent.putExtra(TheirFeaturesActivities.FUN_VALUE, funValue);
         intent.putExtra(TheirFeaturesActivities.LOOKS_VALUE, looksValue);
 
-        intent.putExtra(TheirFeaturesActivities.YOUR_GAMER, YOUR_GAMER);
-        intent.putExtra(TheirFeaturesActivities.YOUR_TRAVELER, YOUR_TRAVELER);
-        intent.putExtra(TheirFeaturesActivities.YOUR_MUSICIAN, YOUR_MUSICIAN);
-        intent.putExtra(TheirFeaturesActivities.YOUR_COOK, YOUR_COOK);
-        intent.putExtra(TheirFeaturesActivities.YOUR_WRITER, YOUR_WRITER);
-        intent.putExtra(TheirFeaturesActivities.YOUR_INFLUENCER, YOUR_INFLUENCER);
-        intent.putExtra(TheirFeaturesActivities.YOUR_ATHLETE, YOUR_ATHLETE);
-        intent.putExtra(TheirFeaturesActivities.YOUR_ARTIST, YOUR_ARTIST);
-        intent.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, MY_FIRST_NAME);
-        intent.putExtra(TheirFeaturesActivities.MY_LAST_NAME, MY_LAST_NAME);
-        intent.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, MY_BIRTHDAY);
-        intent.putExtra(TheirFeaturesActivities.MY_HOROSCOPE, MY_HOROSCOPE);
+        intent.putExtra(TheirFeaturesActivities.YOUR_GAMER, gamer);
+        intent.putExtra(TheirFeaturesActivities.YOUR_TRAVELER, traveler);
+        intent.putExtra(TheirFeaturesActivities.YOUR_MUSICIAN, musician);
+        intent.putExtra(TheirFeaturesActivities.YOUR_COOK, cook);
+        intent.putExtra(TheirFeaturesActivities.YOUR_WRITER, writer);
+        intent.putExtra(TheirFeaturesActivities.YOUR_INFLUENCER, influencer);
+        intent.putExtra(TheirFeaturesActivities.YOUR_ATHLETE, athlete);
+        intent.putExtra(TheirFeaturesActivities.YOUR_ARTIST, artist);
+
+        intent.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, first_name_str);
+        intent.putExtra(TheirFeaturesActivities.MY_LAST_NAME, last_name_str);
+        intent.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, b_day);
+        intent.putExtra(TheirFeaturesActivities.MY_HOROSCOPE, horoscope);
 
         startActivity(intent);
     }
