@@ -20,6 +20,8 @@ import java.util.Date;
 
 public class GetToKnowActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +48,18 @@ public class GetToKnowActivity extends AppCompatActivity {
         System.out.println(myFirstNameStr);
 
         Intent intent = new Intent(this, YourQualitiesActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("FIRST_NAME",myFirstNameStr);
+        bundle.putString("LAST_NAME",myLastNameStr);
+        bundle.putString("HOROSCOPE",myHoroscope);
+        bundle.putString("BIRTHDAY",myBirthday);
+        intent.putExtras(bundle);
+        /**
         intent.putExtra(YourQualitiesActivity.MY_FIRST_NAME, myFirstNameStr);
         intent.putExtra(YourQualitiesActivity.MY_LAST_NAME, myLastNameStr);
         intent.putExtra(YourQualitiesActivity.MY_BIRTHDAY, myBirthday);
         intent.putExtra(YourQualitiesActivity.MY_HOROSCOPE, myHoroscope);
+**/
         startActivity(intent);
     }
 }

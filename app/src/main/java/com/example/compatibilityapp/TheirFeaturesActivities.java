@@ -29,7 +29,7 @@ public class TheirFeaturesActivities extends AppCompatActivity {
 
     String first_name_str, last_name_str,b_day,horoscope;
     String gamer, athlete, musician, influencer, cook, writer, traveler, artist;
-    String rich, social, intel, fun, looks;
+    int rich, social, intel, fun, looks;
 
 
     @Override
@@ -50,12 +50,26 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         writer = intent.getStringExtra(YOUR_WRITER);
         traveler = intent.getStringExtra(YOUR_TRAVELER);
         artist = intent.getStringExtra(YOUR_ARTIST);
-        rich = intent.getStringExtra(RICH_VALUE);
-        social = intent.getStringExtra(SOCIAL_VALUE);
-        intel = intent.getStringExtra(INTEL_VALUE);
-        fun = intent.getStringExtra(FUN_VALUE);
-        looks = intent.getStringExtra(LOOKS_VALUE);
+        //rich = intent.getStringExtra(RICH_VALUE);
+        //social = intent.getStringExtra(SOCIAL_VALUE);
+        //intel = intent.getStringExtra(INTEL_VALUE);
+        ///fun = intent.getStringExtra(FUN_VALUE);
+        //looks = intent.getStringExtra(LOOKS_VALUE);
 
+        Bundle bundle = intent.getExtras();
+        if (bundle != null)
+        {
+            rich = bundle.getInt("RICH_VALUE");
+            social = bundle.getInt("SOCIAL_VALUE");
+            intel = bundle.getInt("INTEL_VALUE");
+            fun = bundle.getInt("FUN_VALUE");
+            looks = bundle.getInt("LOOKS_VALUE");
+            first_name_str = bundle.getString("FIRST_NAME");
+            last_name_str = bundle.getString("LAST_NAME");
+            b_day = bundle.getString("BIRTHDAY");
+            horoscope = bundle.getString("HOROSCOPE");
+
+        }
     }
     public void theirQualities(View v)
     {
@@ -72,19 +86,38 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         String theirGender = gender.getSelectedItem().toString();
 
         Intent intent = new Intent(this, TheirQualitiesActivity.class);
-        intent.putExtra(TheirQualitiesActivity.THEIR_FEET, theirFeet);
+        /**intent.putExtra(TheirQualitiesActivity.THEIR_FEET, theirFeet);
         intent.putExtra(TheirQualitiesActivity.THEIR_INCHES, theirInches);
         intent.putExtra(TheirQualitiesActivity.THEIR_MIN, theirMin);
         intent.putExtra(TheirQualitiesActivity.THEIR_MAX, theirMax);
         intent.putExtra(TheirQualitiesActivity.THEIR_GENDER, theirGender);
+**/
+        Bundle bundle = new Bundle();
+        bundle.putString("FEET", theirFeet);
+        bundle.putString("INCHES", theirInches);
+        bundle.putString("MIN", theirMin);
+        bundle.putString("MAX", theirMax);
+        bundle.putString("GENDER", theirGender);
 
+        bundle.putInt("RICH_VALUE", rich);
+        bundle.putInt("SOCIAL_VALUE", social);
+        bundle.putInt("INTEL_VALUE", intel);
+        bundle.putInt("FUN_VALUE", fun);
+        bundle.putInt("LOOKS_VALUE", looks);
 
+        bundle.putString("FIRST_NAME",first_name_str);
+        bundle.putString("LAST_NAME",last_name_str);
+        bundle.putString("HOROSCOPE",horoscope);
+        bundle.putString("BIRTHDAY",b_day);
+        intent.putExtras(bundle);
+
+/**
         intent.putExtra(TheirQualitiesActivity.RICH_VALUE, rich);
         intent.putExtra(TheirQualitiesActivity.SOCIAL_VALUE, social);
         intent.putExtra(TheirQualitiesActivity.INTEL_VALUE, intel);
         intent.putExtra(TheirQualitiesActivity.FUN_VALUE, fun);
         intent.putExtra(TheirQualitiesActivity.LOOKS_VALUE, looks);
-
+**/
         intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, gamer);
         intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, traveler);
         intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, musician);

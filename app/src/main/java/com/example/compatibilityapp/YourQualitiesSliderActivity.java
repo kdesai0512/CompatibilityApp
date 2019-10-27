@@ -9,8 +9,8 @@ import android.widget.SeekBar;
 
 public class YourQualitiesSliderActivity extends AppCompatActivity {
 
-    public static final String YOUR_GAMER = "false";
-    public static final String YOUR_ATHLETE = "false";
+   // public static String YOUR_GAMER = "false";
+    public static String YOUR_ATHLETE = "false";
     public static final String YOUR_MUSICIAN = "false";
     public static final String YOUR_INFLUENCER = "false";
     public static final String YOUR_COOK = "false";
@@ -24,20 +24,30 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
 
     String first_name_str, last_name_str,b_day,horoscope;
     String gamer, athlete, musician, influencer, cook, writer, traveler, artist;
-
+    Intent intent, intent1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities_slider);
 
-        Intent intent = getIntent();
+        intent = getIntent();
         first_name_str = intent.getStringExtra(MY_FIRST_NAME);
         last_name_str = intent.getStringExtra(MY_LAST_NAME);
         b_day = intent.getStringExtra(MY_BIRTHDAY);
         horoscope = intent.getStringExtra(MY_HOROSCOPE);
 
-        gamer = intent.getStringExtra(YOUR_GAMER);
+        Bundle bundle = intent.getExtras();
+        if (bundle != null)
+        {
+            first_name_str = bundle.getString("FIRST_NAME");
+            last_name_str = bundle.getString("LAST_NAME");
+            b_day = bundle.getString("BIRTHDAY");
+            horoscope = bundle.getString("HOROSCOPE");
+
+        }
+      //intent1 = getIntent();
+       /** gamer = intent.getStringExtra(YOUR_GAMER);
         athlete = intent.getStringExtra(YOUR_ATHLETE);
         musician = intent.getStringExtra(YOUR_MUSICIAN);
         influencer = intent.getStringExtra(YOUR_INFLUENCER);
@@ -45,7 +55,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         writer = intent.getStringExtra(YOUR_WRITER);
         traveler = intent.getStringExtra(YOUR_TRAVELER);
         artist = intent.getStringExtra(YOUR_ARTIST);
-
+**/
         System.out.println(first_name_str);
         System.out.println(last_name_str);
         System.out.println(b_day);
@@ -63,6 +73,8 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
 
 
     }
+
+
 
     public void onProgressChanged (SeekBar rich, int progresValue, boolean fromUser) {}
     public void onStartTrackingTouch(SeekBar rich) {}
@@ -100,25 +112,41 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         int looksValue= looks.getProgress();
 
         Intent intent = new Intent(this, TheirFeaturesActivities.class);
-        intent.putExtra(TheirFeaturesActivities.RICH_VALUE, richValue);
-        intent.putExtra(TheirFeaturesActivities.SOCIAL_VALUE, socialValue);
-        intent.putExtra(TheirFeaturesActivities.INTEL_VALUE, intelValue);
-        intent.putExtra(TheirFeaturesActivities.FUN_VALUE, funValue);
-        intent.putExtra(TheirFeaturesActivities.LOOKS_VALUE, looksValue);
+        Intent intent1 = new Intent(this, FinalActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("RICH_VALUE", richValue);
+        bundle.putInt("SOCIAL_VALUE", socialValue);
+        bundle.putInt("INTEL_VALUE", intelValue);
+        bundle.putInt("FUN_VALUE", funValue);
+        bundle.putInt("LOOKS_VALUE", looksValue);
+        bundle.putString("FIRST_NAME",first_name_str);
+        bundle.putString("LAST_NAME",last_name_str);
+        bundle.putString("HOROSCOPE",horoscope);
+        bundle.putString("BIRTHDAY",b_day);
+        intent.putExtras(bundle);
 
-        intent.putExtra(TheirFeaturesActivities.YOUR_GAMER, gamer);
-        intent.putExtra(TheirFeaturesActivities.YOUR_TRAVELER, traveler);
-        intent.putExtra(TheirFeaturesActivities.YOUR_MUSICIAN, musician);
-        intent.putExtra(TheirFeaturesActivities.YOUR_COOK, cook);
-        intent.putExtra(TheirFeaturesActivities.YOUR_WRITER, writer);
-        intent.putExtra(TheirFeaturesActivities.YOUR_INFLUENCER, influencer);
-        intent.putExtra(TheirFeaturesActivities.YOUR_ATHLETE, athlete);
-        intent.putExtra(TheirFeaturesActivities.YOUR_ARTIST, artist);
 
-        intent.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, first_name_str);
-        intent.putExtra(TheirFeaturesActivities.MY_LAST_NAME, last_name_str);
-        intent.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, b_day);
-        intent.putExtra(TheirFeaturesActivities.MY_HOROSCOPE, horoscope);
+
+       /** intent1.putExtra(FinalActivity.RICH_VALUE, richValue);
+        intent1.putExtra(FinalActivity.SOCIAL_VALUE, socialValue);
+        intent1.putExtra(FinalActivity.INTEL_VALUE, intelValue);
+        intent1.putExtra(FinalActivity.FUN_VALUE, funValue);
+        intent1.putExtra(FinalActivity.LOOKS_VALUE, looksValue);
+
+
+        intent1.putExtra(TheirFeaturesActivities.YOUR_GAMER, gamer);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_TRAVELER, traveler);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_MUSICIAN, musician);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_COOK, cook);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_WRITER, writer);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_INFLUENCER, influencer);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_ATHLETE, athlete);
+        intent1.putExtra(TheirFeaturesActivities.YOUR_ARTIST, artist);
+**/
+        intent1.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, first_name_str);
+        intent1.putExtra(TheirFeaturesActivities.MY_LAST_NAME, last_name_str);
+        intent1.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, b_day);
+        intent1.putExtra(TheirFeaturesActivities.MY_HOROSCOPE, horoscope);
 
         startActivity(intent);
     }

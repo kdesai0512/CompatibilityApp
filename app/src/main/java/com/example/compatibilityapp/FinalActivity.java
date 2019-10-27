@@ -46,8 +46,8 @@ public class FinalActivity extends AppCompatActivity {
     String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
     String first_name_str, last_name_str,b_day,horoscope;
     String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
-    String rich, social, intel, fun, looks;
-    String feet, inch, min, max,gender;
+    int  rich, social, intel, fun, looks;
+    String feet, inch, min, max, gender;
     Button button, button2;
     TextView text, text2;
 
@@ -66,42 +66,65 @@ public class FinalActivity extends AppCompatActivity {
         b_day = MY_BIRTHDAY;
         horoscope = MY_HOROSCOPE;
 
-        gamer2 = YOUR_GAMER;
-        athlete2 = YOUR_ATHLETE;
-        musician2 = YOUR_MUSICIAN;
-        influencer2 = YOUR_INFLUENCER;
-        cook2 = YOUR_COOK;
-        writer2 = YOUR_WRITER;
-        traveler2 = YOUR_TRAVELER;
-        artist2 = YOUR_ARTIST;
+       // Intent intent3 = getIntent();
+        gamer2 = YourQualitiesActivity.gamer1;
+        athlete2 = YourQualitiesActivity.athlete1;
+        musician2 = YourQualitiesActivity.musician1;
+        influencer2 = YourQualitiesActivity.influencer1;
+        cook2 = YourQualitiesActivity.cook1;
+        writer2 = YourQualitiesActivity.writer1;
+        traveler2 = YourQualitiesActivity.traveler1;
+        artist2 = YourQualitiesActivity.artist1;
 
-        rich = RICH_VALUE;
-        social = SOCIAL_VALUE;
-        intel = INTEL_VALUE;
-        fun = FUN_VALUE;
-        looks = LOOKS_VALUE;
+        Bundle bundle = intent.getExtras();
+        if (bundle != null)
+        {
+            rich = bundle.getInt("RICH_VALUE");
+            social = bundle.getInt("SOCIAL_VALUE");
+            intel = bundle.getInt("INTEL_VALUE");
+            fun = bundle.getInt("FUN_VALUE");
+            looks = bundle.getInt("LOOKS_VALUE");
+            feet = bundle.getString("FEET");
+            inch = bundle.getString("INCHES");
+            max = bundle.getString("MAX");
+            min = bundle.getString("MIN");
+            gender = bundle.getString("GENDER");
+
+            first_name_str = bundle.getString("FIRST_NAME");
+            last_name_str = bundle.getString("LAST_NAME");
+            b_day = bundle.getString("BIRTHDAY");
+            horoscope = bundle.getString("HOROSCOPE");
+
+        }
+
+        /**
+
+        rich = intent.getStringExtra(RICH_VALUE);
+        social = intent.getStringExtra(SOCIAL_VALUE);
+        intel = intent.getStringExtra(INTEL_VALUE);
+        fun = intent.getStringExtra(FUN_VALUE);
+        looks = intent.getStringExtra(LOOKS_VALUE);
+
+
         feet = THEIR_FEET;
         inch = THEIR_INCHES;
         min = THEIR_MIN;
         max = THEIR_MAX;
         gender = THEIR_GENDER;
-
-        gamer1 = THEIR_GAMER;
-        athlete1 = THEIR_ATHLETE;
-        musician1 = THEIR_MUSICIAN;
-        influencer1 = THEIR_INFLUENCER;
-        cook1 = THEIR_COOK;
-        writer1 = THEIR_WRITER;
-        traveler1 = THEIR_TRAVELER;
-        artist1 = THEIR_ARTIST;
+**/
+        gamer1 = TheirQualitiesActivity.gamer1;
+        athlete1 = TheirQualitiesActivity.athlete1;
+        musician1 = TheirQualitiesActivity.musician1;
+        influencer1 = TheirQualitiesActivity.influencer1;
+        cook1 = TheirQualitiesActivity.cook1;
+        writer1 = TheirQualitiesActivity.writer1;
+        traveler1 = TheirQualitiesActivity.traveler1;
+        artist1 = TheirQualitiesActivity.artist1;
 
         button = (Button)findViewById(R.id.button4);
         text=(TextView)findViewById(R.id.textView6);
         button2 = (Button)findViewById(R.id.button5);
         text2 = (TextView) findViewById(R.id.textView7);
-
-
-
 
     }
     public void profile(View v) //ignore this for now?? idk the purpose of that last activity
@@ -180,7 +203,7 @@ public class FinalActivity extends AppCompatActivity {
     {
         //String age = MY_BIRTHDAY.substring(6);
         //int age2 = Integer.parseInt(age);
-        String rich = RICH_VALUE;
+        /**String rich = RICH_VALUE;
         int rich2 = Integer.parseInt(rich);
         String social = SOCIAL_VALUE;
         int social2 = Integer.parseInt(social);
@@ -190,6 +213,7 @@ public class FinalActivity extends AppCompatActivity {
         int fun2 = Integer.parseInt(fun);
         String looks = LOOKS_VALUE;
         int looks2 = Integer.parseInt(looks);
+         **/
         String feet = THEIR_FEET;
         int feet2 =  Integer.parseInt(feet);
         String inches = THEIR_FEET;
@@ -205,47 +229,47 @@ public class FinalActivity extends AppCompatActivity {
         boolean your_athlete2 = false;
         boolean their_gender2 = false;
 
-        if(YOUR_GAMER=="true")
+        if(gamer2.equalsIgnoreCase("true"))
             your_gamer2 = true;
         else
             your_gamer2 = false;
 
-        if(YOUR_TRAVELER =="true")
+        if(traveler2.equalsIgnoreCase("true"))
             your_traveler2 = true;
         else
             your_traveler2 = false;
 
-        if(YOUR_ARTIST=="true")
+        if(artist2.equalsIgnoreCase("true"))
             your_artist2 = true;
         else
             your_artist2 = false;
 
-        if(YOUR_MUSICIAN=="true")
+        if(musician2.equalsIgnoreCase("true"))
             your_musician2 = true;
         else
             your_musician2 = false;
 
-        if(YOUR_COOK=="true")
+        if(cook2.equalsIgnoreCase("true"))
             your_cook2 = true;
         else
             your_cook2 = false;
 
-        if(YOUR_INFLUENCER=="true")
+        if(influencer2.equalsIgnoreCase("true"))
             your_influencer = true;
         else
             your_influencer = false;
 
-        if(YOUR_WRITER=="true")
+        if(writer2.equalsIgnoreCase("true"))
             your_writer2 = true;
         else
             your_writer2 = false;
 
-        if(YOUR_ATHLETE=="true")
+        if(athlete2.equalsIgnoreCase("true"))
             your_athlete2 = true;
         else
             your_athlete2 = false;
 
-        if(THEIR_GENDER.equals("male"))
+        if(gender.equals("male"))
             their_gender2 = true;
         else
             their_gender2 = false;
@@ -253,7 +277,7 @@ public class FinalActivity extends AppCompatActivity {
 
 
 
-        new Person(MY_FIRST_NAME, MY_LAST_NAME,0,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
+        new Person(first_name_str, last_name_str,0,feet2, inches2, their_gender2, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0);
 
        for (int i = 0; i < people.length; i++)
@@ -264,7 +288,7 @@ public class FinalActivity extends AppCompatActivity {
                {
                    //if(people[i].isGender() == their_gender2)
                    {
-                       if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                       if(people[i].getHoroscope().equalsIgnoreCase(horoscope))
                        {
                            people[i].setPoints(people[i].getPoints() + 1);
                        }
@@ -301,11 +325,11 @@ public class FinalActivity extends AppCompatActivity {
                            people[i].setPoints(people[i].getPoints() + 1);
                        }
 
-                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
-                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
-                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
-                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
-                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun)));
+                       people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks)));
                    }
 
 
@@ -333,18 +357,6 @@ public class FinalActivity extends AppCompatActivity {
 
     public void calculations2(View v)
     {
-        //String age = MY_BIRTHDAY.substring(6);
-        //int age2 = Integer.parseInt(age);
-        String rich = RICH_VALUE;
-        int rich2 = Integer.parseInt(rich);
-        String social = SOCIAL_VALUE;
-        int social2 = Integer.parseInt(social);
-        String intel = INTEL_VALUE;
-        int intel2 = Integer.parseInt(intel);
-        String fun = FUN_VALUE;
-        int fun2 = Integer.parseInt(fun);
-        String looks = LOOKS_VALUE;
-        int looks2 = Integer.parseInt(looks);
         String feet = THEIR_FEET;
         int feet2 =  Integer.parseInt(feet);
         String inches = THEIR_FEET;
@@ -360,47 +372,47 @@ public class FinalActivity extends AppCompatActivity {
         boolean your_athlete2 = false;
         boolean their_gender2 = false;
 
-        if(YOUR_GAMER=="true")
+        if(gamer2.equalsIgnoreCase("true"))
             your_gamer2 = true;
         else
             your_gamer2 = false;
 
-        if(YOUR_TRAVELER =="true")
+        if(traveler2.equalsIgnoreCase("true"))
             your_traveler2 = true;
         else
             your_traveler2 = false;
 
-        if(YOUR_ARTIST=="true")
+        if(artist2.equalsIgnoreCase("true"))
             your_artist2 = true;
         else
             your_artist2 = false;
 
-        if(YOUR_MUSICIAN=="true")
+        if(musician2.equalsIgnoreCase("true"))
             your_musician2 = true;
         else
             your_musician2 = false;
 
-        if(YOUR_COOK=="true")
+        if(cook2.equalsIgnoreCase("true"))
             your_cook2 = true;
         else
             your_cook2 = false;
 
-        if(YOUR_INFLUENCER=="true")
+        if(influencer2.equalsIgnoreCase("true"))
             your_influencer = true;
         else
             your_influencer = false;
 
-        if(YOUR_WRITER=="true")
+        if(writer2.equalsIgnoreCase("true"))
             your_writer2 = true;
         else
             your_writer2 = false;
 
-        if(YOUR_ATHLETE=="true")
+        if(athlete2.equalsIgnoreCase("true"))
             your_athlete2 = true;
         else
             your_athlete2 = false;
 
-        if(THEIR_GENDER.equals("male"))
+        if(gender.equals("male"))
             their_gender2 = true;
         else
             their_gender2 = false;
@@ -408,7 +420,7 @@ public class FinalActivity extends AppCompatActivity {
 
 
 
-        new Person(MY_FIRST_NAME, MY_LAST_NAME,0,0, 0, false, MY_HOROSCOPE, rich2, social2, intel2, fun2, looks2, your_gamer2,your_traveler2,your_artist2,your_musician2,
+        new Person(first_name_str, last_name_str,0,feet2, inches2, their_gender2, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0);
 
         for (int i = 0; i < people.length; i++)
@@ -419,7 +431,7 @@ public class FinalActivity extends AppCompatActivity {
                 {
                     //if(people[i].isGender() == their_gender2)
                     {
-                        if(people[i].getHoroscope().equalsIgnoreCase(MY_HOROSCOPE))
+                        if(people[i].getHoroscope().equalsIgnoreCase(horoscope))
                         {
                             people[i].setPoints(people[i].getPoints() + 1);
                         }
@@ -456,11 +468,11 @@ public class FinalActivity extends AppCompatActivity {
                             people[i].setPoints(people[i].getPoints() + 1);
                         }
 
-                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich2)));
-                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social2)));
-                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel2)));
-                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun2)));
-                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks2)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getRich() - rich)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getSocial() - social)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getIntelligence() - intel)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getFun() - fun)));
+                        people[i].setPoints((people[i].getPoints() + Math.abs(people[i].getLooks() - looks)));
                     }
 
 
@@ -471,7 +483,6 @@ public class FinalActivity extends AppCompatActivity {
 
             }
         }
-
 
         int min = people[0].getPoints();
         int index2 = 0;
