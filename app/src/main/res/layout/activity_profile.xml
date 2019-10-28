@@ -43,21 +43,7 @@
         android:layout_gravity="center"
         android:id="@+id/mostpersonpic"/>
 
-    <Button
-        android:id="@+id/backbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="goBack"
-        android:layout_marginTop="@dimen/marginTop"
-        android:text="@string/back"></Button>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/share"></Button>
 
 
 </LinearLayout>

@@ -51,7 +51,6 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        button = (Button)findViewById(R.id.button);
         name = (TextView) findViewById(R.id.mostpersonname);
         age = (TextView) findViewById(R.id.mostpersonage);
         points = (TextView) findViewById(R.id.mostpersoncompatibility);
@@ -75,13 +74,5 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-    public void goBack(View v) {
-        Intent i = new Intent(this, FinalActivity.class); //change it to your main class
-        //the following 2 tags are for clearing the backStack and start fresh
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        finish();
-        startActivity(i);
 
-    }
 }
