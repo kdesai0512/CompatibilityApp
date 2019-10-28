@@ -131,9 +131,9 @@ public class FinalActivity extends AppCompatActivity {
          String looks = LOOKS_VALUE;
          int looks2 = Integer.parseInt(looks);
          **/
-        String feet = THEIR_FEET;
-        int feet2 =  Integer.parseInt(feet);
-        String inches = THEIR_FEET;
+        String feet1 =feet;
+        int feet2 =  Integer.parseInt(feet1);
+        String inches = inch;
         int inches2 =  Integer.parseInt(inches);
 
         boolean your_gamer2 = false;
@@ -200,10 +200,12 @@ public class FinalActivity extends AppCompatActivity {
         for (int i = 0; i < Person.people.length; i++)
         {
             // if(Math.abs(people[i].getAge() - age2) <=15)
+            int num = Person.people[i].getFeet();
+            int num1 = Person.people[i].getInches();
             {
-                if (Person.people[i].getFeet() >= feet2 && Person.people[i].getInches() >= inches2)
+                if (Person.people[i].getFeet() > feet2 || (Person.people[i].getFeet() == feet2 && Person.people[i].getInches() >= inches2))
                 {
-                    //if(Person.people[i].isGender() == their_gender2)
+                   // if(Person.people[i].getFeet() )
                     {
                         if(Person.people[i].getHoroscope().equalsIgnoreCase(horoscope))
                         {

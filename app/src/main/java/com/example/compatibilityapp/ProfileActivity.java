@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class ProfileActivity extends AppCompatActivity {
 
     public static final String THEIR_GAMER = "false";
@@ -45,6 +47,8 @@ public class ProfileActivity extends AppCompatActivity {
     Button button;
     TextView name, age, points;
     ImageView image;
+    double percent;
+    int index = 0, max = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +60,8 @@ public class ProfileActivity extends AppCompatActivity {
         points = (TextView) findViewById(R.id.mostpersoncompatibility);
         image = (ImageView) findViewById(R.id.mostpersonpic);
 
-        int max = 0;
-        int index = 0;
+         max = 0;
+         index = 0;
         for (int i = 0; i < Person.people.length; i++) {
             if (Person.people[i].getPoints() > max) {
                 max = Person.people[i].getPoints();
@@ -65,13 +69,24 @@ public class ProfileActivity extends AppCompatActivity {
             }
         }
 
+        DecimalFormat df = new DecimalFormat("0.00");
         name.setText("Name: " + Person.people[index].getFirstName() + " " + Person.people[index].getLastName());
         age.setText("Age: " + Person.people[index].getAge());
-        points.setText("Points: " + Person.people[index].getPoints());
+        percent = ((Person.people[index].getPoints())/100);
+        Double.toString(percent);
+        points.setText(df.format(percent) + "% Compatibility");
         image.setImageResource(Person.people[index].getImageResourceID());
+    }
 
-
-
+    public void shareInfo (View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+         String strToDisplay = "I am " + percent + "% compatible with " + Person.people[index].getFirstName() + " " + Person.people[index].getLastName();
+         intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = "Choose an app to send your message";
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
     }
 
 
