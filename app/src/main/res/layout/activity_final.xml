@@ -4,102 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FinalActivity">
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FinalActivity">
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rate"
+        android:layout_gravity="center"
+        android:text="Results"
+        android:textColor="@color/black"
         android:textSize="@dimen/textSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/compatibility"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/textSize"
-        android:text="% compatible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"></TextView>
+        android:layout_marginTop="@dimen/marginStart"/>
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:onClick="calculations"
         android:text="Show Me My Most Compatible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/compatibility"
-        app:layout_constraintVertical_bias="0.051"></Button>
-
-    <!-- Add the GIF view thingy -->
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="56dp"
-        android:textSize="@dimen/infoTextSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button4"></TextView>
+        android:onClick="startProfile"
+        android:layout_marginTop="@dimen/marginStart"></Button>
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Show Me My Least Compatible"
-        android:onClick="calculations2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.298"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.238"></Button>
+        android:onClick="startProfile2"
+        android:layout_marginTop="@dimen/marginStart"></Button>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="104dp"
-        android:textSize="@dimen/infoTextSize"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/marginTop"
-        android:text="@string/share"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"></Button>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/restart"
-        android:layout_marginStart="@dimen/marginStart"
-        android:layout_marginTop="@dimen/marginTop"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"></Button>
+        android:layout_gravity="center"
+        android:onClick="restart"
+        android:layout_marginTop="@dimen/marginTop"></Button>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 
     </ScrollView>

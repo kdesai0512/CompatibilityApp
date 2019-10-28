@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".Profile2Activity"></activity>
         <activity android:name=".FinalActivity" />
         <activity android:name=".TheirQualitiesActivity" />
         <activity android:name=".TheirFeaturesActivities" />

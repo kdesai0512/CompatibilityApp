@@ -5,21 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    tools:context=".Profile2Activity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ProfileActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize"
-        android:id="@+id/mostpersonname" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Profile2Activity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,38 +19,46 @@
         android:layout_gravity="center"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize"
-        android:id="@+id/mostpersonage"/>
+        android:id="@+id/leastpersonname" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textColor="@color/black"
         android:textSize="@dimen/textSize"
+        android:id="@+id/leastpersonage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/mostpersoncompatibility" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize"
+        android:id="@+id/leastpersoncompatibility" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/mostpersonpic"/>
+        android:id="@+id/leastpersonpic"/>
 
     <Button
-        android:id="@+id/backbutton"
+        android:id="@+id/backbutton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:onClick="goBack"
+        android:onClick="goBack2"
         android:layout_marginTop="@dimen/marginTop"
         android:text="@string/back"></Button>
 
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/share"></Button>
 
-
 </LinearLayout>
-    </ScrollView>
+</ScrollView>
