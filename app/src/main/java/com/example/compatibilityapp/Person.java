@@ -2,7 +2,7 @@ package com.example.compatibilityapp;
 
 public class Person
 {
-    private String firstName, lastName, horoscope;
+    private String firstName, lastName, horoscope, gamer1, traveler1, artist1, musician1, homeCook1, writer1, socialInfluencer1, athlete1, rich1, social1, intelligence1, fun1, looks1;
     private int age, feet, inches, rich, social, intelligence, fun, looks, points;
     private boolean gender, gamer, traveler, artist, musician,homeCook, writer, socialInfluencer, athlete;
     private int imageResourceID;
@@ -33,6 +33,19 @@ public class Person
         this.athlete = athlete;
         this.points = points;
         this.imageResourceID = imageResourceID;
+        gamer1 = "";
+        athlete1 = "";
+        traveler1 = "";
+        artist1 = "";
+        musician1 = "";
+        homeCook1 = "";
+        writer1 = "";
+        socialInfluencer1 = "";
+        rich1 = "";
+        social1 = "";
+        intelligence1 = "";
+        fun1 = "";
+        looks1 = "";
     }
 
     public static final Person[] people = {
@@ -268,9 +281,152 @@ public class Person
         this.points = points;
     }
 
-    public String toString() {
-        String r = "Name: " + getFirstName() + " " + getLastName() + "\nAge: " + getAge() + "\nPoints: " + getPoints();
-        return r;
+    public String description() {
+        if (isAthlete()) {
+            athlete1 = " Sports is my life and I'm super competitive.";
+        }
+        if (isArtist()) {
+            artist1 = " I love to draw. It calms me down and helps me express my thoughts.";
+        }
+        if (isGamer()) {
+            gamer1 = " I'm probably the best gamer out there and video games take up hours of my weekend.";
+        }
+        if (isHomeCook()) {
+            homeCook1 = " I don't go out to restaurants as much because I prefer cooking my own thing at home!";
+        }
+        if (isMusician()) {
+            musician1 = " Music is a huge aspect of my personality. I love to both play and listen to music everyday.";
+        }
+        if (isSocialInfluencer()) {
+            socialInfluencer1 = " I'm very active on all social media and I am pretty outgoing. Please follow me on insta!";
+        }
+        if (isTraveler()) {
+            traveler1 = " I love to explore the world and go to other countries to learn about their culture.";
+        }
+        if (isWriter()) {
+            writer1 = " I have a really big imagination and I enjoy writing stories with my ideas";
+        }
+        if (getRich() > 0 && getRich() <= 15)
+            rich1 = " not very ";
+        else if (getRich() <= 30)
+            rich1 = " a little ";
+        else if (getRich() <= 60)
+            rich1 = " pretty ";
+        else if (getRich() > 80)
+            rich1 = " very ";
+        if (getSocial() > 0 && getSocial() <= 15)
+            social1 = " not very ";
+        else if (getSocial() <= 30)
+            social1 = " a little ";
+        else if (getSocial() <= 60)
+            social1 = " pretty ";
+        else if (getSocial() > 80)
+            social1 = " very ";
+        if (getFun() > 0 && getFun() <= 15)
+            fun1 = " not very ";
+        else if (getFun() <= 30)
+            fun1 = " a little ";
+        else if (getFun() <= 60)
+            fun1 = " pretty ";
+        else if (getFun() > 80)
+            fun1 = " very ";
+        if (getIntelligence() > 0 && getIntelligence() <= 15)
+            intelligence1 = " not very ";
+        else if (getIntelligence() <= 30)
+            intelligence1 = " a little ";
+        else if (getIntelligence() <= 60)
+            intelligence1 = " pretty ";
+        else if (getIntelligence() > 80)
+            intelligence1 = " very ";
+        if (getLooks() > 0 && getLooks() <= 15)
+            looks1 = " not very ";
+        else if (getLooks() <= 30)
+            looks1 = " a little ";
+        else if (getLooks() <= 60)
+            looks1 = " pretty ";
+        else if (getLooks() > 80)
+            looks1 = " very ";
+
+
+        String description = "Hi! I'm " + getFirstName() + " " + getLastName() + ". It turns out we are super compatible so you should get to know me! Here are the basics:"
+                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm" + rich1 + "rich," +
+                social1 + "social," + intelligence1 + "intelligent," + fun1 + "fun," + looks1 + "good looking.";
+
+        return description;
+    }
+
+    public String description2() {
+        if (isAthlete()) {
+            athlete1 = " Sports is my life and I'm super competitive.";
+        }
+        if (isArtist()) {
+            artist1 = " I love to draw. It calms me down and helps me express my thoughts.";
+        }
+        if (isGamer()) {
+            gamer1 = " I'm probably the best gamer out there and video games take up hours of my weekend.";
+        }
+        if (isHomeCook()) {
+            homeCook1 = " I don't go out to restaurants as much because I prefer cooking my own thing at home!";
+        }
+        if (isMusician()) {
+            musician1 = " Music is a huge aspect of my personality. I love to both play and listen to music everyday.";
+        }
+        if (isSocialInfluencer()) {
+            socialInfluencer1 = " I'm very active on all social media and I am pretty outgoing. Please follow me on insta!";
+        }
+        if (isTraveler()) {
+            traveler1 = " I love to explore the world and go to other countries to learn about their culture.";
+        }
+        if (isWriter()) {
+            writer1 = " I have a really big imagination and I enjoy writing stories with my ideas";
+        }
+        if (getRich() > 0 && getRich() <= 15)
+            rich1 = " not very ";
+        else if (getRich() <= 30)
+            rich1 = " a little ";
+        else if (getRich() <= 60)
+            rich1 = " pretty ";
+        else if (getRich() > 80)
+            rich1 = " very ";
+        if (getSocial() > 0 && getSocial() <= 15)
+            social1 = " not very ";
+        else if (getSocial() <= 30)
+            social1 = " a little ";
+        else if (getSocial() <= 60)
+            social1 = " pretty ";
+        else if (getSocial() > 80)
+            social1 = " very ";
+        if (getFun() > 0 && getFun() <= 15)
+            fun1 = " not very ";
+        else if (getFun() <= 30)
+            fun1 = " a little ";
+        else if (getFun() <= 60)
+            fun1 = " pretty ";
+        else if (getFun() > 80)
+            fun1 = " very ";
+        if (getIntelligence() > 0 && getIntelligence() <= 15)
+            intelligence1 = " not very ";
+        else if (getIntelligence() <= 30)
+            intelligence1 = " a little ";
+        else if (getIntelligence() <= 60)
+            intelligence1 = " pretty ";
+        else if (getIntelligence() > 80)
+            intelligence1 = " very ";
+        if (getLooks() > 0 && getLooks() <= 15)
+            looks1 = " not very ";
+        else if (getLooks() <= 30)
+            looks1 = " a little ";
+        else if (getLooks() <= 60)
+            looks1 = " pretty ";
+        else if (getLooks() > 80)
+            looks1 = " very ";
+
+
+        String description = "Hi! I'm " + getFirstName() + " " + getLastName() + ". It turns out we are not very compatible so here's why! Here are the basics:"
+                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm" + rich1 + "rich," +
+                social1 + "social," + intelligence1 + "intelligent," + fun1 + "fun, and" + looks1 + "good looking.";
+
+        return description;
     }
 
     public int getImageResourceID() {
