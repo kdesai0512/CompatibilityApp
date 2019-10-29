@@ -109,7 +109,8 @@
             android:layout_height="308dp"
             android:layout_marginStart="68dp"
             android:layout_marginTop="84dp"
-            android:maxDate="31-12-2001"
+            android:maxDate="22dp"
+            android:minDate="12-12-2018"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12">
 

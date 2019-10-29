@@ -330,4 +330,11 @@ public class FinalActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+
+    public void onClick(View v)
+    {
+        Intent intent = new Intent(this, PeopleActivity.class);
+        startActivity(intent);
+    }
+
 }
