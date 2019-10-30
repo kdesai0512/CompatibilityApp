@@ -209,39 +209,39 @@ public class FinalActivity extends AppCompatActivity {
                     {
                         if(Person.people[i].getHoroscope().equalsIgnoreCase(horoscope))
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isGamer() == your_gamer2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isTraveler() == your_traveler2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isArtist() == your_artist2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isMusician() == your_musician2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isHomeCook() == your_cook2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isWriter() == your_writer2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isSocialInfluencer() == your_influencer)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
                         if(Person.people[i].isAthlete() == your_athlete2)
                         {
-                            Person.people[i].setPoints(Person.people[i].getPoints() + 1);
+                            Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
 
                         Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getRich() - rich)));
@@ -250,18 +250,9 @@ public class FinalActivity extends AppCompatActivity {
                         Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getFun() - fun)));
                         Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getLooks() - looks)));
                     }
-
-
-
-
                 }
-
-
             }
         }
-
-
-
     }
     public void profile(View v) //ignore this for now?? idk the purpose of that last activity
     {

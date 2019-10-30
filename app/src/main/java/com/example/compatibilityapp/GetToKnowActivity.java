@@ -80,107 +80,99 @@ public class GetToKnowActivity extends AppCompatActivity {
 
         String myHoroscope = "";
 
-        if (birthMonth.equalsIgnoreCase("January") && birthday > 20)
+        if (birthMonth.equalsIgnoreCase("December") && birthday > 22)
         {
             myHoroscope = "Capricorn";
         }
-        else if (birthMonth.equalsIgnoreCase("February") && birthday <= 16)
+        else if (birthMonth.equalsIgnoreCase("January") && birthday <= 20)
         {
             myHoroscope = "Capricorn";
         }
-        else if (birthMonth.equalsIgnoreCase("February") && birthday > 16)
+        else if (birthMonth.equalsIgnoreCase("January") && birthday > 20)
         {
             myHoroscope = "Aquarius";
         }
-        else if (birthMonth.equalsIgnoreCase("March") && birthday <= 11)
+        else if (birthMonth.equalsIgnoreCase("February") && birthday <= 18)
         {
             myHoroscope = "Aquarius";
         }
-        else if (birthMonth.equalsIgnoreCase("March") && birthday > 11)
+        else if (birthMonth.equalsIgnoreCase("February") && birthday > 18)
         {
             myHoroscope = "Pisces";
         }
-        else if (birthMonth.equalsIgnoreCase("April") && birthday <=18)
+        else if (birthMonth.equalsIgnoreCase("March") && birthday <=20)
         {
             myHoroscope = "Pisces";
         }
-        else if (birthMonth.equalsIgnoreCase("April") && birthday > 18)
+        else if (birthMonth.equalsIgnoreCase("March") && birthday > 20)
         {
             myHoroscope = "Aries";
         }
-        else if (birthMonth.equalsIgnoreCase("May") && birthday <=13)
+        else if (birthMonth.equalsIgnoreCase("April") && birthday <=20)
         {
             myHoroscope = "Aries";
         }
-        else if (birthMonth.equalsIgnoreCase("May") && birthday > 13)
+        else if (birthMonth.equalsIgnoreCase("April") && birthday > 20)
         {
             myHoroscope = "Taurus";
         }
-        else if (birthMonth.equalsIgnoreCase("June") && birthday <= 21)
+        else if (birthMonth.equalsIgnoreCase("May") && birthday <= 21)
         {
             myHoroscope = "Taurus";
         }
-        else if (birthMonth.equalsIgnoreCase("June") && birthday > 21)
+        else if (birthMonth.equalsIgnoreCase("May") && birthday > 21)
         {
             myHoroscope = "Gemini";
         }
-        else if (birthMonth.equalsIgnoreCase("July") && birthday <=20)
+        else if (birthMonth.equalsIgnoreCase("June") && birthday <=21)
         {
             myHoroscope = "Gemini";
         }
-        else if (birthMonth.equalsIgnoreCase("July") && birthday >20)
+        else if (birthMonth.equalsIgnoreCase("June") && birthday >21)
         {
             myHoroscope = "Cancer";
         }
-        else if (birthMonth.equalsIgnoreCase("August") && birthday <= 10)
+        else if (birthMonth.equalsIgnoreCase("July") && birthday <= 23)
         {
             myHoroscope = "Cancer";
         }
-        else if (birthMonth.equalsIgnoreCase("August") && birthday > 10)
+        else if (birthMonth.equalsIgnoreCase("July") && birthday > 23)
         {
             myHoroscope = "Leo";
         }
-        else if (birthMonth.equalsIgnoreCase("September") && birthday <=16)
+        else if (birthMonth.equalsIgnoreCase("August") && birthday <=23)
         {
             myHoroscope = "Leo";
         }
-        else if (birthMonth.equalsIgnoreCase("September") && birthday > 16)
+        else if (birthMonth.equalsIgnoreCase("August") && birthday > 23)
         {
             myHoroscope = "Virgo";
         }
-        else if (birthMonth.equalsIgnoreCase("October") && birthday <=30)
+        else if (birthMonth.equalsIgnoreCase("September") && birthday <=23)
         {
             myHoroscope = "Virgo";
         }
-        else if (birthMonth.equalsIgnoreCase("October") && birthday > 30)
+        else if (birthMonth.equalsIgnoreCase("September") && birthday > 23)
         {
             myHoroscope = "Libra";
         }
-        else if (birthMonth.equalsIgnoreCase("November") && birthday <=23)
+        else if (birthMonth.equalsIgnoreCase("October") && birthday <=23)
         {
             myHoroscope = "Libra";
         }
-        else if (birthMonth.equalsIgnoreCase("November") && birthday > 23)
+        else if (birthMonth.equalsIgnoreCase("October") && birthday > 23)
         {
             myHoroscope = "Scorpio";
         }
-        else if (birthMonth.equalsIgnoreCase("November") && birthday <=29)
+        else if (birthMonth.equalsIgnoreCase("November") && birthday <=22)
         {
             myHoroscope = "Scorpio";
         }
-        else if (birthMonth.equalsIgnoreCase("November") && birthday > 29)
-        {
-            myHoroscope = "Ophiuchus";
-        }
-        else if (birthMonth.equalsIgnoreCase("December") && birthday <=17)
-        {
-            myHoroscope = "Ophiuchus";
-        }
-        else if (birthMonth.equalsIgnoreCase("December") && birthday > 17)
+        else if (birthMonth.equalsIgnoreCase("November") && birthday > 22)
         {
             myHoroscope = "Sagittarius";
         }
-        else if (birthMonth.equalsIgnoreCase("January") && birthday <=20)
+        else if (birthMonth.equalsIgnoreCase("December") && birthday <=22)
         {
             myHoroscope = "Sagittarius";
         }
