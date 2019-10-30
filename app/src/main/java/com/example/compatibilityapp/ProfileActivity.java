@@ -69,9 +69,10 @@ public class ProfileActivity extends AppCompatActivity {
             }
         }
 
-        DecimalFormat df = new DecimalFormat("0.00");
+        DecimalFormat df = new DecimalFormat("#.##");
+
         name.setText(Person.people[index].description());
-        percent = ((Person.people[index].getPoints())/500);
+        percent = (((double)max/1400)*100);
         Double.toString(percent);
         points.setText(df.format(percent) + "% Compatibility");
         image.setImageResource(Person.people[index].getImageResourceID());
