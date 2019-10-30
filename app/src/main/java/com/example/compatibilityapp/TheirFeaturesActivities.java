@@ -75,14 +75,10 @@ public class TheirFeaturesActivities extends AppCompatActivity {
     {
         EditText feet = (EditText) findViewById(R.id.editText);
         EditText inches = (EditText) findViewById(R.id.editText2);
-        EditText min = (EditText) findViewById(R.id.editText3);
-        EditText max = (EditText) findViewById(R.id.editText4);
         Spinner gender = (Spinner) findViewById(R.id.spinner);
 
         String theirFeet = feet.getText().toString();
         String theirInches = inches.getText().toString();
-        String theirMin = min.getText().toString();
-        String theirMax = max.getText().toString();
         String theirGender = gender.getSelectedItem().toString();
 
         Intent intent = new Intent(this, TheirQualitiesActivity.class);
@@ -95,8 +91,6 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("FEET", theirFeet);
         bundle.putString("INCHES", theirInches);
-        bundle.putString("MIN", theirMin);
-        bundle.putString("MAX", theirMax);
         bundle.putString("GENDER", theirGender);
 
         bundle.putInt("RICH_VALUE", rich);
