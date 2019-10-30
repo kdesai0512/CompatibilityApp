@@ -28,8 +28,8 @@ public class GetToKnowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know);
-        TextView text = (TextView) findViewById(R.id.textView15);
-        text.setMovementMethod(LinkMovementMethod.getInstance());
+       // TextView text = (TextView) findViewById(R.id.textView15);
+       // text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     public void yourQualities(View v)
@@ -39,6 +39,7 @@ public class GetToKnowActivity extends AppCompatActivity {
 
 
         //CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
+        /**
         String min =  "13/12/2019";
 
         DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -53,16 +54,16 @@ public class GetToKnowActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-        SimpleDateFormat ss = new SimpleDateFormat("dd-MM-yyyy");
+**/
+       // SimpleDateFormat ss = new SimpleDateFormat("dd-MM-yyyy");
        // Date date1 = new Date(calendar.getDate());
        // String myBirthday= ss.format(date1);
 
 
 
 
-        Spinner mySpinner = (Spinner) findViewById(R.id.spinner2);
-        String myHoroscope = mySpinner.getSelectedItem().toString();
+        //Spinner mySpinner = (Spinner) findViewById(R.id.spinner2);
+       // String myHoroscope = mySpinner.getSelectedItem().toString();
 
         Spinner myBirthYear = (Spinner) findViewById(R.id.year);
         String birthYear = myBirthYear.getSelectedItem().toString();
@@ -71,13 +72,15 @@ public class GetToKnowActivity extends AppCompatActivity {
         String birthMonth = myBirthMonth.getSelectedItem().toString();
 
         Spinner myBirthDay = (Spinner) findViewById(R.id.day);
-        String birthDay = myBirthMonth.getSelectedItem().toString();
+        String birthDay = myBirthDay.getSelectedItem().toString();
         int birthday = Integer.parseInt(birthDay);
 
         String myFirstNameStr = myFirstName.getText().toString();
         String myLastNameStr = myLastName.getText().toString();
 
-        if (birthMonth.equalsIgnoreCase("January") && birthday >= 20)
+        String myHoroscope = "";
+
+        if (birthMonth.equalsIgnoreCase("January") && birthday > 20)
         {
             myHoroscope = "Capricorn";
         }
@@ -101,6 +104,86 @@ public class GetToKnowActivity extends AppCompatActivity {
         {
             myHoroscope = "Pisces";
         }
+        else if (birthMonth.equalsIgnoreCase("April") && birthday > 18)
+        {
+            myHoroscope = "Aries";
+        }
+        else if (birthMonth.equalsIgnoreCase("May") && birthday <=13)
+        {
+            myHoroscope = "Aries";
+        }
+        else if (birthMonth.equalsIgnoreCase("May") && birthday > 13)
+        {
+            myHoroscope = "Taurus";
+        }
+        else if (birthMonth.equalsIgnoreCase("June") && birthday <= 21)
+        {
+            myHoroscope = "Taurus";
+        }
+        else if (birthMonth.equalsIgnoreCase("June") && birthday > 21)
+        {
+            myHoroscope = "Gemini";
+        }
+        else if (birthMonth.equalsIgnoreCase("July") && birthday <=20)
+        {
+            myHoroscope = "Gemini";
+        }
+        else if (birthMonth.equalsIgnoreCase("July") && birthday >20)
+        {
+            myHoroscope = "Cancer";
+        }
+        else if (birthMonth.equalsIgnoreCase("August") && birthday <= 10)
+        {
+            myHoroscope = "Cancer";
+        }
+        else if (birthMonth.equalsIgnoreCase("August") && birthday > 10)
+        {
+            myHoroscope = "Leo";
+        }
+        else if (birthMonth.equalsIgnoreCase("September") && birthday <=16)
+        {
+            myHoroscope = "Leo";
+        }
+        else if (birthMonth.equalsIgnoreCase("September") && birthday > 16)
+        {
+            myHoroscope = "Virgo";
+        }
+        else if (birthMonth.equalsIgnoreCase("October") && birthday <=30)
+        {
+            myHoroscope = "Virgo";
+        }
+        else if (birthMonth.equalsIgnoreCase("October") && birthday > 30)
+        {
+            myHoroscope = "Libra";
+        }
+        else if (birthMonth.equalsIgnoreCase("November") && birthday <=23)
+        {
+            myHoroscope = "Libra";
+        }
+        else if (birthMonth.equalsIgnoreCase("November") && birthday > 23)
+        {
+            myHoroscope = "Scorpio";
+        }
+        else if (birthMonth.equalsIgnoreCase("November") && birthday <=29)
+        {
+            myHoroscope = "Scorpio";
+        }
+        else if (birthMonth.equalsIgnoreCase("November") && birthday > 29)
+        {
+            myHoroscope = "Ophiuchus";
+        }
+        else if (birthMonth.equalsIgnoreCase("December") && birthday <=17)
+        {
+            myHoroscope = "Ophiuchus";
+        }
+        else if (birthMonth.equalsIgnoreCase("December") && birthday > 17)
+        {
+            myHoroscope = "Sagittarius";
+        }
+        else if (birthMonth.equalsIgnoreCase("January") && birthday <=20)
+        {
+            myHoroscope = "Sagittarius";
+        }
 
        // System.out.println(myBirthday);
         System.out.println(myFirstNameStr);
@@ -110,7 +193,7 @@ public class GetToKnowActivity extends AppCompatActivity {
         bundle.putString("FIRST_NAME",myFirstNameStr);
         bundle.putString("LAST_NAME",myLastNameStr);
         bundle.putString("HOROSCOPE",myHoroscope);
-       // bundle.putString("BIRTHDAY",myBirthday);
+        bundle.putString("BIRTHDAY",birthYear);
         intent.putExtras(bundle);
         /**
         intent.putExtra(YourQualitiesActivity.MY_FIRST_NAME, myFirstNameStr);
