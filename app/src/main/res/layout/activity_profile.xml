@@ -13,12 +13,18 @@
     android:orientation="vertical"
     tools:context=".ProfileActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/mostpersonpic"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/textSize"
+        android:textSize="20sp"
         android:id="@+id/mostpersonname" />
 
     <TextView
@@ -37,11 +43,7 @@
         android:layout_gravity="center"
         android:id="@+id/mostpersoncompatibility" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/mostpersonpic"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

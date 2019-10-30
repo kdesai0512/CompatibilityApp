@@ -203,7 +203,7 @@ public class FinalActivity extends AppCompatActivity {
             int num = Person.people[i].getFeet();
             int num1 = Person.people[i].getInches();
             {
-                if (Person.people[i].getFeet() > feet2 || (Person.people[i].getFeet() == feet2 && Person.people[i].getInches() >= inches2))
+                if (Person.people[i].getFeet() > feet2 || ((Person.people[i].getFeet() == feet2 && Person.people[i].getInches() >= inches2)))
                 {
                    // if(Person.people[i].getFeet() )
                     {

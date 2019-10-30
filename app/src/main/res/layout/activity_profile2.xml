@@ -13,12 +13,18 @@
         android:orientation="vertical"
         tools:context=".Profile2Activity">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/leastpersonpic"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/textSize"
+        android:textSize="15sp"
         android:id="@+id/leastpersonname" />
 
     <TextView
@@ -37,11 +43,7 @@
         android:textSize="@dimen/textSize"
         android:id="@+id/leastpersoncompatibility" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/leastpersonpic"/>
+
 
         <Button
             android:layout_width="wrap_content"
