@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+   <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/get_to_know_you">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +14,7 @@
     android:orientation="vertical"
     android:layout_margin="@dimen/margin"
     tools:context=".ChooseCelebrityActivity">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/textSize"
+        android:entries="@array/celebrity"
         android:layout_gravity="center">
     </Spinner>
 
@@ -46,7 +55,9 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
         android:text="@string/next"
+        android:onClick="getToKnowCeleb"
         android:layout_gravity="center">
     </Button>
 
 </LinearLayout>
+    </ScrollView>

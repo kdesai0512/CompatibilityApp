@@ -21,4 +21,8 @@
         <item>Male</item>
     </string-array>
 
+    <string-array name = "celebrity">
+        <item>Alex Trebek</item>
+    </string-array>
+
 </resources>

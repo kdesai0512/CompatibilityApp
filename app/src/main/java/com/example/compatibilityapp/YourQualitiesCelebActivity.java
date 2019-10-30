@@ -7,12 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 
-public class YourQualitiesActivity extends AppCompatActivity {
-
-    public static final String MY_FIRST_NAME = "firstName";
-    public static final String MY_LAST_NAME = "lastName";
-    public static final String MY_BIRTHDAY = "birthday";
-    public static final String MY_HOROSCOPE = "horoscope";
+public class YourQualitiesCelebActivity extends AppCompatActivity {
 
     static String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
     String first_name_str, last_name_str,b_day,horoscope;
@@ -22,14 +17,9 @@ public class YourQualitiesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_qualities);
-
+        setContentView(R.layout.activity_your_qualities_celeb);
 
         intent = getIntent();
-        first_name_str = intent.getStringExtra(MY_FIRST_NAME);
-        last_name_str = intent.getStringExtra(MY_LAST_NAME);
-        b_day = intent.getStringExtra(MY_BIRTHDAY);
-        horoscope = intent.getStringExtra(MY_HOROSCOPE);
 
         Bundle bundle = intent.getExtras();
         if (bundle != null)
@@ -114,16 +104,10 @@ public class YourQualitiesActivity extends AppCompatActivity {
                 artist1 = "true";
             }
         });
-
-
-
-
-
-
     }
-    public void yourQualitiesSlider(View v)
+    public void yourQualitiesCelebSlider(View v)
     {
-        intent = new Intent(this, YourQualitiesSliderActivity.class);
+        intent = new Intent(this, YourQualitiesCelebSliderActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("FIRST_NAME",first_name_str);
         bundle.putString("LAST_NAME",last_name_str);

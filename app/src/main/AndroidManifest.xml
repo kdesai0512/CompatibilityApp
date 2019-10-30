@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PeopleActivity"></activity>
+        <activity android:name=".FinalCelebActivity"></activity>
+        <activity android:name=".YourQualitiesCelebSliderActivity" />
+        <activity android:name=".YourQualitiesCelebActivity" />
+        <activity android:name=".GetToKnowCelebActivity" />
+        <activity android:name=".PeopleActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".Profile2Activity" />
         <activity android:name=".FinalActivity" />

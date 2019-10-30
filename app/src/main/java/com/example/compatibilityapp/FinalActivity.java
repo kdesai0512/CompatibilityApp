@@ -94,21 +94,6 @@ public class FinalActivity extends AppCompatActivity {
 
         }
 
-        /**
-
-        rich = intent.getStringExtra(RICH_VALUE);
-        social = intent.getStringExtra(SOCIAL_VALUE);
-        intel = intent.getStringExtra(INTEL_VALUE);
-        fun = intent.getStringExtra(FUN_VALUE);
-        looks = intent.getStringExtra(LOOKS_VALUE);
-
-
-        feet = THEIR_FEET;
-        inch = THEIR_INCHES;
-        min = THEIR_MIN;
-        max = THEIR_MAX;
-        gender = THEIR_GENDER;
-**/
         gamer1 = TheirQualitiesActivity.gamer1;
         athlete1 = TheirQualitiesActivity.athlete1;
         musician1 = TheirQualitiesActivity.musician1;
@@ -120,17 +105,7 @@ public class FinalActivity extends AppCompatActivity {
 
         //String age = MY_BIRTHDAY.substring(6);
         //int age2 = Integer.parseInt(age);
-        /**String rich = RICH_VALUE;
-         int rich2 = Integer.parseInt(rich);
-         String social = SOCIAL_VALUE;
-         int social2 = Integer.parseInt(social);
-         String intel = INTEL_VALUE;
-         int intel2 = Integer.parseInt(intel);
-         String fun = FUN_VALUE;
-         int fun2 = Integer.parseInt(fun);
-         String looks = LOOKS_VALUE;
-         int looks2 = Integer.parseInt(looks);
-         **/
+
         String feet1 =feet;
         int feet2 =  Integer.parseInt(feet1);
         String inches = inch;

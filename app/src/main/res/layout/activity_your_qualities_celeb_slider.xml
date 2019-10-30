@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/your_qualities_slider"
+    tools:context=".YourQualitiesCelebSliderActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/headingTextSize"
+        android:text="@string/sliderHeading"
+        android:fontFamily="@font/doppio_one"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rich"
+        android:fontFamily="@font/nova_mono"
+        android:textSize="@dimen/myTextSize"
+        android:layout_gravity="center" />
+
+    <SeekBar
+        android:id="@+id/richBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/custom_progress"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
+        android:text="@string/social"
+        android:textSize="@dimen/myTextSize"
+        android:layout_gravity="center" />
+
+    <SeekBar
+        android:id="@+id/socialBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/custom_progress" />
+
+    <TextView
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
+        android:text="@string/intelligence"
+        android:textSize="@dimen/myTextSize"
+        android:layout_gravity="center" />
+
+    <SeekBar
+        android:id="@+id/intelligenceBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/custom_progress"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
+        android:text="@string/fun"
+        android:textSize="@dimen/myTextSize"
+        android:layout_gravity="center" />
+
+    <SeekBar
+        android:id="@+id/funBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/custom_progress" />
+
+    <TextView
+        android:layout_marginTop="@dimen/myMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nova_mono"
+        android:text="@string/looks"
+        android:textSize="@dimen/myTextSize"
+        android:layout_gravity="center" />
+
+    <SeekBar
+        android:id="@+id/looksBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/custom_progress" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/next"
+        android:fontFamily="@font/nova_mono"
+        android:textAllCaps="true"
+        android:onClick="finalActivityCeleb"
+        android:layout_gravity="center">
+    </Button>
+
+
+
+</LinearLayout>

@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.SeekBar;
 
-public class YourQualitiesSliderActivity extends AppCompatActivity {
+public class YourQualitiesCelebSliderActivity extends AppCompatActivity {
 
-   // public static String YOUR_GAMER = "false";
+    // public static String YOUR_GAMER = "false";
     public static String YOUR_ATHLETE = "false";
     public static final String YOUR_MUSICIAN = "false";
     public static final String YOUR_INFLUENCER = "false";
@@ -29,7 +29,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_qualities_slider);
+        setContentView(R.layout.activity_your_qualities_celeb_slider);
 
         intent = getIntent();
         first_name_str = intent.getStringExtra(MY_FIRST_NAME);
@@ -84,7 +84,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
     public void onStopTrackingTouch5(SeekBar looks) {}
 
 
-    public void theirFeatures(View v)
+    public void finalActivityCeleb(View v)
     {
         SeekBar rich = (SeekBar)  findViewById(R.id.richBar);
         SeekBar social = (SeekBar)  findViewById(R.id.socialBar);
@@ -98,7 +98,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         int funValue= fun.getProgress();
         int looksValue= looks.getProgress();
 
-        Intent intent = new Intent(this, TheirFeaturesActivities.class);
+        Intent intent = new Intent(this, FinalCelebActivity.class);
         Intent intent1 = new Intent(this, FinalActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("RICH_VALUE", richValue);
