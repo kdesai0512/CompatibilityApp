@@ -1,5 +1,8 @@
 package com.example.compatibilityapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Person
 {
     private String firstName, lastName, horoscope;
@@ -98,7 +101,7 @@ public class Person
             new Person("Marty", "Gongey", 36, 5, 10, true, "Virgo", 83, 58, 23, 90, 85, true, true, false, false, false, false, false, false,0, R.drawable.marty_gongey),
 
     };
-
+    
 
     public String getFirstName() {
         return firstName;
