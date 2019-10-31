@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <androidx.cardview.widget.CardView>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="14dp"
             android:text="Title here"
             android:textColor="@color/colorAccent"
             android:textSize="36dp"
             android:textStyle="bold" />
-        <TextView
-            android:id="@+id/subtitle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Subtitle here"
-            android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/imgcar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:src="@drawable/adevry_detoolk" />
 
 
-</LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgcar"
+            android:layout_width="98dp"
+            android:layout_height="109dp"
+            android:layout_weight="1"
+            android:src="@drawable/adevry_detoolk" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
