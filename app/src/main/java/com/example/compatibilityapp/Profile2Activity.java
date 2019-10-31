@@ -29,9 +29,9 @@ public class Profile2Activity extends AppCompatActivity {
         points = (TextView) findViewById(R.id.leastpersoncompatibility);
         image = (ImageView) findViewById(R.id.leastpersonpic);
 
-         min = Person.people[0].getPoints();
+         min = 1400;
          index2 = 0;
-        for (int i = 1; i < Person.people.length; i++) {
+        for (int i = 0; i < Person.people.length; i++) {
             if (Person.people[i].getPoints() > 0 && Person.people[i].getPoints() < min) {
                 min = Person.people[i].getPoints();
                 index2 = i;

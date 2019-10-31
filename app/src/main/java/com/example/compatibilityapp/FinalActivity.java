@@ -119,7 +119,6 @@ public class FinalActivity extends AppCompatActivity {
         boolean your_influencer = false;
         boolean your_writer2 = false;
         boolean your_athlete2 = false;
-        boolean their_gender2 = false;
 
         if(gamer2.equalsIgnoreCase("true"))
             your_gamer2 = true;
@@ -161,15 +160,12 @@ public class FinalActivity extends AppCompatActivity {
         else
             your_athlete2 = false;
 
-        if(gender.equals("male"))
-            their_gender2 = true;
-        else
-            their_gender2 = false;
 
 
 
 
-        new Person(first_name_str, last_name_str,0,feet2, inches2, their_gender2, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
+
+        new Person(first_name_str, last_name_str,0,feet2, inches2, false, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0, R.drawable.adevry_detoolk);
 
         for (int i = 0; i < Person.people.length; i++)
@@ -180,7 +176,22 @@ public class FinalActivity extends AppCompatActivity {
             {
                 if (Person.people[i].getFeet() > feet2 || ((Person.people[i].getFeet() == feet2 && Person.people[i].getInches() >= inches2)))
                 {
-                   // if(Person.people[i].getFeet() )
+                    String gender2 = "";
+                    if (Person.people[i].getGender()) {
+                        if (gender.equals("No Preference")) {
+                            gender2 = "No Preference";
+                        }
+                        else
+                        gender2 = "Male";
+                    }
+                    else if (Person.people[i].getGender() == false){
+                        if (gender.equals("No Preference")) {
+                            gender2 = "No Preference";
+                        }
+                        else
+                        gender2 = "Female";
+                    }
+                   if(gender.equals(gender2))
                     {
                         if(Person.people[i].getHoroscope().equalsIgnoreCase(horoscope))
                         {

@@ -136,6 +136,10 @@ public class Person
         return age;
     }
 
+    public boolean getGender() {
+        return gender;
+    }
+
     public void setAge(int age) {
         this.age = age;
     }
@@ -310,50 +314,50 @@ public class Person
             writer1 = " I have a really big imagination and I enjoy writing stories with my ideas";
         }
         if (getRich() > 0 && getRich() <= 15)
-            rich1 = " not very ";
+            rich1 = "not very ";
         else if (getRich() <= 30)
-            rich1 = " a little ";
+            rich1 = "a little ";
         else if (getRich() <= 60)
-            rich1 = " pretty ";
+            rich1 = "pretty ";
         else if (getRich() > 80)
-            rich1 = " very ";
+            rich1 = "very ";
         if (getSocial() > 0 && getSocial() <= 15)
-            social1 = " not very ";
+            social1 = "not very ";
         else if (getSocial() <= 30)
-            social1 = " a little ";
+            social1 = "a little ";
         else if (getSocial() <= 60)
-            social1 = " pretty ";
+            social1 = "pretty ";
         else if (getSocial() > 80)
-            social1 = " very ";
+            social1 = "very ";
         if (getFun() > 0 && getFun() <= 15)
-            fun1 = " not very ";
+            fun1 = "not very ";
         else if (getFun() <= 30)
-            fun1 = " a little ";
+            fun1 = "a little ";
         else if (getFun() <= 60)
-            fun1 = " pretty ";
+            fun1 = "pretty ";
         else if (getFun() > 80)
-            fun1 = " very ";
+            fun1 = "very ";
         if (getIntelligence() > 0 && getIntelligence() <= 15)
-            intelligence1 = " not very ";
+            intelligence1 = "not very ";
         else if (getIntelligence() <= 30)
-            intelligence1 = " a little ";
+            intelligence1 = "a little ";
         else if (getIntelligence() <= 60)
-            intelligence1 = " pretty ";
+            intelligence1 = "pretty ";
         else if (getIntelligence() > 80)
-            intelligence1 = " very ";
+            intelligence1 = "very ";
         if (getLooks() > 0 && getLooks() <= 15)
-            looks1 = " not very ";
+            looks1 = "not very ";
         else if (getLooks() <= 30)
-            looks1 = " a little ";
+            looks1 = "a little ";
         else if (getLooks() <= 60)
-            looks1 = " pretty ";
+            looks1 = "pretty ";
         else if (getLooks() > 80)
-            looks1 = " very ";
+            looks1 = "very ";
 
 
         String description = "Hi! I'm " + getFirstName() + " " + getLastName() + ". It turns out we are super compatible so you should get to know me! Here are the basics:"
-                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm" + rich1 + "rich," +
-                social1 + "social," + intelligence1 + "intelligent," + fun1 + "fun," + looks1 + "good looking.";
+                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm " + rich1 + "rich, " +
+                social1 + "social, " + intelligence1 + "intelligent, " + fun1 + "fun, and " + looks1 + "good looking.";
 
         return description;
     }
@@ -384,50 +388,50 @@ public class Person
             writer1 = " I have a really big imagination and I enjoy writing stories with my ideas";
         }
         if (getRich() > 0 && getRich() <= 15)
-            rich1 = " not very ";
+            rich1 = "not very ";
         else if (getRich() <= 30)
-            rich1 = " a little ";
+            rich1 = "a little ";
         else if (getRich() <= 60)
-            rich1 = " pretty ";
+            rich1 = "pretty ";
         else if (getRich() > 80)
-            rich1 = " very ";
+            rich1 = "very ";
         if (getSocial() > 0 && getSocial() <= 15)
-            social1 = " not very ";
+            social1 = "not very ";
         else if (getSocial() <= 30)
-            social1 = " a little ";
+            social1 = "a little ";
         else if (getSocial() <= 60)
-            social1 = " pretty ";
+            social1 = "pretty ";
         else if (getSocial() > 80)
-            social1 = " very ";
+            social1 = "very ";
         if (getFun() > 0 && getFun() <= 15)
-            fun1 = " not very ";
+            fun1 = "not very ";
         else if (getFun() <= 30)
-            fun1 = " a little ";
+            fun1 = "a little ";
         else if (getFun() <= 60)
-            fun1 = " pretty ";
+            fun1 = "pretty ";
         else if (getFun() > 80)
-            fun1 = " very ";
+            fun1 = "very ";
         if (getIntelligence() > 0 && getIntelligence() <= 15)
-            intelligence1 = " not very ";
+            intelligence1 = "not very ";
         else if (getIntelligence() <= 30)
-            intelligence1 = " a little ";
+            intelligence1 = "a little ";
         else if (getIntelligence() <= 60)
-            intelligence1 = " pretty ";
+            intelligence1 = "pretty ";
         else if (getIntelligence() > 80)
-            intelligence1 = " very ";
+            intelligence1 = "very ";
         if (getLooks() > 0 && getLooks() <= 15)
-            looks1 = " not very ";
+            looks1 = "not very ";
         else if (getLooks() <= 30)
-            looks1 = " a little ";
+            looks1 = "a little ";
         else if (getLooks() <= 60)
-            looks1 = " pretty ";
+            looks1 = "pretty ";
         else if (getLooks() > 80)
-            looks1 = " very ";
+            looks1 = "very ";
 
 
         String description = "Hi! I'm " + getFirstName() + " " + getLastName() + ". It turns out we are not very compatible so here's why! Here are the basics:"
-                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm" + rich1 + "rich," +
-                social1 + "social," + intelligence1 + "intelligent," + fun1 + "fun, and" + looks1 + "good looking.";
+                + " I am " + getAge() + " years old and I am a " + getHoroscope() + "." + athlete1 + artist1 + gamer1 + homeCook1 + musician1 + socialInfluencer1 + traveler1 + writer1 + " Also, not to brag, but I'm " + rich1 + "rich, " +
+                social1 + "social, " + intelligence1 + "intelligent, " + fun1 + "fun, and " + looks1 + "good looking.";
 
         return description;
     }
