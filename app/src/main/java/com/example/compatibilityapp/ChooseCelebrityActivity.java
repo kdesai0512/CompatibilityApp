@@ -36,12 +36,11 @@ public class ChooseCelebrityActivity extends AppCompatActivity {
     public void getToKnowCeleb(View v)
     {
         Intent intent = new Intent(this, GetToKnowCelebActivity.class);
-        startActivity(intent);
-
         Spinner spinner = (Spinner) findViewById(R.id.celebrity);
         String celebrity = spinner.getSelectedItem().toString();
         Bundle bundle = new Bundle();
         bundle.putString("CELEBRITY", celebrity);
         intent.putExtras(bundle);
+        startActivity(intent);
     }
 }

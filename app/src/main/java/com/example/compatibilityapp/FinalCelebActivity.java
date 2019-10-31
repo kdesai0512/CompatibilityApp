@@ -47,24 +47,6 @@ public class FinalCelebActivity extends AppCompatActivity {
             horoscope = bundle.getString("HOROSCOPE");
             celeb = bundle.getString("CELEBRITY");
         }
-/**
-        gamer1 = TheirQualitiesActivity.gamer1;
-        athlete1 = TheirQualitiesActivity.athlete1;
-        musician1 = TheirQualitiesActivity.musician1;
-        influencer1 = TheirQualitiesActivity.influencer1;
-        cook1 = TheirQualitiesActivity.cook1;
-        writer1 = TheirQualitiesActivity.writer1;
-        traveler1 = TheirQualitiesActivity.traveler1;
-        artist1 = TheirQualitiesActivity.artist1;
-**/
-        //String age = MY_BIRTHDAY.substring(6);
-        //int age2 = Integer.parseInt(age);
-
-      /**  String feet1 =feet;
-        int feet2 =  Integer.parseInt(feet1);
-        String inches = inch;
-        int inches2 =  Integer.parseInt(inches);
-**/
         boolean your_gamer2 = false;
         boolean your_traveler2 = false;
         boolean your_artist2 = false;
@@ -168,7 +150,7 @@ public class FinalCelebActivity extends AppCompatActivity {
                 double percent = ((((double)Celeb.celeb[i].getPoints())/1400)*100);
                 Double.toString(percent);
                 TextView percentText = (TextView) findViewById(R.id.percent);
-                percentText.setText(df.format(percent) + "% Compatibility");
+                percentText.setText("You are " + df.format(percent) + "% compatible with " + Celeb.celeb[i].getFullName() + "!");
             }
         }
 

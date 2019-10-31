@@ -10,14 +10,14 @@ import android.widget.Spinner;
 
 public class GetToKnowCelebActivity extends AppCompatActivity {
 
-    String celeb = "";
+    String celeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know_celeb);
 
-        Intent intent = new Intent();
+        Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if (bundle != null) {
             celeb = bundle.getString("CELEBRITY");

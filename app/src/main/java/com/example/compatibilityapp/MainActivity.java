@@ -36,7 +36,18 @@ public class MainActivity extends AppCompatActivity {
     public void chooseCelebrity (View v)
     {
         Intent intent = new Intent(this, ChooseCelebrityActivity.class);
-        startActivity(intent);
+        Switch sw = (Switch) findViewById(R.id.switch1);
+        if (!sw.isChecked()) {
+            Context context = getApplicationContext();
+            CharSequence text = "Please agree terms and conditions";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else {
+            startActivity(intent);
+        }
+
     }
 
 }
