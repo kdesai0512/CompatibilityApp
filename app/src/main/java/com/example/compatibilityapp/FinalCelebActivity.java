@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import java.text.DecimalFormat;
 
 public class FinalCelebActivity extends AppCompatActivity {
 
     String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
-    String first_name_str, last_name_str,b_day,horoscope;
+    String first_name_str, last_name_str,b_day,horoscope,celeb;
     String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
     int  rich, social, intel, fun, looks;
     String feet, inch, min, max, gender;
@@ -42,7 +45,7 @@ public class FinalCelebActivity extends AppCompatActivity {
             last_name_str = bundle.getString("LAST_NAME");
             b_day = bundle.getString("BIRTHDAY");
             horoscope = bundle.getString("HOROSCOPE");
-
+            celeb = bundle.getString("CELEBRITY");
         }
 /**
         gamer1 = TheirQualitiesActivity.gamer1;
@@ -112,67 +115,60 @@ public class FinalCelebActivity extends AppCompatActivity {
         else
             your_athlete2 = false;
 
-        if(gender.equals("male"))
-            their_gender2 = true;
-        else
-            their_gender2 = false;
 
-        new Celeb(first_name_str, last_name_str,0,0, 0, their_gender2, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
+
+        new Celeb(first_name_str, last_name_str,0,0, 0, false, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
                 your_cook2,your_writer2,your_influencer,your_athlete2, 0, R.drawable.adevry_detoolk);
-        for (int i = 0; i < Celeb.celeb.length; i++)
-        {
-            // if(Math.abs(people[i].getAge() - age2) <=15)
-            int num = Celeb.celeb[i].getFeet();
-            int num1 = Celeb.celeb[i].getInches();
-            {
-                //if (Celeb.celeb[i].getFeet() > feet2 || ((Celeb.celeb[i].getFeet() == feet2 && Celeb.celeb[i].getInches() >= inches2)))
+        for (int i = 0; i < Celeb.celeb.length; i++) {
+            if (Celeb.celeb[i].getFullName().equals(celeb)) {
                 {
-                    // if(Person.people[i].getFeet() )
                     {
-                        if(Celeb.celeb[i].getHoroscope().equalsIgnoreCase(horoscope))
                         {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isGamer() == your_gamer2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isTraveler() == your_traveler2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isArtist() == your_artist2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isMusician() == your_musician2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isHomeCook() == your_cook2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isWriter() == your_writer2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isSocialInfluencer() == your_influencer)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
-                        if(Celeb.celeb[i].isAthlete() == your_athlete2)
-                        {
-                            Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
-                        }
+                            if (Celeb.celeb[i].getHoroscope().equalsIgnoreCase(horoscope)) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isGamer() == your_gamer2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isTraveler() == your_traveler2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isArtist() == your_artist2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isMusician() == your_musician2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isHomeCook() == your_cook2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isWriter() == your_writer2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isSocialInfluencer() == your_influencer) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
+                            if (Celeb.celeb[i].isAthlete() == your_athlete2) {
+                                Celeb.celeb[i].setPoints(Celeb.celeb[i].getPoints() + 100);
+                            }
 
-                        Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getRich() - rich)));
-                        Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getSocial() - social)));
-                        Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getIntelligence() - intel)));
-                        Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getFun() - fun)));
-                        Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getLooks() - looks)));
+                            Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getRich() - rich)));
+                            Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getSocial() - social)));
+                            Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getIntelligence() - intel)));
+                            Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getFun() - fun)));
+                            Celeb.celeb[i].setPoints((Celeb.celeb[i].getPoints() + Math.abs(Celeb.celeb[i].getLooks() - looks)));
+                        }
                     }
                 }
+            }
+        }
+        DecimalFormat df = new DecimalFormat("#.##");
+        for (int i = 0; i < Celeb.celeb.length; i++) {
+            if (Celeb.celeb[i].getPoints() > 0) {
+                double percent = ((((double)Celeb.celeb[i].getPoints())/1400)*100);
+                Double.toString(percent);
+                TextView percentText = (TextView) findViewById(R.id.percent);
+                percentText.setText(df.format(percent) + "% Compatibility");
             }
         }
 

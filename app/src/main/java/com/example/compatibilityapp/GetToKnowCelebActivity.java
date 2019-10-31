@@ -10,10 +10,18 @@ import android.widget.Spinner;
 
 public class GetToKnowCelebActivity extends AppCompatActivity {
 
+    String celeb = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know_celeb);
+
+        Intent intent = new Intent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            celeb = bundle.getString("CELEBRITY");
+        }
     }
 
     public void yourQualitiesCeleb (View v)
@@ -140,6 +148,7 @@ public class GetToKnowCelebActivity extends AppCompatActivity {
             bundle.putString("LAST_NAME",myLastNameStr);
             bundle.putString("HOROSCOPE",myHoroscope);
             bundle.putString("BIRTHDAY",birthYear);
+            bundle.putString("CELEBRITY", celeb);
             intent.putExtras(bundle);
             startActivity(intent);
         }

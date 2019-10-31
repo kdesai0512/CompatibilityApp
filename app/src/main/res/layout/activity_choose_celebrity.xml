@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/textSize"
         android:entries="@array/celebrity"
+        android:id="@+id/celebrity"
         android:layout_gravity="center">
     </Spinner>
 
@@ -38,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:id="@+id/celebimage"
         android:layout_margin="@dimen/marginTop">
     </ImageView>
 
@@ -45,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
+        android:id="@+id/description"
         android:layout_gravity="center"
         android:layout_margin="@dimen/marginTop"
         android:text="Description">

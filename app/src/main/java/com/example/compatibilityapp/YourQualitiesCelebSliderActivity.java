@@ -22,7 +22,7 @@ public class YourQualitiesCelebSliderActivity extends AppCompatActivity {
     public static final String MY_BIRTHDAY = "birthday";
     public static final String MY_HOROSCOPE = "horoscope";
 
-    String first_name_str, last_name_str,b_day,horoscope;
+    String first_name_str, last_name_str,b_day,horoscope, celeb;
     String gamer, athlete, musician, influencer, cook, writer, traveler, artist;
     Intent intent, intent1;
 
@@ -44,6 +44,7 @@ public class YourQualitiesCelebSliderActivity extends AppCompatActivity {
             last_name_str = bundle.getString("LAST_NAME");
             b_day = bundle.getString("BIRTHDAY");
             horoscope = bundle.getString("HOROSCOPE");
+            celeb = bundle.getString("CELEBRITY");
 
         }
         System.out.println(first_name_str);
@@ -110,6 +111,7 @@ public class YourQualitiesCelebSliderActivity extends AppCompatActivity {
         bundle.putString("LAST_NAME",last_name_str);
         bundle.putString("HOROSCOPE",horoscope);
         bundle.putString("BIRTHDAY",b_day);
+        bundle.putString("CELEBRITY",celeb);
         intent.putExtras(bundle);
 
         intent1.putExtra(TheirFeaturesActivities.MY_FIRST_NAME, first_name_str);

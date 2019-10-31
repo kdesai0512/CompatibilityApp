@@ -96,6 +96,10 @@ public class Celeb {
         return artist1;
     }
 
+    public String getFullName() {
+        return getFirstName() + " " + getLastName();
+    }
+
     public void setArtist1(String artist1) {
         this.artist1 = artist1;
     }

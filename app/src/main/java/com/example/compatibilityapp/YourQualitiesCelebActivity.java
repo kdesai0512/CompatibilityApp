@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 public class YourQualitiesCelebActivity extends AppCompatActivity {
 
     static String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
-    String first_name_str, last_name_str,b_day,horoscope;
+    String first_name_str, last_name_str,b_day,horoscope, celeb;
 
     Intent intent, intent1;
 
@@ -28,6 +28,7 @@ public class YourQualitiesCelebActivity extends AppCompatActivity {
             last_name_str = bundle.getString("LAST_NAME");
             b_day = bundle.getString("BIRTHDAY");
             horoscope = bundle.getString("HOROSCOPE");
+            celeb = bundle.getString("CELEBRITY");
         }
 
         gamer1 = "false";
@@ -113,12 +114,8 @@ public class YourQualitiesCelebActivity extends AppCompatActivity {
         bundle.putString("LAST_NAME",last_name_str);
         bundle.putString("HOROSCOPE",horoscope);
         bundle.putString("BIRTHDAY",b_day);
+        bundle.putString("CELEBRITY", celeb);
         intent.putExtras(bundle);
-
-        intent.putExtra(YourQualitiesSliderActivity.MY_FIRST_NAME, first_name_str);
-        intent.putExtra(YourQualitiesSliderActivity.MY_LAST_NAME, last_name_str);
-        intent.putExtra(YourQualitiesSliderActivity.MY_BIRTHDAY, b_day);
-        intent.putExtra(YourQualitiesSliderActivity.MY_HOROSCOPE, horoscope);
         startActivity(intent);
     }
 }
