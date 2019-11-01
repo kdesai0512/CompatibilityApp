@@ -2,14 +2,14 @@ package com.example.compatibilityapp;
 
 public class Celeb {
 
-    private String firstName, lastName, horoscope, gamer1, traveler1, artist1, musician1, homeCook1, writer1, socialInfluencer1, athlete1, rich1, social1, intelligence1, fun1, looks1;
+    private String firstName, lastName, horoscope, gamer1, traveler1, artist1, musician1, homeCook1, writer1, socialInfluencer1, athlete1, rich1, social1, intelligence1, fun1, looks1, description;
     private int age, feet, inches, rich, social, intelligence, fun, looks, points;
     private boolean gender, gamer, traveler, artist, musician,homeCook, writer, socialInfluencer, athlete;
     private int imageResourceID;
 
     public Celeb (String firstName, String lastName, int age, int feet, int inches, boolean gender, String horoscope, int rich, int social, int intelligence,
                   int fun, int looks, boolean gamer, boolean traveler, boolean artist, boolean musician, boolean homeCook, boolean writer, boolean socialInfluencer,
-                  boolean athlete, int points, int imageResourceID) {
+                  boolean athlete, int points, int imageResourceID, String description) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -32,6 +32,7 @@ public class Celeb {
         this.athlete = athlete;
         this.points = points;
         this.imageResourceID = imageResourceID;
+        this.description = description;
 
         gamer1 = "";
         athlete1 = "";
@@ -46,10 +47,18 @@ public class Celeb {
         intelligence1 = "";
         fun1 = "";
         looks1 = "";
+
     }
 
     public static final Celeb[] celeb = {
-            new Celeb("Alex", "Trebek", 79, 5, 8, true, "Cancer", 99, 70, 99, 80, 60, false, true, false, true, false, false, false, true,0, R.drawable.alex_trebek),
+            new Celeb("Alex", "Trebek", 79, 5, 8, true, "Cancer", 99, 70, 99, 80, 60, false, true, false, true, false, false, false, true,0, R.drawable.alex_trebek, ""),
+            new Celeb("Beyonce", "Knowles-Carter", 38, 5, 7, false, "Virgo", 100, 100, 100, 100, 100, false, true, false, true, true, false, true, false, 0, R.drawable.beyonce, ""),
+            new Celeb("Elon", "Musk", 48, 6, 2, true, "Cancer", 100, 80, 100, 80, 75, true, true, false, false, false, false, true, false,0, R.drawable.elon_musk, ""),
+            new Celeb("Barack", "Obama", 58, 6, 1, true, "Leo", 100, 95, 100, 85, 80, false, true, false, false, true, false, false, false, 0 , R.drawable.barack_obama, ""),
+            new Celeb("Kim", "Kardashian", 39, 5, 3, false, "Libra", 100, 100, 57, 100, 100, false, false, false, false, false, false, true, false, 0, R.drawable.kim_kardashian, ""),
+            new Celeb("Bob", "Ross", 53, 6, 2, true, "Scorpio", 65, 45, 98, 100, 85, false, true, true, false, false, false, false, false, 0, R.drawable.bob_ross, ""),
+            new Celeb("Jennifer", "Lopez", 50, 5, 5, false, "Leo", 100, 100, 85, 100, 98, false, true, false, true, true, false, true, false, 0, R.drawable.jennifer_lopez, ""),
+
     };
 
     public String getFirstName() {
