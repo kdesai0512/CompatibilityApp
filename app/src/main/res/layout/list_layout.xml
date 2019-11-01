@@ -4,28 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        >
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="234dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="14dp"
-            android:text="Title here"
-            android:textColor="@color/colorAccent"
-            android:textSize="36dp"
-            android:textStyle="bold" />
-
-
+        android:layout_width="474dp"
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/imgcar"
@@ -35,8 +23,19 @@
             android:src="@drawable/adevry_detoolk" />
 
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="105dp"
+            android:text="Title here"
+            android:textColor="@color/colorAccent"
+            android:textSize="27dp"
+            android:textStyle="bold" />
 
+
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

@@ -1,6 +1,9 @@
 package com.example.compatibilityapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -56,6 +60,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         holder.title.setText(mTitle[i]);
         Picasso.with(mContext).load(mImage[i]).into(holder.imgView);
+
+        
 
 
     }
