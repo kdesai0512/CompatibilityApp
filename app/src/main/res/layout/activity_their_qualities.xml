@@ -93,6 +93,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
         android:text="@string/next"
+        android:id="@+id/button"
         android:fontFamily="@font/nova_mono"
         android:onClick="finalActivity"
         android:layout_gravity="center">

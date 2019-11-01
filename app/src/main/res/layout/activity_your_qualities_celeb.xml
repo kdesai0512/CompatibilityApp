@@ -94,6 +94,7 @@
         android:fontFamily="@font/nova_mono"
         android:textSize="@dimen/textSize"
         android:text="@string/next"
+        android:id="@+id/button"
         android:onClick="yourQualitiesCelebSlider"
         android:layout_gravity="center">
     </Button>
