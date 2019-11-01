@@ -111,6 +111,7 @@
         android:text="@string/next"
         android:fontFamily="@font/nova_mono"
         android:textAllCaps="true"
+        android:id="@+id/button"
         android:onClick="theirFeatures"
         android:layout_gravity="center">
     </Button>

@@ -3,8 +3,10 @@ package com.example.compatibilityapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 
 public class TheirQualitiesActivity extends AppCompatActivity {
@@ -42,6 +44,15 @@ public class TheirQualitiesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_their_qualities);
+
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        next.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v) {
+                popDrip.start();
+            }
+        });
 
         Intent intent = getIntent();
         first_name_str = intent.getStringExtra(MY_FIRST_NAME);

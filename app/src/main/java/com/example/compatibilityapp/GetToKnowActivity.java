@@ -4,11 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -28,6 +30,15 @@ public class GetToKnowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know);
+
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        next.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v) {
+                popDrip.start();
+            }
+        });
        // TextView text = (TextView) findViewById(R.id.textView15);
        // text.setMovementMethod(LinkMovementMethod.getInstance());
     }

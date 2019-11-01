@@ -19,6 +19,7 @@
             android:layout_marginTop="72dp"
             android:fontFamily="@font/nova_mono"
             android:onClick="yourQualities"
+            android:id="@+id/button"
             android:text="@string/next"
             android:textSize="@dimen/textSize"
             app:layout_constraintStart_toStartOf="parent"
