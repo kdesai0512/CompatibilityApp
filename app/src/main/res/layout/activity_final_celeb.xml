@@ -10,7 +10,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
         android:id="@+id/percent"
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/restart"
+        android:layout_gravity="center"
+        android:textSize="@dimen/textSize"
+        android:onClick="restart2"/>
 
 </LinearLayout>

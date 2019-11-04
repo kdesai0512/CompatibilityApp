@@ -56,8 +56,11 @@ public class Celeb {
             new Celeb("Elon", "Musk", 48, 6, 2, true, "Cancer", 100, 80, 100, 80, 75, true, true, false, false, false, false, true, false,0, R.drawable.elon_musk, ""),
             new Celeb("Barack", "Obama", 58, 6, 1, true, "Leo", 100, 95, 100, 85, 80, false, true, false, false, true, false, false, false, 0 , R.drawable.barack_obama, ""),
             new Celeb("Kim", "Kardashian", 39, 5, 3, false, "Libra", 100, 100, 57, 100, 100, false, false, false, false, false, false, true, false, 0, R.drawable.kim_kardashian, ""),
-            new Celeb("Bob", "Ross", 53, 6, 2, true, "Scorpio", 65, 45, 98, 100, 85, false, true, true, false, false, false, false, false, 0, R.drawable.bob_ross, ""),
+            new Celeb("Bob", "Ross", 53, 6, 2, true, "Scorpio", 65, 45, 98, 100, 55, false, true, true, false, false, false, false, false, 0, R.drawable.bob_ross, ""),
             new Celeb("Jennifer", "Lopez", 50, 5, 5, false, "Leo", 100, 100, 85, 100, 98, false, true, false, true, true, false, true, false, 0, R.drawable.jennifer_lopez, ""),
+            new Celeb("Harry", "Styles", 25, 6, 0, true, "Aquarius", 100, 87, 79, 94, 99, false, true, false, true, false, false, true, false, 0, R.drawable.harry_styles, ""),
+            new Celeb("Emma", "Watson", 29, 5, 5, false, "Aries", 100, 96, 100, 93, 100, false, true, false, false, true, true, true, false, 0, R.drawable.emma_watson, ""),
+            new Celeb("Cardi","B", 27, 5, 3, false, "Libra", 100, 100, 53, 100, 84, false, true, false, true, true, false, true, false, 0, R.drawable.cardi_b, "")
 
     };
 

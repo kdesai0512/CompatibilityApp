@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -100,7 +101,7 @@ public class FinalCelebActivity extends AppCompatActivity {
 
 
         new Celeb(first_name_str, last_name_str,0,0, 0, false, horoscope, rich, social, intel, fun, looks, your_gamer2,your_traveler2,your_artist2,your_musician2,
-                your_cook2,your_writer2,your_influencer,your_athlete2, 0, R.drawable.adevry_detoolk);
+                your_cook2,your_writer2,your_influencer,your_athlete2, 0, R.drawable.adevry_detoolk, "");
         for (int i = 0; i < Celeb.celeb.length; i++) {
             if (Celeb.celeb[i].getFullName().equals(celeb)) {
                 {
@@ -155,6 +156,16 @@ public class FinalCelebActivity extends AppCompatActivity {
         }
 
 
+    }
+
+    //https://stackoverflow.com/questions/22213357/making-a-restart-button-for-an-android-app-game
+    public void restart2(View v) {
+        Intent i = new Intent(this, MainActivity.class); //change it to your main class
+        //the following 2 tags are for clearing the backStack and start fresh
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+        startActivity(i);
     }
 
 }

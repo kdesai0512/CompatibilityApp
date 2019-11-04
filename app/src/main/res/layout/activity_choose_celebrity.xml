@@ -29,7 +29,7 @@
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/textSize"
+        android:textSize="@dimen/textSize"
         android:entries="@array/celebrity"
         android:id="@+id/celebrity"
         android:layout_gravity="center">
@@ -39,8 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/celebimage"
-        android:layout_margin="@dimen/marginTop">
+        android:id="@+id/celebimage">
     </ImageView>
 
     <TextView
@@ -49,7 +48,7 @@
         android:textSize="@dimen/textSize"
         android:id="@+id/description"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/marginTop"
+        android:layout_marginStart="@dimen/marginStart"
         android:text="Description">
     </TextView>
 

@@ -24,6 +24,15 @@
 
     <string-array name = "celebrity">
         <item>Alex Trebek</item>
+        <item>Beyonce Knowles-Carter</item>
+        <item>Elon Musk</item>
+        <item>Barack Obama</item>
+        <item>Kim Kardashian</item>
+        <item>Bob Ross</item>
+        <item>Jennifer Lopez</item>
+        <item>Harry Styles</item>
+        <item>Emma Watson</item>
+        <item>Cardi B</item>
     </string-array>
 
 </resources>
