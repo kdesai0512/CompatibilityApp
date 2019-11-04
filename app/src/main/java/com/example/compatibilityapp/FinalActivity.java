@@ -49,9 +49,6 @@ public class FinalActivity extends AppCompatActivity {
     int  rich, social, intel, fun, looks;
     String feet, inch, min, max, gender;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -26,14 +26,6 @@ public class YourQualitiesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities);
 
-        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
-        Button next = (Button) this.findViewById(R.id.button);
-        next.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v) {
-                popDrip.start();
-            }
-        });
 
 
         intent = getIntent();
@@ -134,6 +126,10 @@ public class YourQualitiesActivity extends AppCompatActivity {
     }
     public void yourQualitiesSlider(View v)
     {
+
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        popDrip.start();
         intent = new Intent(this, YourQualitiesSliderActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("FIRST_NAME",first_name_str);

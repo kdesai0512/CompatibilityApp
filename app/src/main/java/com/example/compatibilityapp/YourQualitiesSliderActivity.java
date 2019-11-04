@@ -33,14 +33,7 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities_slider);
 
-        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
-        Button next = (Button) this.findViewById(R.id.button);
-        next.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View v) {
-                popDrip.start();
-            }
-        });
 
         intent = getIntent();
         first_name_str = intent.getStringExtra(MY_FIRST_NAME);
@@ -97,6 +90,9 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
 
     public void theirFeatures(View v)
     {
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        popDrip.start();
         SeekBar rich = (SeekBar)  findViewById(R.id.richBar);
         SeekBar social = (SeekBar)  findViewById(R.id.socialBar);
         SeekBar intel = (SeekBar)  findViewById(R.id.intelligenceBar);

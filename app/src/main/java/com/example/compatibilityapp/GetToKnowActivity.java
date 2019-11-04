@@ -31,50 +31,19 @@ public class GetToKnowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know);
 
-        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
-        Button next = (Button) this.findViewById(R.id.button);
-        next.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v) {
-                popDrip.start();
-            }
-        });
        // TextView text = (TextView) findViewById(R.id.textView15);
        // text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     public void yourQualities(View v)
     {
+
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        popDrip.start();
+
         EditText myFirstName = (EditText) findViewById(R.id.firstName);
         EditText myLastName = (EditText) findViewById(R.id.lastName);
-
-
-        //CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
-        /**
-        String min =  "13/12/2019";
-
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            // The SimpleDateFormat parse the string and return a date object.
-            // To get the date in long value just call the getTime method of
-            // the Date object.
-            Date date = formatter.parse(min);
-            long dateInLong = date.getTime();
-            //calendar.setMinDate(dateInLong);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-**/
-       // SimpleDateFormat ss = new SimpleDateFormat("dd-MM-yyyy");
-       // Date date1 = new Date(calendar.getDate());
-       // String myBirthday= ss.format(date1);
-
-
-
-
-        //Spinner mySpinner = (Spinner) findViewById(R.id.spinner2);
-       // String myHoroscope = mySpinner.getSelectedItem().toString();
 
         Spinner myBirthYear = (Spinner) findViewById(R.id.year);
         String birthYear = myBirthYear.getSelectedItem().toString();
@@ -90,6 +59,7 @@ public class GetToKnowActivity extends AppCompatActivity {
         String myLastNameStr = myLastName.getText().toString();
 
         String myHoroscope = "";
+
 
         if (birthMonth.equalsIgnoreCase("December") && birthday > 22)
         {
