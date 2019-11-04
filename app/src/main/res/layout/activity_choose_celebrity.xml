@@ -48,8 +48,7 @@
         android:textSize="@dimen/textSize"
         android:id="@+id/description"
         android:layout_gravity="center"
-        android:layout_marginStart="@dimen/marginStart"
-        android:text="Description">
+        android:layout_marginStart="@dimen/marginStart">
     </TextView>
 
     <Button
