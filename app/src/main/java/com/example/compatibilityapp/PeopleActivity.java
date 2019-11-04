@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 //import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+
+import java.text.DecimalFormat;
 
 public class PeopleActivity extends AppCompatActivity {
 
@@ -35,6 +38,15 @@ public class PeopleActivity extends AppCompatActivity {
             Person.people[23].getLastName(), Person.people[24].getLastName(), Person.people[25].getLastName(), Person.people[26].getLastName(),
             Person.people[27].getLastName()};
 
+    double[] percents = {Person.people[0].percentCompat(0), Person.people[1].percentCompat(1), Person.people[2].percentCompat(2),
+            Person.people[3].percentCompat(3), Person.people[4].percentCompat(4), Person.people[5].percentCompat(5), Person.people[6].percentCompat(6),
+            Person.people[7].percentCompat(7), Person.people[8].percentCompat(8), Person.people[9].percentCompat(9), Person.people[10].percentCompat(10),
+            Person.people[11].percentCompat(11), Person.people[12].percentCompat(12), Person.people[13].percentCompat(13), Person.people[14].percentCompat(14),
+            Person.people[15].percentCompat(15), Person.people[16].percentCompat(16), Person.people[17].percentCompat(17), Person.people[18].percentCompat(18),
+            Person.people[19].percentCompat(19), Person.people[20].percentCompat(20), Person.people[21].percentCompat(21), Person.people[22].percentCompat(22),
+            Person.people[23].percentCompat(23), Person.people[24].percentCompat(24), Person.people[25].percentCompat(25), Person.people[26].percentCompat(26),
+            Person.people[27].percentCompat(27)};
+
     CustomAdapter ad;
 
     @Override
@@ -51,6 +63,16 @@ public class PeopleActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    public double percentCompat(View v, int i)
+    {
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        //name.setText(Person.people[i].description());
+        double percent = (((double)Person.people[i].getPoints()/1400)*100);
+        return percent;
 
     }
 

@@ -61,7 +61,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         holder.title.setText(mTitle[i]);
         Picasso.with(mContext).load(mImage[i]).into(holder.imgView);
 
-        
+    
+
+        Intent intent = new Intent(mContext, DetailsActivity.class);
 
 
     }

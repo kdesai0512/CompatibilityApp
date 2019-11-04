@@ -1,5 +1,8 @@
 package com.example.compatibilityapp;
 
+import android.view.View;
+
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -114,7 +117,18 @@ public class Person
             new Person("Marty", "Gongey", 36, 5, 10, true, "Virgo", 83, 58, 23, 90, 85, true, true, false, false, false, false, false, false,0, R.drawable.marty_gongey),
 
     };
-    
+
+
+    public double percentCompat(int i)
+    {
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        //name.setText(Person.people[i].description());
+        double percent = (((double)Person.people[i].getPoints()/1400)*100);
+        return percent;
+
+    }
+
 
     public String getFirstName() {
         return firstName;
