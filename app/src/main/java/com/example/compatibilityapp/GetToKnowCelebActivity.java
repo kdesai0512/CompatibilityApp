@@ -19,7 +19,7 @@ public class GetToKnowCelebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know_celeb);
 
-        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+       /** final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
         Button next = (Button) this.findViewById(R.id.button);
         next.setOnClickListener(new View.OnClickListener(){
 
@@ -27,6 +27,7 @@ public class GetToKnowCelebActivity extends AppCompatActivity {
                 popDrip.start();
             }
         });
+        **/
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if (bundle != null) {
@@ -36,6 +37,9 @@ public class GetToKnowCelebActivity extends AppCompatActivity {
 
     public void yourQualitiesCeleb (View v)
     {
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        popDrip.start();
             EditText myFirstName = (EditText) findViewById(R.id.firstName);
             EditText myLastName = (EditText) findViewById(R.id.lastName);
 

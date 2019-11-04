@@ -31,20 +31,17 @@ public class GetToKnowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know);
 
-        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
-        Button next = (Button) this.findViewById(R.id.button);
-        next.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v) {
-                popDrip.start();
-            }
-        });
        // TextView text = (TextView) findViewById(R.id.textView15);
        // text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     public void yourQualities(View v)
     {
+
+        final MediaPlayer popDrip = MediaPlayer.create(this, R.raw.pop_drip);
+        Button next = (Button) this.findViewById(R.id.button);
+        popDrip.start();
+
         EditText myFirstName = (EditText) findViewById(R.id.firstName);
         EditText myLastName = (EditText) findViewById(R.id.lastName);
 
