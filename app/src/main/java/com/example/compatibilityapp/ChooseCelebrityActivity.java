@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class ChooseCelebrityActivity extends AppCompatActivity {
 
@@ -18,13 +19,16 @@ public class ChooseCelebrityActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_celebrity);
 
         final ImageView image = (ImageView) findViewById(R.id.celebimage);
+        final TextView text = (TextView) findViewById(R.id.description);
         final Spinner spinner = (Spinner) findViewById(R.id.celebrity);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                for (int x = 0; x < Celeb.celeb.length; x++) {
-                   if (Celeb.celeb[x].getFullName().equals(spinner.getSelectedItem().toString()))
+                   if (Celeb.celeb[x].getFullName().equals(spinner.getSelectedItem().toString())) {
                        image.setImageResource(Celeb.celeb[x].getImageResourceID());
+                       text.setText(Celeb.celeb[x].getDescription());
+                   }
                 }
             }
             public void onNothingSelected(AdapterView<?> adapterView) {

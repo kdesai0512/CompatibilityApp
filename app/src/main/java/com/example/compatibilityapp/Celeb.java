@@ -51,16 +51,16 @@ public class Celeb {
     }
 
     public static final Celeb[] celeb = {
-            new Celeb("Alex", "Trebek", 79, 5, 8, true, "Cancer", 99, 70, 99, 80, 60, false, true, false, true, false, false, false, true,0, R.drawable.alex_trebek, ""),
-            new Celeb("Beyonce", "Knowles-Carter", 38, 5, 7, false, "Virgo", 100, 100, 100, 100, 100, false, true, false, true, true, false, true, false, 0, R.drawable.beyonce, ""),
-            new Celeb("Elon", "Musk", 48, 6, 2, true, "Cancer", 100, 80, 100, 80, 75, true, true, false, false, false, false, true, false,0, R.drawable.elon_musk, ""),
-            new Celeb("Barack", "Obama", 58, 6, 1, true, "Leo", 100, 95, 100, 85, 80, false, true, false, false, true, false, false, false, 0 , R.drawable.barack_obama, ""),
-            new Celeb("Kim", "Kardashian", 39, 5, 3, false, "Libra", 100, 100, 57, 100, 100, false, false, false, false, false, false, true, false, 0, R.drawable.kim_kardashian, ""),
-            new Celeb("Bob", "Ross", 53, 6, 2, true, "Scorpio", 65, 45, 98, 100, 55, false, true, true, false, false, false, false, false, 0, R.drawable.bob_ross, ""),
-            new Celeb("Jennifer", "Lopez", 50, 5, 5, false, "Leo", 100, 100, 85, 100, 98, false, true, false, true, true, false, true, false, 0, R.drawable.jennifer_lopez, ""),
-            new Celeb("Harry", "Styles", 25, 6, 0, true, "Aquarius", 100, 87, 79, 94, 99, false, true, false, true, false, false, true, false, 0, R.drawable.harry_styles, ""),
-            new Celeb("Emma", "Watson", 29, 5, 5, false, "Aries", 100, 96, 100, 93, 100, false, true, false, false, true, true, true, false, 0, R.drawable.emma_watson, ""),
-            new Celeb("Cardi","B", 27, 5, 3, false, "Libra", 100, 100, 53, 100, 84, false, true, false, true, true, false, true, false, 0, R.drawable.cardi_b, "")
+            new Celeb("Alex", "Trebek", 79, 5, 8, true, "Cancer", 99, 70, 99, 80, 60, false, true, false, true, false, false, false, true,0, R.drawable.alex_trebek, "Alex Trebek is a Canadian-American television personality. He has been the host of the syndicated game show Jeopardy! since its revival in 1984, and has also hosted a number of other game shows, including The Wizard of Odds, Double Dare, High Rollers, Battlestars, Classic Concentration, and To Tell the Truth."),
+            new Celeb("Beyonce", "Knowles-Carter", 38, 5, 7, false, "Virgo", 100, 100, 100, 100, 100, false, true, false, true, true, false, true, false, 0, R.drawable.beyonce, "Beyoncé Giselle Knowles-Carter is an American singer, songwriter, and actress.  She rose to fame in the late 1990s as the lead singer of Destiny's Child. Beyoncé is one of the best-selling music artists of all time, having sold over 100 million records worldwide as a solo artist and a further 60 million records with Destiny's Child."),
+            new Celeb("Elon", "Musk", 48, 6, 2, true, "Cancer", 100, 80, 100, 80, 75, true, true, false, false, false, false, true, false,0, R.drawable.elon_musk, "Elon Musk is a technology entrepreneur, investor, and engineer. He is the founder, CEO, and chief engineer/designer of SpaceX; co-founder, CEO, and product architect of Tesla, Inc.; co-founder of Neuralink; founder of The Boring Company, co-founder and initial co-chairman of OpenAI; and co-founder of PayPal. He was ranked 21st on the Forbes list of The World's Most Powerful People."),
+            new Celeb("Barack", "Obama", 58, 6, 1, true, "Leo", 100, 95, 100, 85, 80, false, true, false, false, true, false, false, false, 0 , R.drawable.barack_obama, "Barack Obama is an American attorney and politician who served as the 44th president of the United States from 2009 to 2017. He is a member of the Democratic Party and was the first African American to be elected president."),
+            new Celeb("Kim", "Kardashian", 39, 5, 3, false, "Libra", 100, 100, 57, 100, 100, false, false, false, false, false, false, true, false, 0, R.drawable.kim_kardashian, "Kim Kardashian is an American media personality, model, entrepreneur, socialite and actress. She became famous for her personal life, much of which was chronicled on the popular reality series Keeping Up with the Kardashians."),
+            new Celeb("Bob", "Ross", 53, 6, 2, true, "Scorpio", 65, 45, 98, 100, 55, false, true, true, false, false, false, false, false, 0, R.drawable.bob_ross, "Bob Ross was an American painter, art instructor, and television host. Ross went from being a public television personality to being an Internet celebrity in the 21st century, with his talent and kindness leading to major popularity with fans on YouTube and other websites many years after his death."),
+            new Celeb("Jennifer", "Lopez", 50, 5, 5, false, "Leo", 100, 100, 85, 100, 98, false, true, false, true, true, false, true, false, 0, R.drawable.jennifer_lopez, "Jennifer Lopez is an American actress, singer, dancer, fashion designer, producer and businesswoman. With a cumulative film gross of $3.1 billion and estimated global sales of 80 million records, Lopez is regarded as the most influential Latin performer in the United States. In 2012, Forbes ranked her as the most powerful celebrity in the world."),
+            new Celeb("Harry", "Styles", 25, 6, 0, true, "Aquarius", 100, 87, 79, 94, 99, false, true, false, true, false, false, true, false, 0, R.drawable.harry_styles, "Harry Styles is an English singer, songwriter, and actor. He became part of One Direction and they gained international success.  One Direction embarked on four world tours and won a number of accolades. In 2016, he left One Direction and launched his solo career"),
+            new Celeb("Emma", "Watson", 29, 5, 5, false, "Aries", 100, 96, 100, 93, 100, false, true, false, false, true, true, true, false, 0, R.drawable.emma_watson, "Emma Watson is an English actress, model and activist. She rose to prominence after getting the role of Hermione Granger in the Harry Potter film series, which gained international success. She also was in The Perks of Being a Wallflower and Belle in Beauty in the Beast. Watson was also appointed as a UN Women Goodwill ambassador and helped launch the UN Women campaign HeForShe."),
+            new Celeb("Cardi","B", 27, 5, 3, false, "Libra", 100, 100, 53, 100, 84, false, true, false, true, true, false, true, false, 0, R.drawable.cardi_b, "Cardi B is an American rapper, songwriter, actress, and television personality. Cardi B has earned three number-one singles on the Billboard Hot 100 and, in 2018, Time included her on their annual list of the 100 most influential people in the world.")
 
     };
 
@@ -346,5 +346,9 @@ public class Celeb {
 
     public void setImageResourceID(int imageResourceID) {
         this.imageResourceID = imageResourceID;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

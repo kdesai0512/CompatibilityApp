@@ -2,6 +2,7 @@ package com.example.compatibilityapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class TheirFeaturesActivities extends AppCompatActivity {
     public static final String YOUR_GAMER = "false";
@@ -88,49 +90,49 @@ public class TheirFeaturesActivities extends AppCompatActivity {
         String theirInches = inches.getText().toString();
         String theirGender = gender.getSelectedItem().toString();
 
-        Intent intent = new Intent(this, TheirQualitiesActivity.class);
-        /**intent.putExtra(TheirQualitiesActivity.THEIR_FEET, theirFeet);
-        intent.putExtra(TheirQualitiesActivity.THEIR_INCHES, theirInches);
-        intent.putExtra(TheirQualitiesActivity.THEIR_MIN, theirMin);
-        intent.putExtra(TheirQualitiesActivity.THEIR_MAX, theirMax);
-        intent.putExtra(TheirQualitiesActivity.THEIR_GENDER, theirGender);
-**/
-        Bundle bundle = new Bundle();
-        bundle.putString("FEET", theirFeet);
-        bundle.putString("INCHES", theirInches);
-        bundle.putString("GENDER", theirGender);
+        if (theirFeet.length()==0 || theirInches.length() == 0)
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "Please fill in all fields";
+            int duration = Toast.LENGTH_SHORT;
 
-        bundle.putInt("RICH_VALUE", rich);
-        bundle.putInt("SOCIAL_VALUE", social);
-        bundle.putInt("INTEL_VALUE", intel);
-        bundle.putInt("FUN_VALUE", fun);
-        bundle.putInt("LOOKS_VALUE", looks);
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
 
-        bundle.putString("FIRST_NAME",first_name_str);
-        bundle.putString("LAST_NAME",last_name_str);
-        bundle.putString("HOROSCOPE",horoscope);
-        bundle.putString("BIRTHDAY",b_day);
-        intent.putExtras(bundle);
+        else {
+            Intent intent = new Intent(this, TheirQualitiesActivity.class);
 
-/**
-        intent.putExtra(TheirQualitiesActivity.RICH_VALUE, rich);
-        intent.putExtra(TheirQualitiesActivity.SOCIAL_VALUE, social);
-        intent.putExtra(TheirQualitiesActivity.INTEL_VALUE, intel);
-        intent.putExtra(TheirQualitiesActivity.FUN_VALUE, fun);
-        intent.putExtra(TheirQualitiesActivity.LOOKS_VALUE, looks);
-**/
-        intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, gamer);
-        intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, traveler);
-        intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, musician);
-        intent.putExtra(TheirQualitiesActivity.YOUR_COOK, cook);
-        intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, writer);
-        intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, influencer);
-        intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, athlete);
-        intent.putExtra(TheirQualitiesActivity.YOUR_ARTIST, artist);
-        intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, first_name_str);
-        intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, last_name_str);
-        intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, b_day);
-        intent.putExtra(TheirQualitiesActivity.MY_HOROSCOPE, horoscope);
-        startActivity(intent);
+            Bundle bundle = new Bundle();
+            bundle.putString("FEET", theirFeet);
+            bundle.putString("INCHES", theirInches);
+            bundle.putString("GENDER", theirGender);
+
+            bundle.putInt("RICH_VALUE", rich);
+            bundle.putInt("SOCIAL_VALUE", social);
+            bundle.putInt("INTEL_VALUE", intel);
+            bundle.putInt("FUN_VALUE", fun);
+            bundle.putInt("LOOKS_VALUE", looks);
+
+            bundle.putString("FIRST_NAME", first_name_str);
+            bundle.putString("LAST_NAME", last_name_str);
+            bundle.putString("HOROSCOPE", horoscope);
+            bundle.putString("BIRTHDAY", b_day);
+            intent.putExtras(bundle);
+
+            intent.putExtra(TheirQualitiesActivity.YOUR_GAMER, gamer);
+            intent.putExtra(TheirQualitiesActivity.YOUR_TRAVELER, traveler);
+            intent.putExtra(TheirQualitiesActivity.YOUR_MUSICIAN, musician);
+            intent.putExtra(TheirQualitiesActivity.YOUR_COOK, cook);
+            intent.putExtra(TheirQualitiesActivity.YOUR_WRITER, writer);
+            intent.putExtra(TheirQualitiesActivity.YOUR_INFLUENCER, influencer);
+            intent.putExtra(TheirQualitiesActivity.YOUR_ATHLETE, athlete);
+            intent.putExtra(TheirQualitiesActivity.YOUR_ARTIST, artist);
+            intent.putExtra(TheirQualitiesActivity.MY_FIRST_NAME, first_name_str);
+            intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, last_name_str);
+            intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, b_day);
+            intent.putExtra(TheirQualitiesActivity.MY_HOROSCOPE, horoscope);
+            startActivity(intent);
+        }
     }
 }
