@@ -22,6 +22,7 @@
         android:text="@string/choose"
         android:textSize="@dimen/textSize"
         android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </TextView>
@@ -30,8 +31,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/textSize"
+        android:gravity="center"
         android:entries="@array/celebrity"
         android:id="@+id/celebrity"
+        android:layout_marginBottom="15dp"
         android:layout_gravity="center">
     </Spinner>
 
@@ -39,16 +42,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/celebimage">
+        android:id="@+id/celebimage"
+        android:adjustViewBounds="true">
     </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/textSize"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/black"
         android:id="@+id/description"
-        android:layout_gravity="center"
-        android:layout_marginStart="@dimen/marginStart">
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
     </TextView>
 
     <Button
