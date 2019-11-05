@@ -13,7 +13,7 @@ public class FinalCelebActivity extends AppCompatActivity {
 
     String gamer1, athlete1, cook1, influencer1, musician1, traveler1, writer1, artist1;
     String first_name_str, last_name_str,b_day,horoscope,celeb;
-    String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2;
+    String gamer2, athlete2, musician2, influencer2, cook2, writer2, traveler2, artist2, strToDisplay;
     int  rich, social, intel, fun, looks;
     String feet, inch, min, max, gender;
 
@@ -150,8 +150,9 @@ public class FinalCelebActivity extends AppCompatActivity {
             if (Celeb.celeb[i].getPoints() > 0) {
                 double percent = ((((double)Celeb.celeb[i].getPoints())/1400)*100);
                 Double.toString(percent);
-                TextView percentText = (TextView) findViewById(R.id.percent);
+                TextView percentText = (TextView) findViewById(R.id.percent3);
                 percentText.setText("You are " + df.format(percent) + "% compatible with " + Celeb.celeb[i].getFullName() + "!");
+                strToDisplay = "I am " + percent + "% compatible with " + Celeb.celeb[i].getFullName();
             }
         }
 
@@ -162,10 +163,24 @@ public class FinalCelebActivity extends AppCompatActivity {
     public void restart2(View v) {
         Intent i = new Intent(this, MainActivity.class); //change it to your main class
         //the following 2 tags are for clearing the backStack and start fresh
+        for (int x = 0; x < Celeb.celeb.length; x++) {
+            Celeb.celeb[x].setPoints(0);
+        }
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();
         startActivity(i);
+    }
+
+    public void shareInfo3 (View v)
+    {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+
+        intent.putExtra(Intent.EXTRA_TEXT, strToDisplay);
+        String chooserTitle = "Choose an app to send your message";
+        Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
     }
 
 }

@@ -298,6 +298,9 @@ public class FinalActivity extends AppCompatActivity {
     public void restart(View v) {
         Intent i = new Intent(this, MainActivity.class); //change it to your main class
         //the following 2 tags are for clearing the backStack and start fresh
+        for (int x = 0; x < Person.people.length; x++) {
+            Person.people[x].setPoints(0);
+        }
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         finish();

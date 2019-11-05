@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FinalCelebActivity">
 
     <TextView
@@ -11,16 +12,26 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_gravity="center"
+
         android:textColor="@color/black"
-        android:id="@+id/percent"
+        android:id="@+id/percent3"
         />
 
     <Button
+        android:layout_marginTop="@dimen/myMarginTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/restart"
         android:layout_gravity="center"
-        android:textSize="@dimen/textSize"
+        android:textSize="10sp"
         android:onClick="restart2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:onClick="shareInfo3"
+        />
 
 </LinearLayout>
