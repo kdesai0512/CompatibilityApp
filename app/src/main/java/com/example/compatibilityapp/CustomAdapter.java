@@ -21,30 +21,27 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Context mContext;
     private Integer[] mImage;
     private String[] mTitle;
-    private String[] mLastTitle;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView title;
-        TextView titleLast;
         ImageView imgView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             this.title = (TextView) itemView.findViewById(R.id.title);
-            this.titleLast = (TextView) itemView.findViewById(R.id.titleLast);
             this.imgView = (ImageView) itemView.findViewById(R.id.imgcar);
 
 
         }
     }
 
-        public CustomAdapter(Context mContext, Integer[] image,String[] title, String[] titleLast) {
+        public CustomAdapter(Context mContext, Integer[] image,String[] title) {
             this.mContext = mContext;
             this.mImage = image;
             this.mTitle = title;
-            this.mLastTitle = titleLast;
+
 
         }
 
@@ -64,7 +61,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
 
         holder.title.setText(mTitle[i]);
-        holder.titleLast.setText(mLastTitle[i]);
         Picasso.with(mContext).load(mImage[i]).into(holder.imgView);
 
     
