@@ -66,15 +66,7 @@ public class PeopleActivity extends AppCompatActivity {
 
     }
 
-    public double percentCompat(View v, int i)
-    {
-        DecimalFormat df = new DecimalFormat("#.##");
 
-        //name.setText(Person.people[i].description());
-        double percent = (((double)Person.people[i].getPoints()/1400)*100);
-        return percent;
-
-    }
 
 
 

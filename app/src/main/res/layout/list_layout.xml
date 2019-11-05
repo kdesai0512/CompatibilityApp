@@ -11,8 +11,8 @@
 
 
     <RelativeLayout
-        android:layout_width="474dp"
-        android:layout_height="match_parent"
+        android:layout_width="386dp"
+        android:layout_height="155dp"
         android:padding="16dp">
 
         <ImageView
@@ -28,10 +28,23 @@
             android:layout_width="234dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="105dp"
+            android:layout_marginEnd="0dp"
             android:text="Title here"
             android:textColor="@color/colorAccent"
-            android:textSize="27dp"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/titleLast"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="70dp"
+            android:text="Title here"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
             android:textStyle="bold" />
 
 
