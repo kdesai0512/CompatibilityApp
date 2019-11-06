@@ -27,13 +27,6 @@
         android:textSize="20sp"
         android:id="@+id/leastpersonname" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/textSize"
-        android:id="@+id/leastpersonage"/>
 
     <TextView
         android:layout_width="wrap_content"

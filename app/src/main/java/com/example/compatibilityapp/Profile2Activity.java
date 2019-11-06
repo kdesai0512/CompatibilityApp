@@ -25,7 +25,6 @@ public class Profile2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_profile2);
 
         name = (TextView) findViewById(R.id.leastpersonname);
-        age = (TextView) findViewById(R.id.leastpersonage);
         points = (TextView) findViewById(R.id.leastpersoncompatibility);
         image = (ImageView) findViewById(R.id.leastpersonpic);
 

@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".FinalCelebActivity">
+    <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/your_qualities"
+        tools:context=".FinalCelebActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".FinalCelebctivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_gravity="center"
-
+        android:gravity="center"
+        android:layout_marginTop="@dimen/marginTop2"
         android:textColor="@color/black"
         android:id="@+id/percent3"
         />
 
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:id="@+id/image2"/>
+
     <Button
-        android:layout_marginTop="@dimen/myMarginTop"
-        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/marginTop2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/restart"
         android:layout_gravity="center"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:onClick="restart2"/>
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/share"
         android:layout_gravity="center"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:onClick="shareInfo3"
         />
 
 </LinearLayout>
+</ScrollView>

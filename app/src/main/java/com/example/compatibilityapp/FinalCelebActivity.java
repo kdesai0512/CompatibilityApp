@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -151,7 +152,9 @@ public class FinalCelebActivity extends AppCompatActivity {
                 double percent = ((((double)Celeb.celeb[i].getPoints())/1400)*100);
                 Double.toString(percent);
                 TextView percentText = (TextView) findViewById(R.id.percent3);
+                ImageView imageView = (ImageView) findViewById(R.id.image2);
                 percentText.setText("You are " + df.format(percent) + "% compatible with " + Celeb.celeb[i].getFullName() + "!");
+                imageView.setImageResource(Celeb.celeb[i].getImageResourceID());
                 strToDisplay = "I am " + percent + "% compatible with " + Celeb.celeb[i].getFullName();
             }
         }
