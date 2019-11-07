@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:gravity="center"
+        android:fontFamily="@font/doppio_one"
         android:layout_marginTop="@dimen/marginTop2"
         android:textColor="@color/black"
         android:id="@+id/percent3"
@@ -37,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/restart"
+        android:fontFamily="@font/doppio_one"
         android:layout_gravity="center"
         android:textSize="15sp"
         android:onClick="restart2"/>
@@ -45,6 +47,7 @@
         android:layout_height="wrap_content"
         android:text="@string/share"
         android:layout_gravity="center"
+        android:fontFamily="@font/doppio_one"
         android:textSize="15sp"
         android:onClick="shareInfo3"
         />

@@ -32,6 +32,7 @@
         android:layout_marginTop="@dimen/pick_option_top"
         android:fontFamily="@font/doppio_one"
         android:text="@string/pick_option"
+        android:textColor="@color/black"
         android:textAllCaps="true"
         android:textSize="29dp"
         app:layout_constraintStart_toStartOf="parent"
