@@ -2,10 +2,17 @@ package com.example.compatibilityapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.TransitionInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 
@@ -25,6 +32,8 @@ public class YourQualitiesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_qualities);
+
+
 
 
 
@@ -124,6 +133,16 @@ public class YourQualitiesActivity extends AppCompatActivity {
 
 
     }
+
+    @SuppressLint("NewApi")
+    private void setupWindowAnimations() {
+        Fade fade = new Fade();
+        fade.setDuration(1000);
+        getWindow().setEnterTransition(fade);
+    }
+
+
+
     public void yourQualitiesSlider(View v)
     {
 
@@ -142,6 +161,11 @@ public class YourQualitiesActivity extends AppCompatActivity {
         intent.putExtra(YourQualitiesSliderActivity.MY_LAST_NAME, last_name_str);
         intent.putExtra(YourQualitiesSliderActivity.MY_BIRTHDAY, b_day);
         intent.putExtra(YourQualitiesSliderActivity.MY_HOROSCOPE, horoscope);
-        startActivity(intent);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            startActivity(intent,  ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }
+
+
     }
 }

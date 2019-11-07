@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             startActivity(intent);
+            
         }
 
     }

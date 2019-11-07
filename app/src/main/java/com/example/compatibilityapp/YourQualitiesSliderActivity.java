@@ -2,8 +2,10 @@ package com.example.compatibilityapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -123,7 +125,8 @@ public class YourQualitiesSliderActivity extends AppCompatActivity {
         intent1.putExtra(TheirFeaturesActivities.MY_LAST_NAME, last_name_str);
         intent1.putExtra(TheirFeaturesActivities.MY_BIRTHDAY, b_day);
         intent1.putExtra(TheirFeaturesActivities.MY_HOROSCOPE, horoscope);
-
-        startActivity(intent);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            startActivity(intent,  ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }
     }
 }

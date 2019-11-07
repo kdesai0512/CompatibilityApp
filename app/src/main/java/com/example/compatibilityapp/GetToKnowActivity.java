@@ -3,12 +3,18 @@ package com.example.compatibilityapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.transition.TransitionInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -31,9 +37,22 @@ public class GetToKnowActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_to_know);
 
+
+
        // TextView text = (TextView) findViewById(R.id.textView15);
        // text.setMovementMethod(LinkMovementMethod.getInstance());
+
+        setupWindowAnimations();
     }
+
+    @SuppressLint("NewApi")
+    private void setupWindowAnimations() {
+        Slide slide = new Slide();
+        slide.setDuration(1000);
+        getWindow().setExitTransition(slide);
+    }
+
+
 
     public void yourQualities(View v)
     {
@@ -173,7 +192,13 @@ public class GetToKnowActivity extends AppCompatActivity {
         intent.putExtra(YourQualitiesActivity.MY_LAST_NAME, myLastNameStr);
         intent.putExtra(YourQualitiesActivity.MY_BIRTHDAY, myBirthday);
         intent.putExtra(YourQualitiesActivity.MY_HOROSCOPE, myHoroscope);
+
+
 **/
-        startActivity(intent);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            startActivity(intent,  ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+        }
     }
 }

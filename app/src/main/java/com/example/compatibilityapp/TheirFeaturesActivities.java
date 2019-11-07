@@ -2,9 +2,11 @@ package com.example.compatibilityapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -132,7 +134,10 @@ public class TheirFeaturesActivities extends AppCompatActivity {
             intent.putExtra(TheirQualitiesActivity.MY_LAST_NAME, last_name_str);
             intent.putExtra(TheirQualitiesActivity.MY_BIRTHDAY, b_day);
             intent.putExtra(TheirQualitiesActivity.MY_HOROSCOPE, horoscope);
-            startActivity(intent);
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                startActivity(intent,  ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+            }
         }
     }
 }
