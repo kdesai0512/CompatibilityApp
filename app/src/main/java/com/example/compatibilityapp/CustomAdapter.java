@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -21,26 +22,21 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Context mContext;
     private Integer[] mImage;
     private String[] mTitle;
-
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView title;
-        ImageView imgView;
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-
-            this.title = (TextView) itemView.findViewById(R.id.title);
-            this.imgView = (ImageView) itemView.findViewById(R.id.imgcar);
+    private String[] mPercent;
+    private String[] mTitleLast;
+    private String[] mDescriptions;
 
 
-        }
-    }
 
-        public CustomAdapter(Context mContext, Integer[] image,String[] title) {
+
+
+    public CustomAdapter(Context mContext, Integer[] image,String[] title, String[] percent, String[] title2, String[] desc) {
             this.mContext = mContext;
             this.mImage = image;
             this.mTitle = title;
+            this.mPercent = percent;
+            this.mTitleLast = title2;
+            this.mDescriptions = desc;
 
 
         }
@@ -61,23 +57,23 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
 
         holder.title.setText(mTitle[i]);
+        holder.titleLast.setText(mTitleLast[i]);
+        holder.descs.setText(mDescriptions[i]);
         Picasso.with(mContext).load(mImage[i]).into(holder.imgView);
 
-    
 
 
-        holder.title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        holder.mView.setOnClickListener(new View.OnClickListener() {
 
-                Intent intent = new Intent(mContext, DetailsActivity.class);
-                intent.putExtra("title",mTitle[i]);
-                intent.putExtra("img", mImage[i]);
+            @Override public void onClick(View v) {
 
-                mContext.startActivity(intent);
+                Toast.makeText(mContext.getApplicationContext(),
+                        "You are " + mPercent[i] + "% compatible with " + mTitle[i] + ". ", Toast.LENGTH_SHORT).show();
 
             }
         });
+
+
 
 
 
@@ -86,5 +82,36 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public int getItemCount() {
         return mTitle.length;
+    }
+
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        TextView title;
+        TextView titleLast;
+        TextView descs;
+        ImageView imgView;
+        View mView;
+
+
+
+        public MyViewHolder(View itemView) {
+            super(itemView);
+
+            this.title = (TextView) itemView.findViewById(R.id.title);
+            this.titleLast = (TextView) itemView.findViewById(R.id.titleLast);
+            this.descs = (TextView) itemView.findViewById(R.id.descrip);
+            this.imgView = (ImageView) itemView.findViewById(R.id.imgcar);
+            mView = itemView;
+
+
+
+
+
+
+
+
+
+        }
     }
 }
