@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CompatibilityApp</string>
+    <string name="app_name">Compatibility App</string>
     <string name="pick_option">Pick an Option</string>
     <string name="celeb">choose a celebrity</string>
     <string name="show_person">show me a person</string>

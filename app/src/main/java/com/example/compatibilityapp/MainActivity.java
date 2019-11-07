@@ -9,6 +9,14 @@ import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
 
+/**
+ * http://technxt.net/android-cardview-with-recyclerview-in-android-cardview-android/
+ * https://camposha.info/android-recyclerview-master-detail-open-new-activitypass-data/
+ * https://www.youtube.com/watch?v=jO0RkS-Ag3A
+ * https://rcptones.com/dev_tones/#tab-id-9
+ * https://www.techotopia.com/index.php/An_Android_RecyclerView_and_CardView_Tutorial
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -227,11 +227,11 @@ public class FinalActivity extends AppCompatActivity {
                             Person.people[i].setPoints(Person.people[i].getPoints() + 100);
                         }
 
-                        Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getRich() - rich)));
-                        Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getSocial() - social)));
-                        Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getIntelligence() - intel)));
-                        Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getFun() - fun)));
-                        Person.people[i].setPoints((Person.people[i].getPoints() + Math.abs(Person.people[i].getLooks() - looks)));
+                        Person.people[i].setPoints((Person.people[i].getPoints() + (100 - Math.abs(Person.people[i].getRich() - rich))));
+                        Person.people[i].setPoints((Person.people[i].getPoints() + (100 - Math.abs(Person.people[i].getSocial() - social))));
+                        Person.people[i].setPoints((Person.people[i].getPoints() + (100 - Math.abs(Person.people[i].getIntelligence() - intel))));
+                        Person.people[i].setPoints((Person.people[i].getPoints() + (100 - Math.abs(Person.people[i].getFun() - fun))));
+                        Person.people[i].setPoints((Person.people[i].getPoints() + (100 - Math.abs(Person.people[i].getLooks() - looks))));
                     }
                 }
             }
